@@ -20,7 +20,9 @@ Replace 9123 with an unusued port, if you already have something running there. 
 http://localhost:9123 in your browser to see the local copy of the docs.
 
 To build your changes and deploy to staging (docs.beta.tribapps.com), from the root directory:
+
     ./staging_deploy.sh
 
 To do the same for production:
+
     ./production_deploy.sh
