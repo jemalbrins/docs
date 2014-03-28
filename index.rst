@@ -10,8 +10,9 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
-
+   
+   paywall
+   tarbell
 
 Indices and tables
 ==================

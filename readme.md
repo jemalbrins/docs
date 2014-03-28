@@ -19,10 +19,11 @@ To build and preview any changes before deployment, run:
 Replace 9123 with an unusued port, if you already have something running there. Then visit
 http://localhost:9123 in your browser to see the local copy of the docs.
 
-To build your changes and deploy to staging (docs.beta.tribapps.com), from the root directory:
+To build your changes and deploy to staging (http://docs.beta.tribapps.com), from the root
+directory:
 
     ./staging_deploy.sh
 
-To do the same for production:
+To do the same for production (http://docs.tribapps.com):
 
     ./production_deploy.sh
