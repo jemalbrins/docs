@@ -26,15 +26,16 @@ Finally, to create the project itself: ::
 And follow the prompts, as described in more detail `here
 <https://tarbell.readthedocs.org/en/latest/tutorial.html>`_.
   
-Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the same as
-a normal Tarbell project, with only a few key differences:
+Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the same 
+as a normal Tarbell project, with only a few key differences:
 
 Publishing location
 -------------------
 
 You still want to publish to S3, but the buckets to use depend on the specific project. For most 
 projects, ``apps.beta.tribapps.com`` is the staging bucket, and ``apps.chicagotribune.com`` is the 
-production bucket, but this varies widely from project to project. `Read more about setting up your S3 buckets here.
+production bucket, but this varies widely from project to project. `Read more about setting up your 
+S3 buckets here.
 <https://tarbell.readthedocs.org/en/latest/publish.html#configuring-s3-buckets-for-a-project>`_
 
 Templates
