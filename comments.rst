@@ -18,8 +18,9 @@ ensure that there's an element (preferably a `<div>`) on the page with the id `"
     <div id="fb-comments"></div>
 
 Tarbell will take care of the rest, assuming you're still using the base template. If you've made
-changes to the base template, you'll need to preserve the `{% block comments %}` section and the
-`fb:app_id` meta tag in the `{% block opengraph %}` section.
+changes to the base template, you'll need to preserve the `{% block comments %}` and 
+`{% block comments_js %}` sections and the `fb:app_id` meta tag in the `{% block comments_app_id %}` 
+section.
 
 If you'd like to change the disclaimer text, copy `_base/_comments.html` to your root directory,
 and update it as described in the next section.
@@ -95,6 +96,8 @@ it the id `fb-comments`: ::
     <div id="fb-comments"></div>
 
 Finally, at the bottom of your page code, add the following: ::
+
+    <div id="fb-root"></div>    
 
     <script type="text/javascript">
         (function(d, s, id) {
