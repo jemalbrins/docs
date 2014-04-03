@@ -13,16 +13,17 @@ Example using Tarbell
 ---------------------
 
 If you're using the `Tribune Tarbell template <tarbell.html#templates>`_, all you need to do is
-ensure that there's an element (preferably a `<div>`) on the page with the id `"fb-comments"`: ::
+ensure that there's an element (preferably a ``<div>``) on the page with the id
+``"fb-comments"``: ::
 
     <div id="fb-comments"></div>
 
 Tarbell will take care of the rest, assuming you're still using the base template. If you've made
-changes to the base template, you'll need to preserve the `{% block comments %}` and 
-`{% block comments_js %}` sections and the `fb:app_id` meta tag in the `{% block comments_app_id %}` 
-section.
+changes to the base template, you'll need to preserve the ``{% block comments %}`` and 
+``{% block comments_js %}`` sections and the ``fb:app_id`` meta tag in the
+``{% block comments_app_id %}`` section.
 
-If you'd like to change the disclaimer text, copy `_base/_comments.html` to your root directory,
+If you'd like to change the disclaimer text, copy ``_base/_comments.html`` to your root directory,
 and update it as described in the next section.
 
 Changing disclaimer text
@@ -51,8 +52,9 @@ following: ::
         $("#fb-comments").append(fbml);
     }
 
-All you need to change is the text on the line beginning `var disclaimer`. Replace everything
-between `<div class="fb-comment-disclaimer">` and `</div>` with whatever new disclaimer you like.
+All you need to change is the text on the line beginning ``var disclaimer``. Replace everything
+between ``<div class="fb-comment-disclaimer">`` and ``</div>`` with whatever new disclaimer you
+like.
 
 Moderating comments
 -------------------
@@ -83,15 +85,16 @@ If you'd like to include Facebook Comments on a non-Tarbell site, you'll need to
 more boilerplate code. Here's everything you'll need to include on any page that contains a
 comments box.
 
-In your page's `<head>`, you need to add a meta tag that tells Facebook what app to use for your
+In your page's ``<head>``, you need to add a meta tag that tells Facebook what app to use for your
 comments: ::
 
     <meta property="fb:app_id" content="INSERT_APP_ID_HERE">
 
-Tarbell projects use the app id `306836229411287` but you're free to set up and use a different one.
+Tarbell projects use the app id ``306836229411287`` but you're free to set up and use a different
+one.
 
-Create a `<div>` element somewhere on the page that you'd like the comments box to appear, and give
-it the id `fb-comments`: ::
+Create a ``<div>`` element somewhere on the page that you'd like the comments box to appear, and
+give it the id ``fb-comments``: ::
     
     <div id="fb-comments"></div>
 
@@ -134,11 +137,11 @@ Finally, at the bottom of your page code, add the following: ::
        }
     </script>
 
-In the line that begins `js.src = "//connect.facebook.net...`, replace `APP_ID_GOES_HERE` with the
-app id you're using for these comments.
+In the line that begins ``js.src = "//connect.facebook.net...``, replace ``APP_ID_GOES_HERE`` with
+the app id you're using for these comments.
 
-You can change the disclaimer text by updating the line that begins `var disclaimer = '<div...`
+You can change the disclaimer text by updating the line that begins ``var disclaimer = '<div...``
 (see `the above section <#changing-disclaimer-text>`_ for more details).
 
 Note that you can attach the comments to a differently-named element on the page by changing the
-line that contains `$("#fb-comments").append(fbml);`, but you shouldn't need to in most cases.
+line that contains ``$("#fb-comments").append(fbml);``, but you shouldn't need to in most cases.
