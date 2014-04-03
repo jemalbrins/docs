@@ -51,11 +51,19 @@ You may have noticed that one of the above lines is commented out; this is becau
 environment or production. Make sure that the correct line is uncommented, depending on which 
 environment you're working in.
 
-Things to consider
-------------------
+Using the paywall with Tarbell
+------------------------------
+
+If you're using Tarbell, much of the above work has already been done for you. All you need to do is
+include the appropriate paywall template partial (for either staging or production) inside the
+``paywall`` block, as follows: ::
+
+    {% block paywall %}
+        {% include "_paywall_prod.html" %}
+    {% endblock paywall %}
 
 Changing paywall appearance or behavior
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 You may be tempted to customize the look and feel of the paywall modal, or only trigger it in 
 certain conditions. In general, the experience of the Chicago News Apps team has been that this may 
@@ -64,7 +72,7 @@ test any changes you want to make. Further, the underlying paywall implementatio
 underneath your feet, breaking your page, without you getting advance notice.
 
 Use by different markets
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 The above code samples all assume you're using Chicago's paywall. If that's not the case, 
 everything should still work as described, but you'll have to swap out the Hive URLs from 
@@ -73,7 +81,7 @@ http://www.chicagotribune.com/hive/stylesheets/ssor.css, while the equivalent LA
 http://www.latimes.com/hive/stylesheets/ssor.css.
 
 Staging vs. production
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 Chicago has had difficulty getting the staging paywall to work properly. Make sure you're using an
 account that exists in the SSOR staging environment, which is one of the most common hurdles we've
