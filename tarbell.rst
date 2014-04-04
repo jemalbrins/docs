@@ -47,6 +47,10 @@ to each project. These are all enabled by default, but they rely on a few contex
 filled out (`as described in the Tarbell documentation
 <https://tarbell.readthedocs.org/en/latest/build.html#using-context-variables>`_).
 
+Facebook has a `debug tool <https://developers.facebook.com/tools/debug/>`_ and Google+ has a
+`structured data testing tool <http://www.google.com/webmasters/tools/richsnippets>`_, both of which
+can be used to find and help fix errors you encounter with these tags.
+
 og_description
     Text to be used as a descriptive snippet in Facebook and Pinterest sharing. Should be 200 
     characters or fewer.
