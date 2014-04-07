@@ -38,6 +38,26 @@ production bucket, but this varies widely from project to project. `Read more ab
 S3 buckets here.
 <https://tarbell.readthedocs.org/en/latest/publish.html#configuring-s3-buckets-for-a-project>`_
 
+Ads
+---
+
+For more on how to use ads in Tribune projects, `see our Tarbell example in the ads documentation 
+<ads.html#example-using-tarbell>`_ or `see our complete ads documentation <ads.html>`_.
+
+Comments
+--------
+
+For more on how to use comments in Tribune projects, `see our Tarbell example in the comments 
+documentation <comments.html#example-using-tarbell>`_ or `see our complete comments documentation 
+<comments.html>`_.
+
+Paywall
+-------
+
+For more on how to use the paywall in Tribune projects, `see our Tarbell example in the paywall 
+documentation <paywall.html#example-using-tarbell>`_ or `see our complete paywall documentation 
+<paywall.html>`_.
+
 Social media
 ------------
 

@@ -51,8 +51,8 @@ You may have noticed that one of the above lines is commented out; this is becau
 environment or production. Make sure that the correct line is uncommented, depending on which 
 environment you're working in.
 
-Using the paywall with Tarbell
-------------------------------
+Example using Tarbell
+---------------------
 
 If you're using Tarbell, much of the above work has already been done for you. All you need to do is
 include the appropriate paywall template partial (for either staging or production) inside the

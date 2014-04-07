@@ -8,7 +8,8 @@ Welcome to Trib Apps' documentation!
 
 .. toctree::
    :maxdepth: 2
-  
+ 
+   ads
    comments
    paywall
    tarbell

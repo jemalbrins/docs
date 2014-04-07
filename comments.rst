@@ -78,8 +78,8 @@ look for any questions you have about creating and administering apps. `Facebook
 <https://developers.facebook.com/apps>`_ is the clearinghouse for everything app-related, and `their
 commenting documentation is here <https://developers.facebook.com/docs/plugins/comments>`_.
 
-Appendix: full example for non-Tarbell sites
---------------------------------------------
+Full example for non-Tarbell sites
+----------------------------------
 
 If you'd like to include Facebook Comments on a non-Tarbell site, you'll need to include a bit
 more boilerplate code. Here's everything you'll need to include on any page that contains a
