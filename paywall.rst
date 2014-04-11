@@ -5,14 +5,18 @@ How to enable the paywall
 -------------------------
 
 Include the following CSS files in the ``<head>`` section of any page you'd like to show the paywall
-on: ::
+on:
+
+.. code-block:: html
 
     <!-- SSOR Start CSS -->
     <link href="http://www.chicagotribune.com/hive/stylesheets/ssor.css" media="all" rel="stylesheet" type="text/css" />
     <link href="http://www.chicagotribune.com/hive/stylesheets/registration_signin/registration.css?v=15" media="all" rel="stylesheet" type="text/css" />
     <!-- SSOR End CSS -->
 
-Include the following Javascript in any page you'd like to show the paywall on: ::
+Include the following Javascript in any page you'd like to show the paywall on:
+
+.. code-block:: html
 
     <!-- SSOR Start -->
     <script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/registration-global.js?v=15"></script>
@@ -41,7 +45,9 @@ Include the following Javascript in any page you'd like to show the paywall on: 
     <!-- Meter End -->
 
 Finally, add a file named ``modal-close.html``, reachable at the URL you used in the above section
-(``trb.meteringService.modalCloseUrl``), with the following contents: ::
+(``trb.meteringService.modalCloseUrl``), with the following contents:
+
+.. code-block:: html
 
     <script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/helper/modal-close.js"></script>
     <!-- <script src="http://www.chicagotribune.stage.tribdev.com/hive/javascripts/registration_signin/helper/modal-close.js"></script -->
@@ -56,7 +62,9 @@ Example using Tarbell
 
 If you're using Tarbell, much of the above work has already been done for you. All you need to do is
 include the appropriate paywall template partial (for either staging or production) inside the
-``paywall`` block, as follows: ::
+``paywall`` block, as follows:
+
+.. code-block:: django
 
     {% block paywall %}
         {% include "_paywall_prod.html" %}
