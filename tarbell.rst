@@ -84,8 +84,8 @@ title
     the title of the page.
 
 twitter_description
-    Default text to appear when a user clicks the Tweet button. Should be 140 characters or fewer,
-    and may be replaced or edited by the user before tweeting.
+    Default text to appear when a user clicks the Tweet button. Should be **117 characters or fewer** (to
+    accomodate the link as well as the text), and may be replaced or edited by the user before tweeting.
 
 Templates
 ---------
