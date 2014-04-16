@@ -158,7 +158,16 @@ the third cube ad, nor does the homepage always contain a leaderboard.
 Example using Tarbell
 ---------------------
 
-TK. It looks like the base template needs to be slightly rewritten to facilitate this.
+Tarbell loads the ads library out-of-the-box. You only need to provide an ad path and to put advert 
+divs on the page where you want them. In the Google spreadsheet that Tarbell created, you'll have the
+option to specify an ad path. Then, place this code where you want your ad to show, replacing ``cube``
+with your desired ad: 
+
+.. code-block:: html
+
+  <div class="advert" data-type-type="cube"></div>
+
+
 
 Full example for non-Tarbell sites
 ----------------------------------
