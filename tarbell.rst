@@ -1,6 +1,62 @@
 Tarbell
 =======
 
+Get set up with Unfuddle
+------------------------
+
+Create a new key:
+
+.. code-block:: bash
+
+    ssh-keygen -t rsa
+
+When prompted for a passphrase, hit "enter" or provide a password to use later when interacting
+with Unfuddle:
+
+.. code-block:: bash
+
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/vagrant/.ssh/id_rsa): 
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+    Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    ec:d4:c2:4f:ea:52:73:4e:51:f9:30:fe:40:ab:78:a7 vagrant@precise64
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |             .   |
+    |            *    |
+    |           + =   |
+    |       o .. + .  |
+    |        S.oo o   |
+    |       o+== . .  |
+    |       .o*.o     |
+    |      ..  E      |
+    |       ..        |
+    +-----------------+
+
+Now copy your public key:
+
+.. code-block:: bash
+
+    cat ~/.ssh/id_rsa.pub
+
+You'll see your key:
+
+.. code-block:: bash
+
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9kydyjPXQQQVSg9iVFo5s08Gi09QlvBTRpeXxUr+ZG/iCi04C4mTGGxTapFkKeysJUJnl+bEnRin+aml7+TQoiA2ySInQtkJGg9YA69eTIx09av6+HFL7SaBRRKVUdMLOH8Mv9bDGRPqB1eTfNaNdl8xKJuA3WU64lxff5hNIXOvoLVkcq2rFGQMXMtj35lUeQgjDaH1urrZ3qKulNTT7D0FlQkDKMqPEuek/KQCkjxZ82VBT2y2UR00ksmZGomAc1o01DmMD/PD8/4Thr0dF1IyAIHNDK+TnwQhKjzPinRs73h0MGbfL1ydTSTPwHz1VdyJJHZip4pRNIFxylznl vagrant@precise64
+
+Now, someone from the news applications team will need to create an `Unfuddle <http://tribune.unfuddle.com>`_
+account for you. Email the apps team, pasting the contents of your key into the email.
+
+.. note::
+
+    **Apps team / Unfuddle administrators**: Unfuddle doesn't allow administrators to add keys for users. Therefore, to create an account, first create the user with a well known password. Log in as that user and input the new user's public key. Now log back in as an administrative user and send a password reset email to the account you just created.
+
+
+
 Starting a Chicago Tribune Tarbell project
 ------------------------------------------
 
