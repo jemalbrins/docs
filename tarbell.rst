@@ -13,6 +13,9 @@ above documentation if you haven't already.
 Get set up with Unfuddle
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+You will need an Unfuddle account to create project repositories, manage your projects and collaborate 
+with other developers. 
+
 Create a new key:
 
 .. code-block:: bash
