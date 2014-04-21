@@ -1,8 +1,17 @@
 Tarbell
 =======
 
+Starting a Chicago Tribune Tarbell project
+------------------------------------------
+
+Comprehensive documentation for Tarbell, including `a getting-started tutorial
+<https://tarbell.readthedocs.org/en/latest/tutorial.html>`_, is `available here
+<https://tarbell.readthedocs.org/en/latest/index.html>`_. This section will outline what you need to
+know that's specific to the Chicago Tribune, but it's a good idea to familiarize yourself with the
+above documentation if you haven't already.
+
 Get set up with Unfuddle
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create a new key:
 
@@ -55,18 +64,10 @@ account for you. Email the apps team, pasting the contents of your key into the 
 
     **Apps team / Unfuddle administrators**: Unfuddle doesn't allow administrators to add keys for users. Therefore, to create an account, first create the user with a well known password. Log in as that user and input the new user's public key. Now log back in as an administrative user and send a password reset email to the account you just created.
 
+Install Tarbell
+^^^^^^^^^^^^^^^
 
-
-Starting a Chicago Tribune Tarbell project
-------------------------------------------
-
-Comprehensive documentation for Tarbell, including `a getting-started tutorial
-<https://tarbell.readthedocs.org/en/latest/tutorial.html>`_, is `available here
-<https://tarbell.readthedocs.org/en/latest/index.html>`_. This section will outline what you need to
-know that's specific to the Chicago Tribune, but it's a good idea to familiarize yourself with the
-above documentation if you haven't already.
-
-Begin by installing Tarbell, as outlined `here
+Install Tarbell, as outlined `here
 <https://tarbell.readthedocs.org/en/latest/install.html>`_. For most users, it's as simple as: ::
 
     pip install tarbell
