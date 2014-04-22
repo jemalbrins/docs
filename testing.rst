@@ -9,6 +9,7 @@ Browser testing
 ---------------
 
 We currently support the following browsers:
+
 - Internet Explorer 8, 9 & 10
 - Chrome
 - Safari
@@ -17,6 +18,7 @@ We currently support the following browsers:
 
 Check your site in each of these browsers to ensure that the display and functionality is the same 
 across browsers. This includes such things as:
+
 - Font size and rendering
 - Padding and margins
 - Positioning
@@ -38,6 +40,7 @@ Device testing
 --------------
 
 Your site should work on the following devices:
+
 - iPad
 - iPhone
 - Android tablet
