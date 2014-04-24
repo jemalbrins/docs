@@ -36,11 +36,15 @@ needs to be at apps.chicagotribune.com/ad-iframe.html (or even
 apps.chicagotribune.com/news/adstuff.html; as long as it starts with apps.chicagotribune.com, you're
 fine).
 
-To get started, first import the library: ::
+To get started, first import the library: 
+
+.. code-block:: html
 
     <script src="//s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.2/ads.min.js"></script>
 
-And set up the body of the page to pass the correct parameters to adops: ::
+And set up the body of the page to pass the correct parameters to adops:
+
+.. code-block:: html
 
     <body
         data-ad-path="/4011/trb.chicagotribune/news"
@@ -60,9 +64,11 @@ ad-iframe.html file.
 
 Now you just have to create at least one element to receive the ad itself, typically a ``<div>``.
 The element(s) must have the class ``advert`` and should tell the library what type of ad to place
-in that position; if none is specified, the library will insert a leaderboard: ::
+in that position; if none is specified, the library will insert a leaderboard:
 
-    <div class="advert" data-ad-type="cube"></div>
+.. code-block:: html
+
+  <div class="advert" data-ad-type="cube"></div>
 
 At this point, when you load the page, a cube ad should appear in that ``<div>``.
 
@@ -92,7 +98,9 @@ Out-of-page (OOP) ads
 Although not directly supported by our ads library, OOP ads are commonly used across Tribune
 properties, and allow us to sell more interactive ads like reskins, takeovers and peelbacks. To
 enable an OOP ad on a page, you have to set up a few `Google Publisher tags
-<https://support.google.com/dfp_premium/answer/1650154?hl=en>`_ in the document ``<head>``: ::
+<https://support.google.com/dfp_premium/answer/1650154?hl=en>`_ in the document ``<head>``: 
+
+.. code-block:: html
 
     <!-- Start: GPT Async -->
     <script type='text/javascript'>
