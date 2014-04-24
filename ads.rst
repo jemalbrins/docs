@@ -15,7 +15,7 @@ will contain an ad. Then set the contents of that element to contain the content
 passing some data to adops in the process that tells it what section to use and what size you want,
 and you're done.
 
-Although it's certainly possible to do all this yourself, the Trib Apps team has a Javascript
+Although it's certainly possible to do all this yourself, the News Applications team has a Javascript
 library that takes care of most of the messy work for you, so this documentation will primarily
 focus on how to use that library.
 
@@ -62,7 +62,7 @@ Now you just have to create at least one element to receive the ad itself, typic
 The element(s) must have the class ``advert`` and should tell the library what type of ad to place
 in that position; if none is specified, the library will insert a leaderboard: ::
 
-    <div class="advert" data-type-type="cube"></div>
+    <div class="advert" data-ad-type="cube"></div>
 
 At this point, when you load the page, a cube ad should appear in that ``<div>``.
 
@@ -165,7 +165,7 @@ with your desired ad:
 
 .. code-block:: html
 
-  <div class="advert" data-type-type="cube"></div>
+  <div class="advert" data-ad-type="cube"></div>
 
 
 
@@ -217,7 +217,7 @@ Full example for non-Tarbell sites
             data-ad-iframe-url="/ad-iframe.html"
         >
 
-            <div class="advert" data-type-type="cube"></div>
+            <div class="advert" data-ad-type="cube"></div>
 
         </body>
     </html>

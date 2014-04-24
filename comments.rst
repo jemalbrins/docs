@@ -4,10 +4,8 @@ Comments
 How Tribune commenting works
 ----------------------------
 
-The Chicago Tribune primarily uses Facebook commenting, which means that all you need to do to
-include comments on your project is add a bit of code to any page that should have comments. 
-Comments can also be moderated by an administrator of the Facebook app you choose - by default, 
-Tarbell uses its own Facebook app for commenting, but you can use a new app instead if you prefer.
+The Chicago Tribune primarily uses Facebook commenting, which means all that you need to
+include comments is a bit of code on the html page(s).
 
 Example using Tarbell
 ---------------------
@@ -18,19 +16,19 @@ ensure that there's an element (preferably a ``<div>``) on the page with the id
 
     <div id="fb-comments"></div>
 
-Tarbell will take care of the rest, assuming you're still using the base template. If you've made
+Tarbell will take care of the rest. If you've made
 changes to the base template, you'll need to preserve the ``{% block comments %}`` and 
 ``{% block comments_js %}`` sections and the ``fb:app_id`` meta tag in the
 ``{% block comments_app_id %}`` section.
 
-If you'd like to change the disclaimer text, copy ``_base/_comments.html`` to your root directory,
+If you'd like to change the disclaimer text, copy ``_base/_comments.html`` to your root directory 
 and update it as described in the next section.
 
 Changing disclaimer text
 ------------------------
 
 The disclaimer text is what appears above the Facebook comments box, briefly explaining what it is
-and what our policies are. In order to customize it, you need to find a block of code like the 
+and our policies. In order to customize it, you need to find a block of code like the 
 following: ::
 
     window.add_facebook_comments = function() {
@@ -59,11 +57,14 @@ like.
 Moderating comments
 -------------------
 
+Comments can be moderated by an administrator of the Facebook app you choose. Tarbell projects use 
+the app id ``306836229411287`` but you're free to set up and use a different one.
+
 Comment moderation using this system is handled entirely through Facebook, in particular their
 `Comment Moderation Tool <https://developers.facebook.com/tools/comments>`_. If you've already been 
-added as a moderator for the app you're using to set up these comments, then visiting that page
-will show you all recent comments and allow you to take action. Visiting the page containing the 
-comment box will also allow you to moderate them, once you've logged into Facebook.
+added as a moderator for the app, then visiting that page will show you all recent comments and 
+allow you to take action. Visiting the page containing the comment box will also allow you to 
+moderate them, once you've logged into Facebook.
 
 In order to add yourself as a moderator, you or an administrator of the app you're using should
 visit the `Comment Moderation Tool <https://developers.facebook.com/tools/comments>`_, select the
@@ -78,7 +79,7 @@ look for any questions you have about creating and administering apps. `Facebook
 <https://developers.facebook.com/apps>`_ is the clearinghouse for everything app-related, and `their
 commenting documentation is here <https://developers.facebook.com/docs/plugins/comments>`_.
 
-Full example for non-Tarbell sites
+For non-Tarbell sites
 ----------------------------------
 
 If you'd like to include Facebook Comments on a non-Tarbell site, you'll need to include a bit
@@ -90,8 +91,6 @@ comments: ::
 
     <meta property="fb:app_id" content="INSERT_APP_ID_HERE">
 
-Tarbell projects use the app id ``306836229411287`` but you're free to set up and use a different
-one.
 
 Create a ``<div>`` element somewhere on the page that you'd like the comments box to appear, and
 give it the id ``fb-comments``: ::
