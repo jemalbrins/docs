@@ -123,13 +123,9 @@ Social media
 
 The Tribune Tarbell template comes with social sharing buttons for Twitter, Facebook, Google+ and
 Pinterest, as well as metatags that enable social sharing to use descriptions and images specific
-to each project. These are all enabled by default, but they rely on a few context variables to be
-filled out (`as described in the Tarbell documentation
-<https://tarbell.readthedocs.org/en/latest/build.html#using-context-variables>`_).
-
-Facebook has a `debug tool <https://developers.facebook.com/tools/debug/>`_ and Google+ has a
-`structured data testing tool <http://www.google.com/webmasters/tools/richsnippets>`_, both of which
-can be used to find and help fix errors you encounter with these tags.
+to each project. Social media buttons will not appear in the project header if the og_description, 
+og_image and twitter_description are not filled out in the Google spreadsheet (`or default context 
+<https://tarbell.readthedocs.org/en/latest/build.html#using-context-variables>`_). 
 
 og_description
     Text to be used as a descriptive snippet in Facebook and Pinterest sharing. Should be 200 
@@ -146,6 +142,10 @@ title
 twitter_description
     Default text to appear when a user clicks the Tweet button. Should be **117 characters or fewer** (to
     accomodate the link as well as the text), and may be replaced or edited by the user before tweeting.
+
+.. note::
+    
+    Facebook has a `debug tool <https://developers.facebook.com/tools/debug/>`_ and Google+ has a `structured data testing tool <http://www.google.com/webmasters/tools/richsnippets>`_, both of which can be used to find and help fix errors you encounter with these tags.
 
 Templates
 ---------
