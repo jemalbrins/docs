@@ -12,5 +12,6 @@ Welcome to Trib Apps' documentation!
    ads
    comments
    paywall
+   seo
    tarbell
 

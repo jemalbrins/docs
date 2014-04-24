@@ -1,5 +1,5 @@
 Ads
-========
+===
 
 How Tribune ads work
 --------------------
