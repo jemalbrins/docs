@@ -1,8 +1,8 @@
-Comments
-========
+Facebook Comments
+=================
 
-How Tribune commenting works
-----------------------------
+How Tribune Facebook commenting works
+-------------------------------------
 
 The Chicago Tribune primarily uses Facebook commenting, which means all that you need to
 include comments is a bit of code on the html page(s).
