@@ -43,9 +43,11 @@ Include the following Javascript in any page you'd like to show the paywall on:
         });
     </script>
     <!-- Meter End -->
+    
+You will need to add your project in place of ``PATH_TO_MODAL_CLOSE`` as the reachable URL in the above section 
+(``trb.meteringService.modalCloseUrl``). For example, graphics.chicagotribune.com/yourproject.
 
-Finally, add a file named ``modal-close.html``, reachable at the URL you used in the above section
-(``trb.meteringService.modalCloseUrl``), with the following contents:
+Finally, add a file named ``modal-close.html`` to your project directory, with the following contents:
 
 .. code-block:: html
 
