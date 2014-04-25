@@ -72,6 +72,19 @@ include the appropriate paywall template partial (for either staging or producti
         {% include "_paywall_prod.html" %}
     {% endblock paywall %}
 
+If you'd like to use the staging environment locally but the production environment when deployed, add
+a little logic:
+
+.. code-block:: django
+
+    {% block paywall %}
+        {% if PREVIEW_SERVER %}
+            {% include "_paywall_stage.html" %}
+        {% else %}
+            {% include "_paywall_prod.html" %}
+        {% endif %}
+    {% endblock paywall %}
+
 Changing paywall appearance or behavior
 ---------------------------------------
 
