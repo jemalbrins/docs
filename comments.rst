@@ -12,7 +12,9 @@ Example using Tarbell
 
 If you're using the `Tribune Tarbell template <tarbell.html#templates>`_, all you need to do is
 ensure that there's an element (preferably a ``<div>``) on the page with the id
-``"fb-comments"``: ::
+``"fb-comments"``:
+
+.. code-block:: html
 
     <div id="fb-comments"></div>
 
@@ -28,8 +30,10 @@ Changing disclaimer text
 ------------------------
 
 The disclaimer text is what appears above the Facebook comments box, briefly explaining what it is
-and our policies. In order to customize it, you need to find a block of code like the 
-following: ::
+and our policies. In order to customize it, you need to find a block of Javascript code like the 
+following:
+
+.. code-block:: javascript
 
     window.add_facebook_comments = function() {
         var disclaimer = '<div class="fb-comment-disclaimer">The Tribune is using Facebook comments 
@@ -87,17 +91,23 @@ more boilerplate code. Here's everything you'll need to include on any page that
 comments box.
 
 In your page's ``<head>``, you need to add a meta tag that tells Facebook what app to use for your
-comments: ::
+comments:
+
+.. code-block:: html
 
     <meta property="fb:app_id" content="INSERT_APP_ID_HERE">
 
 
 Create a ``<div>`` element somewhere on the page that you'd like the comments box to appear, and
-give it the id ``fb-comments``: ::
+give it the id ``fb-comments``:
     
-    <div id="fb-comments"></div>
+.. code-block:: html
 
-Finally, at the bottom of your page code, add the following: ::
+  <div id="fb-comments"></div>
+
+Finally, at the bottom of your page code, add the following:
+
+.. code-block:: html
 
     <div id="fb-root"></div>    
 

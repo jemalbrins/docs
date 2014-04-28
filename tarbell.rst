@@ -123,8 +123,8 @@ Social media
 
 The Tribune Tarbell template comes with social sharing buttons for Twitter, Facebook, Google+ and
 Pinterest, as well as metatags that enable social sharing to use descriptions and images specific
-to each project. Social media buttons will not appear in the project header if the og_description, 
-og_image and twitter_description are not filled out in the Google spreadsheet (`or default context 
+to each project. **Social media buttons will not appear in the project header if the og_description, 
+og_image and twitter_description are not filled out in the Google spreadsheet** (`or default context 
 <https://tarbell.readthedocs.org/en/latest/build.html#using-context-variables>`_). 
 
 og_description
