@@ -47,9 +47,10 @@ avoid putting content in Javascript, unless you have a good reason to do so.
 2. Wrap headlines in H1 tags
 ----------------------------
 
-The <h1> tag is interpreted by search engines as being the most important descriptive element on a
-page, so make sure that you wrap your headline in <h1>s. You can control the size of the <h1> text
-itself with CSS, but it's important to use that specific tag.
+The <h1> tag is interpreted by search engines as being one of the most important descriptive
+elements on a page (second only to the <title> tag), so make sure that you wrap your headline in
+<h1>s. You can control the size of the <h1> text itself with CSS, but it's important to use that
+specific tag.
 
 3. Add alt text to images
 -------------------------
@@ -61,8 +62,8 @@ the following:
 
 .. code-block:: html
 
-    <img src="http://chicagotribune.com/rahm.png" alt="Mayor Rahm Emanuel pictured in a scene from
-    "Chicagoland," a CNN documentary about the city and its leaders. (CNN)">
+    <img src="http://chicagotribune.com/rahm.png" alt="Mayor Rahm Emanuel in a scene from
+    &ldquo;Chicagoland&rdquo;">
 
 4. Use title tags and meta descriptions
 ---------------------------------------
@@ -72,9 +73,15 @@ that the ``<title>`` tag will often be used as the headline for a page in a set 
 Therefore, it should both contain some of the most important keywords for the page in question, and
 be able to stand alone in a list of links as an accurate description of the page to which it refers.
 
+The title should be no longer than 70 characters, and there should be no duplicate titles across the
+site. Important keywords should appear earlier in the title than less-important keywords, if at all
+possible. For more information on the ``<title>`` tag, check out `this excellent Moz walkthrough
+<http://moz.com/learn/seo/title-tag>`_.
+
 The "description" meta tag is helpful both in generating search result snippets, and helping search
 engines understand what content and keywords on the page deserve priority. However, don't count on
-it being used to directly generate the search result snippet.
+it being used to directly generate the search result snippet. The description text should be no
+longer than 156 characters.
 
 .. code-block:: html
 
@@ -121,35 +128,16 @@ Here's an example:
     <meta property="og:description" content="Chicago Under the Gun: Tribune photographers chronicle the physical and emotional toll of Chicago&#39;s violent crimes in this special visual report" />
     <meta property="og:image" content="http://graphics.chicagotribune.com/under-the-gun/img/under-the-gun.jpg?v12" />
 
-6. Use Schema.org tags where applicable
----------------------------------------
+6. Use Schema.org tags
+----------------------
 
-`Schema.org <http://www.schema.org>`_ tags are a way to add structured data to webpages. They cover
-similar territory as meta "description" tags and Open Graph tags, but they're more versatile and
-used more prominently by Google. This is all a bit redundant, but different major traffic sources
-use slightly different systems, so sadly, some redundancy is necessary.
+`Schema.org <http://www.schema.org>`_ tags are a way to add structured data to webpages, primarily
+for use by search engines to help them understand the content they crawl as they scan the web. They
+allow search engines to look inside pages and understand more of the actual content they see,
+allowing that content to appear in more places and be used for more purposes.
 
-Schema.org tags can be used for the same purpose as the ``<title>`` and ``og:title`` tag:
-
-.. code-block:: html
-
-    <meta itemprop="name" content="Designed in Chicago, Made in China">
-
-They have an equivalent to the "description" meta tag and ``og:description`` tags:
-
-.. code-block:: html
-
-    <meta itemprop="description" content="In chapter one of a three-part series, &quot;Designed in Chicago, Made in China,&quot; Chicago Tribune architecture critic Blair Kamin and photographer John Kim examine the evolution of some of the most visible symbols of China&#39;s hyper-fast urban growth-its new skyscrapers, many of them Chicago-designed.">
-
-They also have an equivalent to the ``og:image`` tag:
-
-.. code-block:: html
-
-    <meta itemprop="image" content="http://apps.chicagotribune.com/news/chicago-architecture-in-china/img/work-shanghai-og.jpg">
-
-However, Schema.org tags have more uses than just duplicating the functionality of other tags.
-They're particularly useful in pointing out elements of a page that we want search engines to pay
-particular attention to, like videos and images:
+Schema.org tags can tell search engines that they're encountering a specific layout element, like a
+video or photo, and give that layout element attributes like a name:
 
 .. code-block:: html
 
@@ -170,8 +158,20 @@ belongs to:
     <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
         <meta itemprop="name" content="Chicago Tribune">
     </span>
-    <meta itemprop="articleSection" content="Blue Sky Innovation">
+    <article itemscope itemtype="http://schema.org/Article">
+        <meta itemprop="articleSection" content="Blue Sky Innovation">
+        <h1 itemprop="headline">This is a post about nothing</h1>
+        <div itemprop="articleBody">
+            <p>...</p>
+        </div>
+    </article>
 
+Also, note that the above example embedded Schema.org tags in an HTML5 element (the `article
+element <#use-html5-markup-tags>`_) as well as the ``<h1>`` and ``<div>`` elements. It's often more
+efficient to add Schema.org markup directly to existing page elements. That way, search engines are
+learning the semantic meaning of our pages in almost the exact same fashion that users are reading
+them; there's less to update and less work to ensure consistency.
+    
 .. note::
     
     Question for editors: should we include more detail from `Taylor's Schema.org guide
@@ -203,94 +203,30 @@ everywhere that could be considered a duplicate):
 
     <link rel="canonical" href="http://bluesky.chicagotribune.com/originals/chi-bs-canonicals-are-great,0,0.story" />
 
+8. Put important keywords in image alt tags and meta description tags too
+-------------------------------------------------------------------------
 
-Extra-credit SEO tips
----------------------
+When writing alt text for images and when writing the description meta tag for a page, keep in mind
+which keywords you think users would find most relevant, and try to use them without overusing them.
 
-The above guidelines should be considered essential, unless you have a specific reason not to follow
-them. The guidelines that follow are important but not absolutely essential.
-
-8. Put important keywords in title tags
----------------------------------------
-
-This one is tricky. Search engines look for the presence of a word in a title as a signal that a
-page is about that word; therefore, it makes sense to feature important, relevant keywords in a
-title. However, as a news organization, headlines and titles are important for many more reasons
-than just SEO, and search engines look for signs of keyword stuffing - the practice of putting a lot
-of arbitrary, nonsensical keywords together in prominent places - as a reason to demote sites that
-engage in the practice.
-
-So probably the best advice is: be aware that the word selection in a ``<title>`` tag is important,
-and if it's possible to use words that are likely to be search terms for that article, then go
-ahead. But don't do this at the expense of accuracy, readability, or anything else that might lead
-to a bad user experience.
-
-Put important keywords in image alt tags and meta description tags too, while you're at it
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For the exact same reason, when writing alt text for images and when writing the description meta
-tag for a page, keep in mind which keywords you think users would find most relevant, and try to use
-them without overusing them.
-
-| Use keywords wisely
-| Describe images with them
-| Do not overstuff
-|
-
-9. Don't use targeted keywords more than 15 times
--------------------------------------------------
-
-As mentioned in the above section on keywords in ``<title>`` tags, search engines will consider the
-presence of an unusually large number of occurences of a single word as a sign that a page is
-spammy. A good rule of thumb is: make sure that a given keyword doesn't occur more than 15 times on
-a page.
-
-Obviously plenty of words will appear constantly on most of our pages; this is more of a
-guideline than a hard-and-fast rule. But if you're writing an article about hybrid cars and fuel
-cells, and the phrases "hybrid" or "fuel cell" appear more than 15 times, consider using a few
-alternate phrases.
-
-10. Make sure the first 70 characters of page titles can stand alone
---------------------------------------------------------------------
-
-Often, search engines, social media clients, RSS readers and other places your site may appear will
-truncate titles. The length of title they allow varies, so as a result, our advice is to make sure
-that the first 70 characters of your ``<title>`` tag make sense on their own. Don't worry about
-whether a word breaks in the middle at character 70; this isn't a precise rule. Just make sure that
-the most important and individuating elements of the ``<title>`` tag are at the beginning. For
-example, the following would make for a hard-to-understand title in most search result pages:
-
-    Chicago Tribune -- Sports/high school sports -- Mundelein -- Lacrosse team wins state
-    championship
-
-It would get truncated to just:
-
-    Chicago Tribune -- Sports/high school sports -- Mundelein -- Lacrosse t
-
-Whereas the following contains the exact same text, but would make much more sense to most users,
-wherever they encounter it:
-
-    Lacrosse team wins state championship -- Chicago Tribune -- Sports/high school sports --
-    Mundelein
-
-Would become:
-
-    Lacrosse team wins state championship -- Chicago Tribune -- Sports/high
-
-11. Add links to external websites when it makes sense
+9. Add links to external websites when it makes sense
 ------------------------------------------------------
 
 Linking to other sites is a pattern that search engines, particularly Google, look for to indicate
 good Web citizenship. They reward this behavior by assigning a higher quality score to sites that
 practice it, so in this case, doing the right thing is also good for SEO.
 
-Basically, when you're referring to something found online - not just a video or an article, but an
-entity with a website - try to include a link to it. The more links, the better, within reason
-(typically no more than 1-2 links per sentence, and probably no more than 5 per paragraph, though
-those are entirely arbitrary numbers.)
+However, linking to another webpage will cause search engines to assign some value to that page as
+well. In some cases where we don't wish for that to occur - for instance, when a link appears as
+part of some boilerplate, like a login link - use the ``rel="nofollow"`` attribute, to tell search
+engines not to follow the link:
 
-12. Use HTML5 section, header and article tags
-----------------------------------------------
+.. code-block:: html
+
+    <a href="/signup.html" rel="nofollow">Sign up here</a>
+
+10. Use HTML5 markup tags
+-------------------------
 
 The `HTML5 standard <http://www.w3.org/TR/html5/>`_ offers a few new tags that make the layout of
 our sites easier for search engines to understand, which in turn will make it easier for them to
@@ -305,12 +241,18 @@ appear as an individual entry in an RSS reader, or as a Facebook post?"
 ``<header>`` should be used to wrap the headline, byline and dateline of an article or post,
 separating them from the contents of the article or post itself.
 
+``<footer>`` should be used to wrap the elements that typically appear at the bottom of the page,
+like copyright and contact info.
+
 ``<section>`` should be used to wrap the individual components of a page, the ones usually separated
 from their surroundings by whitespace. This can be an individual paragraph, a collection of related
 paragraphs, an image, a video, etc. How to use this tag in particular is very much open to
 interpretation.
 
-Here's an example that uses all three of these tags, as we suggest you use them:
+``<aside>`` should be used to wrap layout elements that aren't part of the main body of the page,
+but are tangentially related to it, like embedded videos and photos or pull quotes.
+
+Here's an example that uses all five of these tags, as we suggest you use them:
 
 .. code-block:: html
 
@@ -323,11 +265,20 @@ Here's an example that uses all three of these tags, as we suggest you use them:
             <p>Who doesn't love the best team in basketball?</p>
             <p>This is a full paragraph. Just trust me.</p>
         </section>
-        <section>
-            <img src="/bulls.png" alt="The Chicago Bulls logo">
-        </section>
+        <aside>
+            <p>"Just trust me"</p>
+        </aside>
         <section>
             <p>Just think of this as even more text.</p>
             <p>And many more paragraphs.</p>
         </section>
     </article>
+    <footer>
+        <p>Copyright 2014, Chicago Tribune</p>
+        <p>435 N. Michigan, Chicago, IL, 60611</p>
+    </footer>
+
+.. note::
+    
+    Question for editors: should we include the schema.org tags in this example as well, or would
+    that distract from the HTML5 stuff?
