@@ -1,4 +1,4 @@
-12 Surprising Tips to Get Great SEO
+10 Surprising Tips to Get Great SEO
 ===================================
 
 There's no one-size-fits-all recipe for SEO optimization, but over time we've learned some tips and
