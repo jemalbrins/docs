@@ -172,12 +172,6 @@ efficient to add Schema.org markup directly to existing page elements. That way,
 learning the semantic meaning of our pages in almost the exact same fashion that users are reading
 them; there's less to update and less work to ensure consistency.
     
-.. note::
-    
-    Question for editors: should we include more detail from `Taylor's Schema.org guide
-    <https://docs.google.com/document/d/1wkO8ctjkQAbCJYkKBuHh2X9XXZYUhaBd4ZBamSnDBPo/edit>`_? Should
-    that be a separate page/section in these docs?
-
 7. Make sure pages have canonical URLs
 --------------------------------------
 
@@ -277,8 +271,3 @@ Here's an example that uses all five of these tags, as we suggest you use them:
         <p>Copyright 2014, Chicago Tribune</p>
         <p>435 N. Michigan, Chicago, IL, 60611</p>
     </footer>
-
-.. note::
-    
-    Question for editors: should we include the schema.org tags in this example as well, or would
-    that distract from the HTML5 stuff?
