@@ -1,6 +1,28 @@
 Ads
 ===
 
+Standard ad map
+---------------
+
+The ad map is the list of which types of ads are designated for which positions on the page. This is
+the default, because this is what our ads department uses to sell inventory to advertisers. Unless
+you have a really good reason not to use this map, please use it - and if you're not using it, make
+sure the AdOps team knows about it and says its ok.
+
+Our ads code mostly abstracts this away so you don't need to worry about it, but here are the
+details of what goes where:
+
+1) Leaderboard (728x90/320x50)
+2) Cube (300x250/300x600)
+3) Reskin
+4) Cube (300x250/300x600)
+5) OOP (1x1)
+6) Sponsorship logo
+7) Cube (300x250/300x600)
+
+Note that not all of these will be present on all pages. For instance, not all pages have room for
+the third cube ad, nor does the homepage always contain a leaderboard.
+
 How Tribune ads work
 --------------------
 
@@ -144,24 +166,6 @@ However, OOP ads can often be disruptive to the normal layout of a page, so it's
 to test them before they go live, if at all possible. One way to do so is to use a separate section
 path designated for testing/staging environments, allowing OOP ads to be programmed for that section
 without appearing on any live page. This should be coordinated with adops.
-
-Ideal ad map
-------------
-
-The ad map is the list of which types of ads are designated for which positions on the page. Our ads
-code mostly abstracts this away so you don't need to worry about it, but if you're interested, or
-thinking about what types of ads to put on a new page, here's the standard ad map:
-
-1) Leaderboard (728x90/320x50)
-2) Cube (300x250/300x600)
-3) Reskin
-4) Cube (300x250/300x600)
-5) OOP (1x1)
-6) Sponsorship logo
-7) Cube (300x250/300x600)
-
-Note that not all of these will be present on all pages. For instance, not all pages have room for
-the third cube ad, nor does the homepage always contain a leaderboard.
 
 Example using Tarbell
 ---------------------
