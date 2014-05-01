@@ -6,6 +6,10 @@
 Welcome to Trib Apps' documentation!
 ====================================
 
+This is intended to be a home for all documentation related to building things online at the
+Tribune. Much of it was written by `the Chicago News Apps team
+<http://blog.apps.chicagotribune.com/>`_.
+
 .. toctree::
    :maxdepth: 2
  

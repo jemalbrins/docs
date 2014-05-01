@@ -39,6 +39,10 @@ of arbitrary tilesets and data providers, has `good documentation online
 <http://leafletjs.com/reference.html>`_, is generally very flexible and powerful, and works across
 a wide array of browsers and platforms.
 
+Before going any further, again: the `Leaflet documentation <http://leafletjs.com/reference.html>`_
+is really, really good, so you might want to open that up in a new tab and/or bookmark it. It's way
+more comprehensive than this documentation will ever be.
+
 To get started, first include the Leaflet CSS and JS files:
 
 .. code-block:: html
@@ -88,18 +92,182 @@ greatly depending on the size of your map and the geographic area you're coverin
 
     map.setView([41.838299, -87.706953], 11);
 
+Now we need to add a tileset to the map. Tilesets are basically collections of small square
+images that contain sections of a map; when you drag the map, Leaflet (or Google Maps, or any other
+web mapping system) loads new tiles that cover the region being dragged into view. When you think of
+a draggable map you've seen online, almost everything on that map came from a tile. Here's what one
+looks like:
 
-Using Chicago's tileset
------------------------
+.. image:: http://maps4.tribapps.com/chicago-print/11/524/761.png
 
-Blah.
+.. note::
+
+    What should we do about non-Chicago markets? We only have a tileset for Chicago, and I'm sure we
+    don't want to create one for the whole country (right?). I'm just pointing to OpenStreetMap
+    because it's free.
+
+In this example, we'll use a generic tileset from `OpenStreetMap <http://www.openstreetmap.org/>`_;
+the NewsApps team has a custom tileset for Chicago, about which you can learn more in the next
+section, `Using Chicago's tileset <#using-the-chicago-tileset>`_. The principles of adding tilesets
+to Leaflet are the same, no matter what tileset you're using; the only thing that really changes is
+the URL you pass Leaflet.
+
+.. code-block:: javascript
+
+    L.tileLayer(
+      'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 16,
+        minZoom: 9
+    }).addTo(map);
+
+Obviously, there's a lot going on here, so let's unpack it line by line. ``L.tileLayer()`` takes a
+URL template (more on that in a second) that tells Leaflet where to find the tileset, as well as
+some options, and returns a tile layer object; chaining ``.addTo(map)`` tells Leaflet to add the
+tile layer we just created to the ``map`` object.
+
+The URL template (``'http://{s}.tile.osm.org/{z}/{x}/{y}.png'``) should point to a
+specially-constructed directory containing the tileset. The details of creating that directory are
+outside the scope of this document, but the characters in brackets in the template string are filled
+in by Leaflet and refer to, respectively, the subdomain to use ({s}, allowing Leaflet to spread
+requests across multiple servers to reduce load and improve speed); the zoom level ({z}); and the
+geographic area to cover ({x} and {y} coordinates).
+
+The attribution string contains the text that will be placed in the bottom-right corner of the map,
+and should mainly refer to the data source(s) you're using for the map data.
+
+``maxZoom`` and ``minZoom`` refer to the maximum and minimum zoom levels allowed for this tileset.
+
+At this point, we have a basic, functional map, so now we can start doing some interesting things.
+
+Adding a marker
+---------------
+
+The `Leaflet documentation on markers <http://leafletjs.com/reference.html#marker>`_ is pretty
+great, so be sure to check it out. But here's a simple example.
+
+The only thing you really need to add a marker to a Leaflet map is the latitude and longitude you'd
+like the marker to appear at. In the above example, our map is centered on Chicago, so let's put a
+marker at the center of Chicago:
+
+.. code-block:: javascript
+
+    L.marker([41.838299, -87.706953]).addTo(map);
+
+Wait, that's it? Yeah, pretty much. This will place a nice little blue marker at the center of the
+city of Chicago, but it won't do anything else. You might want to add a little popup whenever the
+user clicks the marker, so let's get a bit fancier:
+
+.. code-block:: javascript
+
+    var marker = L.marker([41.838299, -87.706953]);
+    marker.bindPopup('<h1>This is a marker</h1>');
+    marker.addTo(map);
+
+Since ``L.marker()`` returns a marker object, we can store it in a variable (named "marker",
+conveniently enough) and get access to a variety of interaction options before adding it to the map.
+The string you pass to ``bindPopup()`` contains the contents of the popup that will appear above
+the marker, and supports HTML.
+
+Adding a custom marker icon
+---------------------------
+
+The default marker is a bit boring, however, and certainly can make a map confusing if many markers
+that all look identical are added. Fortunately, Leaflet makes it easy to add a custom marker icon:
+
+.. code-block:: javascript
+
+    var new_icon = L.icon({
+        iconUrl: 'new_icon.png',
+        iconSize: [70, 70],
+        iconAnchor: [35, 35],
+    });
+    L.marker([41.838299, -87.706953], {icon: new_icon}).addTo(map);
+
+The URL in ``iconUrl`` should be either absolute (i.e., http://www.domain.com/image.png) or relative
+to the location of your Javascript (so if the Javascript file is at
+http://www.chicagotribune.com/leaflet/map.js, and you have an icon image at
+http://www.chicagotribune.com/leaflet/icon.png, then a valid ``iconUrl`` would be 'icon.png').
+
+``iconSize`` refers to the size of the icon displayed onscreen (rather than the actual size of the
+image file); the first value is the width, and the second value is the height; both are in pixels.
+
+``iconAnchor`` controls where the "tip" of the icon is, relative to the top-left corner of the image
+itself. The first value is the left offset of the tip, and the second value is the top offset of the
+tip. The icon will be placed such that the tip is located at whatever coordinates the marker is
+given. In the above example, the marker is placed at coordinates (41.838299, -87.706953) - these are
+actually the coordinates for the tip of the marker. Since the ``iconAnchor`` specifies that the tip
+is 35 pixels from the left and 35 pixels from the top of the image, the icon will appear to go 35
+pixels above and to the left of whatever coordinates you give the marker.
+
+Using the Chicago tileset
+-------------------------
+
+The News Apps team has created a custom tileset for use in the city of Chicago and the surrounding
+suburbs. We recommend using it for all maps that cover this geography, as the muted color scheme and
+hand-selected geographic features are a better fit for news applications than the standard
+OpenStreetMap tiles.
+
+The following is an example of how to use this tileset, which has much in common with the example
+given in the walkthrough above:
+
+.. code-block:: javascript
+
+    L.tileLayer(
+      'http://{s}.tribapps.com/chicago-print/{z}/{x}/{y}.png', {
+        subdomains: ['maps1', 'maps2', 'maps3', 'maps4'],
+        attribution: 'Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 16,
+        minZoom: 9
+    }).addTo(map);
+
+Besides the different URL template, the only real difference is that we're using 4 subdomains
+instead of the default 1. The key is that all 4 of the subdomains contain the exact same data, so
+Leaflet is free to spread requests among all 4 of them without it mattering which subdomain serves
+which tile.
 
 Basic interactive map example
 -----------------------------
 
-Blah.
+The following is a complete, soup-to-nuts example of creating an interactive, responsive map based
+on all the code discussed in this documentation.
 
-Tarbell example
----------------
+.. code-block:: html
 
-Blah.
+    <html>
+      <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.ie.css" />
+        <![endif]-->
+        <script type="text/javascript" src="//cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+        <style type="text/css">
+          #map { height: 300px; }
+        </style>
+      </head>
+      <body>
+        <div id="map"></div>
+
+        <script type="text/javascript">
+          $(document).ready(function() {
+            // Initialize the map, point it at the #map element and center it on Chicago
+            var map = L.map('map').setView([41.838299, -87.706953], 11);
+            
+            // Add the OpenStreetMap tile layer
+            L.tileLayer(
+              'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+              attribution: 'Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+              maxZoom: 16,
+              minZoom: 9
+            }).addTo(map);
+
+            // Add a marker
+            var marker = L.marker([41.838299, -87.706953]);
+            marker.bindPopup('<h1>This is a marker</h1>');
+            marker.addTo(map);
+          });
+        </script>
+      </body>
+    </html>
