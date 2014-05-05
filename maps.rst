@@ -4,15 +4,13 @@ Maps
 When to make a map, and when not to
 -----------------------------------
 
-The most important question to ask when you're about to build an interactive map is, Why? Not every
-project that can be mapped is best served with one. For more perspective on why this is the case, we
+The most important question to ask when you're about to build an interactive map is, Why? Not all
+data that can be mapped is best served as one. For more perspective on when to use a map, we
 recommend `this thoughtful blog post
-<http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/>`_, but the basic point is that
-maps are overused in online journalism, and there are many instances where they don't make sense for
-a specific project, even if the project contains geographic data.
+<http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/>`_.
 
-Before you decide to build a map at all, think carefully about what you want readers to understand
-about the data you're presenting, and whether a map is the clearest expression of that intention.
+Before you decide to build a map, think carefully about what you want readers to understand
+about the data you're presenting and whether a map is the clearest expression of that intention.
 
 How to use Leaflet.js
 ---------------------
@@ -22,7 +20,7 @@ visualize your data, it's time to start building it. There are an incredible num
 but we're going to walk you through building a map using `Leaflet.js <http://leafletjs.com/>`_.
 We prefer to use Leaflet whenever possible because it's responsive by default, allows for the use
 of arbitrary tilesets and data providers, has `good documentation online
-<http://leafletjs.com/reference.html>`_, is generally very flexible and powerful, and works across
+<http://leafletjs.com/reference.html>`_, is generally very flexible and powerful and works across
 a wide array of browsers and platforms.
 
 Before going any further, again: the `Leaflet documentation <http://leafletjs.com/reference.html>`_
@@ -60,7 +58,7 @@ library; we'll mainly use it here to wait for the page to finish loading before 
         // it into separate functions before it becomes unmanageably large.
     });
 
-When we include leaflet.js on the page, it will create an object in Javascript named ``L`` that
+When we include leaflet.js on the page, it will create a JavaScript object named ``L`` that
 allows us to access all the leaflet functionality we need. We begin by creating a map object and
 tying it to the "map" ``<div>`` we created above.
 
@@ -70,9 +68,9 @@ tying it to the "map" ``<div>`` we created above.
 
 Leaflet needs to know where to center the map, and what zoom level to start out at. Let's give it
 the latitude and longitude coordinates for Chicago, and zoom it to a level that lets us see some
-detail about the city; higher numbers indicate zooming in farther and farther, showing more detail.
+detail about the city; higher numbers indicate a closer zoom, showing more detail.
 We typically don't allow zooming in beyond level 16, or zooming out beyond level 9, but that varies
-greatly depending on the size of your map and the geographic area you're covering).
+depending on the size of your map and the geographic area you're covering.
 
 .. code-block:: javascript
 
@@ -85,12 +83,6 @@ a draggable map you've seen online, almost everything on that map came from a ti
 looks like:
 
 .. image:: http://maps4.tribapps.com/chicago-print/11/524/761.png
-
-.. note::
-
-    What should we do about non-Chicago markets? We only have a tileset for Chicago, and I'm sure we
-    don't want to create one for the whole country (right?). I'm just pointing to OpenStreetMap
-    because it's free.
 
 In this example, we'll use a generic tileset from `OpenStreetMap <http://www.openstreetmap.org/>`_;
 the NewsApps team has a custom tileset for Chicago, about which you can learn more in the next
@@ -109,14 +101,14 @@ the URL you pass Leaflet.
 
 Obviously, there's a lot going on here, so let's unpack it line by line. ``L.tileLayer()`` takes a
 URL template (more on that in a second) that tells Leaflet where to find the tileset, as well as
-some options, and returns a tile layer object; chaining ``.addTo(map)`` tells Leaflet to add the
+some options, and returns a tile layer object. Chaining ``.addTo(map)`` tells Leaflet to add the
 tile layer we just created to the ``map`` object.
 
 The URL template (``'http://{s}.tile.osm.org/{z}/{x}/{y}.png'``) should point to a
 specially-constructed directory containing the tileset. The details of creating that directory are
 outside the scope of this document, but the characters in brackets in the template string are filled
-in by Leaflet and refer to, respectively, the subdomain to use ({s}, allowing Leaflet to spread
-requests across multiple servers to reduce load and improve speed); the zoom level ({z}); and the
+in by Leaflet. They refer to the subdomain to use ({s}, allowing Leaflet to spread
+requests across multiple servers to reduce load and improve speed), the zoom level ({z}) and the
 geographic area to cover ({x} and {y} coordinates).
 
 The attribution string contains the text that will be placed in the bottom-right corner of the map,
@@ -132,8 +124,8 @@ Adding a marker
 The `Leaflet documentation on markers <http://leafletjs.com/reference.html#marker>`_ is pretty
 great, so be sure to check it out. But here's a simple example.
 
-The only thing you really need to add a marker to a Leaflet map is the latitude and longitude you'd
-like the marker to appear at. In the above example, our map is centered on Chicago, so let's put a
+The only thing you really need to add a marker to a Leaflet map is the latitude and longitude where you'd
+like the marker to appear. Our map is centered on Chicago in our previous example, so let's put a
 marker at the center of Chicago:
 
 .. code-block:: javascript
@@ -179,12 +171,11 @@ http://www.chicagotribune.com/leaflet/icon.png, then a valid ``iconUrl`` would b
 image file); the first value is the width, and the second value is the height; both are in pixels.
 
 ``iconAnchor`` controls where the "tip" of the icon is, relative to the top-left corner of the image
-itself. The first value is the left offset of the tip, and the second value is the top offset of the
-tip. The icon will be placed such that the tip is located at whatever coordinates the marker is
-given. In the above example, the marker is placed at coordinates (41.838299, -87.706953) - these are
-actually the coordinates for the tip of the marker. Since the ``iconAnchor`` specifies that the tip
-is 35 pixels from the left and 35 pixels from the top of the image, the icon will appear to go 35
-pixels above and to the left of whatever coordinates you give the marker.
+itself. The two values control the markers left and top offset. The default values are [0,0], centering
+the marker on top of the lat/lng coordinate. In the above example, the marker is placed at coordinates 
+(41.838299, -87.706953) - these are actually the coordinates for the tip of the marker. Since the ``iconAnchor`` 
+specifies that the tip is 35 pixels from the left and 35 pixels from the top of the image, the icon will 
+appear to go 35 pixels above and to the left of whatever coordinates you give the marker.
 
 Using the Chicago tileset
 -------------------------
