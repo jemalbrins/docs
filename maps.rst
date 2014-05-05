@@ -5,28 +5,14 @@ When to make a map, and when not to
 -----------------------------------
 
 The most important question to ask when you're about to build an interactive map is, Why? Not every
-project that can be mapped is best served with one. For instance, if you're trying to compare the
-homicide rate across different neighborhoods in a city, simply displaying a map of the neighborhoods
-with each one shaded according to the rate may not be that effective.
+project that can be mapped is best served with one. For more perspective on why this is the case, we
+recommend `this thoughtful blog post
+<http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/>`_, but the basic point is that
+maps are overused in online journalism, and there are many instances where they don't make sense for
+a specific project, even if the project contains geographic data.
 
-Consider two ways of visualizing the same data, violent crime rate by Chicago community area:
-
-.. image:: crime_map.png
-
-.. image:: crimesite_table.png
-
-The map is the prettier choice, certainly. But does it more effectively convey data about relative
-crime rates? Beyond answering the basic question, "Where in physical space do more violent crimes
-occur?" it doesn't tell the reader much at all, and hides almost all detail. It doesn't even
-effectively address the most basic question, "What community area has the highest or lowest violent
-crime rate?" It certainly doesn't allow the reader to compare any two neighborhoods, unless they
-happen to be close enough together to allow for fuzzy comparisons about which color is slightly
-darker.
-
-The point is, maps are often the first choice when looking to visualize some data, but they're not
-always the best choice. Before you decide to build a map at all, think carefully about what you want
-readers to understand about the data you're presenting, and whether a map is the clearest expression
-of that intention.
+Before you decide to build a map at all, think carefully about what you want readers to understand
+about the data you're presenting, and whether a map is the clearest expression of that intention.
 
 How to use Leaflet.js
 ---------------------
