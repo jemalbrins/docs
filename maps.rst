@@ -158,7 +158,6 @@ that all look identical are added. Fortunately, Leaflet makes it easy to add a c
     var new_icon = L.icon({
         iconUrl: 'new_icon.png',
         iconSize: [70, 70],
-        iconAnchor: [35, 35],
     });
     L.marker([41.838299, -87.706953], {icon: new_icon}).addTo(map);
 
@@ -170,12 +169,13 @@ http://www.chicagotribune.com/leaflet/icon.png, then a valid ``iconUrl`` would b
 ``iconSize`` refers to the size of the icon displayed onscreen (rather than the actual size of the
 image file); the first value is the width, and the second value is the height; both are in pixels.
 
-``iconAnchor`` controls where the "tip" of the icon is, relative to the top-left corner of the image
-itself. The two values control the markers left and top offset. The default values are [0,0], centering
-the marker on top of the lat/lng coordinate. In the above example, the marker is placed at coordinates 
-(41.838299, -87.706953) - these are actually the coordinates for the tip of the marker. Since the ``iconAnchor`` 
-specifies that the tip is 35 pixels from the left and 35 pixels from the top of the image, the icon will 
-appear to go 35 pixels above and to the left of whatever coordinates you give the marker.
+By default, as demonstrated in the example above, giving Leaflet just an ``iconSize`` will mean that 
+the icon image is centered directly on top of the lat/lng coordinate pair you give the marker. Most
+of the time, that's probably what you want; it's certainly the simplest option. However, for some
+types of marker icons (like arrows) the part of the icon that rests atop the lat/lng coordinates
+isn't in the direct center of the icon image. In those cases, Leaflet offers an ``iconAnchor``
+property that lets you customize where the icon appears relative to the lat/lng coordinates you give
+the marker, but this can be somewhat confusing and is therefore outside the scope of this document.
 
 Using the Chicago tileset
 -------------------------
