@@ -4,10 +4,10 @@ Ads
 Standard ad map
 ---------------
 
-The ad map is the list of which types of ads are designated for which positions on the page. This is
+The ad map is the list of ads by type and designated positions on the page for each type. This is
 the default, because this is what our ads department uses to sell inventory to advertisers. Unless
 you have a really good reason not to use this map, please use it - and if you're not using it, make
-sure the AdOps team knows about it and says its ok.
+sure the AdOps team knows about it and says it's ok.
 
 Our ads code mostly abstracts this away so you don't need to worry about it, but here are the
 details of what goes where:
