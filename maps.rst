@@ -48,7 +48,7 @@ this example) and a defined height:
     <div id="map"></div>
 
 We're also going to assume you're using `jQuery <http://jquery.com/>`_, a very powerful and flexible
-library; we'll mainly use it here to wait for the page to finish loading before we build our map.
+library. We'll mainly use it here to wait for the page to finish loading before we build our map.
 
 .. code-block:: javascript
 
@@ -66,9 +66,9 @@ tying it to the "map" ``<div>`` we created above.
 
     var map = L.map('map');
 
-Leaflet needs to know where to center the map, and what zoom level to start out at. Let's give it
-the latitude and longitude coordinates for Chicago, and zoom it to a level that lets us see some
-detail about the city; higher numbers indicate a closer zoom, showing more detail.
+Leaflet needs to know where to center the map and an intial zoom level. Let's give it
+the latitude and longitude coordinates for Chicago and zoom it to a level that lets us see some
+detail about the city. Higher numbers indicate a closer zoom, showing more detail.
 We typically don't allow zooming in beyond level 16, or zooming out beyond level 9, but that varies
 depending on the size of your map and the geographic area you're covering.
 
@@ -77,7 +77,7 @@ depending on the size of your map and the geographic area you're covering.
     map.setView([41.838299, -87.706953], 11);
 
 Now we need to add a tileset to the map. Tilesets are basically collections of small square
-images that contain sections of a map; when you drag the map, Leaflet (or Google Maps, or any other
+images that contain sections of a map. When you drag the map, Leaflet (or Google Maps, or any other
 web mapping system) loads new tiles that cover the region being dragged into view. When you think of
 a draggable map you've seen online, almost everything on that map came from a tile. Here's what one
 looks like:
@@ -85,7 +85,7 @@ looks like:
 .. image:: http://maps4.tribapps.com/chicago-print/11/524/761.png
 
 In this example, we'll use a generic tileset from `OpenStreetMap <http://www.openstreetmap.org/>`_;
-the NewsApps team has a custom tileset for Chicago, about which you can learn more in the next
+the News Apps team has a custom tileset for Chicago, about which you can learn more in the next
 section, `Using Chicago's tileset <#using-the-chicago-tileset>`_. The principles of adding tilesets
 to Leaflet are the same, no matter what tileset you're using; the only thing that really changes is
 the URL you pass Leaflet.
@@ -101,7 +101,7 @@ the URL you pass Leaflet.
 
 Obviously, there's a lot going on here, so let's unpack it line by line. ``L.tileLayer()`` takes a
 URL template (more on that in a second) that tells Leaflet where to find the tileset, as well as
-some options, and returns a tile layer object. Chaining ``.addTo(map)`` tells Leaflet to add the
+some options and returns a tile layer object. Chaining ``.addTo(map)`` tells Leaflet to add the
 tile layer we just created to the ``map`` object.
 
 The URL template (``'http://{s}.tile.osm.org/{z}/{x}/{y}.png'``) should point to a
@@ -111,7 +111,7 @@ in by Leaflet. They refer to the subdomain to use ({s}, allowing Leaflet to spre
 requests across multiple servers to reduce load and improve speed), the zoom level ({z}) and the
 geographic area to cover ({x} and {y} coordinates).
 
-The attribution string contains the text that will be placed in the bottom-right corner of the map,
+The attribution string contains the text that will be placed in the bottom-right corner of the map
 and should mainly refer to the data source(s) you're using for the map data.
 
 ``maxZoom`` and ``minZoom`` refer to the maximum and minimum zoom levels allowed for this tileset.
@@ -162,7 +162,7 @@ that all look identical are added. Fortunately, Leaflet makes it easy to add a c
     L.marker([41.838299, -87.706953], {icon: new_icon}).addTo(map);
 
 The URL in ``iconUrl`` should be either absolute (i.e., http://www.domain.com/image.png) or relative
-to the location of your Javascript (so if the Javascript file is at
+to the location of your JavaScript (so if the JavaScript file is at
 http://www.chicagotribune.com/leaflet/map.js, and you have an icon image at
 http://www.chicagotribune.com/leaflet/icon.png, then a valid ``iconUrl`` would be 'icon.png').
 
@@ -175,7 +175,7 @@ of the time, that's probably what you want; it's certainly the simplest option. 
 types of marker icons (like arrows) the part of the icon that rests atop the lat/lng coordinates
 isn't in the direct center of the icon image. In those cases, Leaflet offers an ``iconAnchor``
 property that lets you customize where the icon appears relative to the lat/lng coordinates you give
-the marker, but this can be somewhat confusing and is therefore outside the scope of this document.
+the marker. This can be somewhat confusing and is therefore outside the scope of this document.
 
 Using the Chicago tileset
 -------------------------
