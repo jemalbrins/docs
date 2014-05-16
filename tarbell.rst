@@ -213,12 +213,14 @@ Adds commas at every thousandth for integers, turning `11000` to `11,000`.
 linebreaks
 ^^^^^^^^^^
 
-Converts newlines into ``<br />`` and wraps each paragraph in ``<p>``.
+Returns an array of paragraphs, each one of which is wrapped in ``<p>`` tags.
+.
 
 linebreaksbr
 ^^^^^^^^^^^^
 
-Converts newlines into ``<br />``.
+Returns an array of paragraphs, sans ``<p>`` tags. Use when you want to add a class to ``<p>`` tags
+or wrap your content with other tags.
 
 markdown
 ^^^^^^^^
