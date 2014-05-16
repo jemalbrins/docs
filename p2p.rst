@@ -11,6 +11,14 @@ To work with P2P content, you'll need to install the `p2p-python` module. In a t
 This will give you access to the `p2p` module. With this, you can import and work with content
 that has been created in P2P as long as you have the slug.
 
+Using p2p-python
+----------------
+TK -- RTM says this should be a short couple of grafs that links off to the TK github readme. Include stuff like
+how to import, how to set slugs, and working with images/storygalleries.
+
+.. note::
+
+  Find available template filters `listed here. <http://docs.tribapps.com/tarbell.html#template-filters-p2p>`_
 
 In Tarbell
 ----------
@@ -35,9 +43,13 @@ With a few filters applied to `story.body`, you can break it into individual par
       <p>{{ p|striptags|process_text }}</p>
   {% endfor %}
 
-This block of code creates a new variable that is iterable, meaning we can use a for loop to iterate over a chosen
+This block of code creates an array of paragraphs, meaning we can use a for loop to iterate over a chosen
 number of paragraphs at a time. Note that the paragraphs' numbering starts at 0, and that the for loop quits when it hits the
 paragraph mentioned after the colon. So, in the example above, only the very first paragraph of the story is printed.
+
+.. note::
+
+  For more information about the filters used here, refer to the `Tarbell template filters page <http://docs.tribapps.com/tarbell.html#template-filters>`_
 
 Here is a fuller example::
 
@@ -64,4 +76,24 @@ Here is a fuller example::
 				{{ p|process_text }}
 			{% endfor %}
 
-TODO: Explain available filters
+
+Big gallery macro
+-----------------
+
+The gallery macro in the Tribune Tarbell base blueprint takes a P2P gallery slug and turns it into a big gallery on
+the story page. All you need to do is feed the slug to the macro using Jinja template tags::
+
+  {{ macros.gallery("chi-scenes-of-chicagos-austin-neighborhood-20130927", 1.5) }}
+
+You can also populate the slug for the gallery macro with a Google spreadsheet::
+
+  {% for row in stories %}
+     <div class="article-media">
+        {% if row.gallery %}
+          {{ macros.gallery(row.gallery, 1.5) }}
+        {% else %}
+          <img src="{{ 'img/' + row.img + '.jpg' }}"/>
+          <figcaption class="text-left">{{ row.imgcaption|process_text }}</figcaption>
+        {% endif %}
+      </div>
+  {% endfor %}
