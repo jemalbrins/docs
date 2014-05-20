@@ -13,12 +13,11 @@ Our ads code mostly abstracts this away so you don't need to worry about it, but
 details of what goes where:
 
 1) Leaderboard (728x90/320x50)
-2) Cube (300x250/300x600)
-3) Reskin
+2) Cube (300x250/300x600)<D-e>
+3) Reskin / OOP (1x1)
 4) Cube (300x250/300x600)
-5) OOP (1x1)
-6) Sponsorship logo
-7) Cube (300x250/300x600)
+5) Sponsorship logo
+6) Cube (300x250/300x600)
 
 Note that not all of these will be present on all pages. For instance, not all pages have room for
 the third cube ad, nor does the homepage always contain a leaderboard.
@@ -45,10 +44,10 @@ Using the ads library
 ---------------------
 
 At the time of writing, the most current version of the ads library is located at
-`http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.2/ads.js
-<http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.2/ads.js>`_ (but you should
+`http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.4/ads.js
+<http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.4/ads.js>`_ (but you should
 probably only use `the minified version
-<http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.2/ads.js>`_ in your projects, since
+<http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.4/ads.min.js>`_ in your projects, since
 it's smaller and loads faster).
 
 This library relies on the presence of a file available at the same domain as your page, typically
@@ -97,7 +96,7 @@ At this point, when you load the page, a cube ad should appear in that ``<div>``
 Types of ads we support
 -----------------------
 
-The ad library currently (as of v2.1.2) supports three separate ad types:
+The ad library currently (as of v2.1.4) supports three separate ad types:
 
 leaderboard
     The default, 728 pixels wide and 90 pixels high. On mobile devices, this will be automatically
@@ -111,7 +110,7 @@ cube
 
 shrinky-cube
     A normal cube ad (300x250) at desktop resolutions, that automatically shrinks down to become a
-    320x250 leaderboard for mobile devices.
+    320x50 mobile banner for mobile devices.
 
 
 Out-of-page (OOP) ads
