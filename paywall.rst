@@ -147,9 +147,9 @@ Path pattern
 
 Content URL or referrer dropdown
     The distinction here is simply whether you want the rule to the URL of your content, or to the
-    URL of the page that referred your users to your content. Most of the time, you want "Content
-    URL" - the other option, "Referrer" is mainly for use in applying different paywall rules to
-    visitors coming in from social media.
+    URL of the page that referred your users to your content. Most of the time, you want "Content URL" - the 
+    other option, "Referrer" is mainly for use in applying different paywall rules to visitors coming in 
+    from social media.
 
 Once you've created or updated the rule, you can test your URLs out to make sure they match - click
 on the Test URL box near the top of the main rules list, enter in as many different variations of
@@ -160,7 +160,7 @@ Changing paywall appearance or behavior
 ---------------------------------------
 
 You may be tempted to customize the look and feel of the paywall modal, or only trigger it in 
-certain conditions. In general, the experience of the Chicago News Apps team has been that this may 
+certain conditions. In general, the experience of the Chicago News Applications team has been that this may 
 not be a good idea. Since the code isn't under your control, it can be difficult to implement and 
 test any changes you want to make. Further, the underlying paywall implementation can change 
 underneath your feet, breaking your page, without you getting advance notice.
