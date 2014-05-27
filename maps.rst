@@ -207,7 +207,8 @@ Basic interactive map example
 -----------------------------
 
 The following is a complete, soup-to-nuts example of creating an interactive, responsive map based
-on all the code discussed in this documentation.
+on all the code discussed in this documentation. You can see a `demonstration of the map <http://jsfiddle.net/eads/bRANh/>`_
+on jsFiddle.
 
 .. code-block:: html
 
