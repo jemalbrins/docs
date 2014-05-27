@@ -17,6 +17,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    comments
    maps
    paywall
+   schema
    seo
    tarbell
    testing
