@@ -127,7 +127,7 @@ other sites correctly displaying the rich snippets and examine their source for 
 Use Cases
 ---------
 
-Some samples of Schema.org in NewsApps projects.
+Some samples of Schema.org in News Applications team projects.
 
 Article
 -------
