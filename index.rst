@@ -14,6 +14,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    :maxdepth: 2
  
    ads
+   analytics
    comments
    maps
    paywall
