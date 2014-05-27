@@ -1,6 +1,8 @@
 Using Schema.org Markup & Microdata
 ===================================
 
+Shout out to Taylor Brown for putting these docs together!
+
 `Schema.org
 <http://www.schema.org/>`_ tags are a way to add structured data to webpages, primarily for use by
 search engines to help them understand content and use it for more purposes. These are necessary for
