@@ -17,7 +17,7 @@ Omniture variables
   ``Chicago Tribune / news / local / breaking``. Those projects with a URL like ``community.chicagotribune.com``
   have paths corresponding to the first part of their URL, e.g., ``Chicago Tribune / community``.
 
-There are a number of unintuitvely named variables that Omniture tracks. These are the ones we care about:
+There are a number of unintuitively named variables that Omniture tracks. These are the ones we care about:
 
 **s_account**
 
