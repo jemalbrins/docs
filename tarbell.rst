@@ -67,6 +67,7 @@ account for you. Email the apps team, pasting the contents of your key into the 
 
     **Apps team / Unfuddle administrators**: Unfuddle doesn't allow administrators to add keys for users. Therefore, to create an account, first create the user with a well known password. Log in as that user and input the new user's public key. Now log back in as an administrative user and send a password reset email to the account you just created.
 
+
 Install Tarbell
 ^^^^^^^^^^^^^^^
 
@@ -88,6 +89,18 @@ And follow the prompts, as described in more detail `here
   
 Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the same 
 as a normal Tarbell project, with only a few key differences:
+
+Ticket creation
+---------------
+
+Tarbell will ask if you would like to use Unfuddle to manage your project. You can create a repo in Unfuddle
+or create tickets in Unfuddle (or both). The tickets will be automatically generated for you based on the
+tickets we normally find helpful when dealing with projects. When you do this, Tarbell will ask you
+what your project ID is. You can find this by looking at the URL of your project in Unfuddle, which should
+be something like this::
+  https://tribune.unfuddle.com/a#/projects/6/ticket_reports/411
+
+The number after ``projects``, in this case, ``6``, is your project ID.
 
 Publishing location
 -------------------
