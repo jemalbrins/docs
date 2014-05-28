@@ -2,7 +2,7 @@ Using content from P2P
 ======================
 
 Installing p2p-python
---------------------
+---------------------
 
 To work with P2P content, you'll need to install the `p2p-python` module. In a terminal, run:
 
