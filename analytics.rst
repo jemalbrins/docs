@@ -40,8 +40,8 @@ Always ``www.chicagotribune.com``.
 
 **channel**
 
-This equates to the path of the section the project rolls up to. If you have a project that belongs under
-"news/local/breaking" the channel would be ``Chicago Tribune:news:local:breaking``, with colons replacing the slashes.
+This equates to the path of the top-level section the project rolls up to. If you have a project that belongs under
+"news/local/breaking," then the channel would be ``Chicago Tribune:news``, with colons replacing the slashes.
 
 **prop38**
 
@@ -91,7 +91,7 @@ Tarbell's Omniture block is reproduced here in its entirety::
   var title = (document.title && document.title.length > 0) ? document.title + ' - ' : '';
   s.pageName= title + "Chicago Tribune / {{ analytics_path|strip_slashes|replace('/', ' / ') }} -- News application, 3rd Party"; 
   s.server="www.chicagotribune.com"
-  s.channel="Chicago Tribune:{{ analytics_path|strip_slashes|replace('/', ':') }}";
+  s.channel="Chicago Tribune:{{ analytics_path|strip_slashes|omniture_channel }}";
   s.prop38="3rd Party";
   s.eVar21="3rd Party";
   s.hier1="Chicago Tribune:{{ analytics_path|strip_slashes|replace('/', ':') }}";
