@@ -58,7 +58,7 @@ You'll see your key:
 
 .. code-block:: bash
 
-    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9kydyjPXQQQVSg9iVFo5s08Gi09QlvBTRpeXxUr+ZG/iCi04C4mTGGxTapFkKeysJUJnl+bEnRin+aml7+TQoiA2ySInQtkJGg9YA69eTIx09av6+HFL7SaBRRKVUdMLOH8Mv9bDGRPqB1eTfNaNdl8xKJuA3WU64lxff5hNIXOvoLVkcq2rFGQMXMtj35lUeQgjDaH1urrZ3qKulNTT7D0FlQkDKMqPEuek/KQCkjxZ82VBT2y2UR00ksmZGomAc1o01DmMD/PD8/4Thr0dF1IyAIHNDK+TnwQhKjzPinRs73h0MGbfL1ydTSTPwHz1VdyJJHZip4pRNIFxylznl vagrant@precise64
+    ssh-rsa YOUR_SSH_KEY_WILL_BE_HERE
 
 Now, someone from the news applications team will need to create an `Unfuddle <http://tribune.unfuddle.com>`_
 account for you. Email the apps team, pasting the contents of your key into the email.
