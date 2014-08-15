@@ -181,7 +181,7 @@ to embed in your page, all you need to enter in the spreadsheet is the video ID 
 
 Note that if your project is not in the default ``values`` spreadsheet, you will need to use ``project_video_id.value``.
 
-Macros exist for NDN video, photo galleries, DocumenCloud views and more. Check out all of the built-in macros in ``_macros.html``.
+Macros exist for NDN video, photo galleries, DocumentCloud views and more. Check out all of the built-in macros in ``_macros.html``.
 
 Template filters
 ----------------
