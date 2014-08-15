@@ -157,7 +157,7 @@ twitter_description
     accomodate the link as well as the text), and may be replaced or edited by the user before tweeting.
 
 .. note::
-    
+
     Facebook has a `debug tool <https://developers.facebook.com/tools/debug/>`_ and Google+ has a `structured data testing tool <http://www.google.com/webmasters/tools/richsnippets>`_, both of which can be used to find and help fix errors you encounter with these tags.
 
 Templates
@@ -167,10 +167,26 @@ When running the ``tarbell newproject`` command, you almost certainly want to us
 templates. They should have been installed when you ran ``tarbell install-template
 git@tribune.unfuddle.com:tribune/tarbell-base.git`` above.
 
+Macros
+------
+
+Macros work a little differently in Tarbell than they do in the Jinja documentation. The Tribune template includes all
+its default macros in ``_macros.html``. On line one, ``_base.html`` imports the macros file and gives it access to any 
+`context variables <http://tarbell.readthedocs.org/en/0.9-beta6/build.html#using-context-variables>`_ you've defined. If your
+context variables are in a Google spreadsheet, you can access those values by name. For instance, if you have a Brightcove video
+to embed in your page, all you need to enter in the spreadsheet is the video ID number. Say you give this number a key of 
+"project_video_id" in the spreadsheet. All you need to do to embed the video is call the macro in your template like so: ::
+
+{{ macros.video(project_video_id) }}
+
+Note that if your project is not in the default ``values`` spreadsheet, you will need to use ``project_video_id.value``.
+
+Macros exist for NDN video, photo galleries, DocumenCloud views and more. Check out all of the built-in macros in ``_macros.html``.
+
 Template filters
 ----------------
 
-The base Tribune template comes with a variety of helpful template filters. The syntax for using
+The Tribune template comes with a variety of helpful template filters. The syntax for using
 them is generally as follows: ::
 
     <p>{{ some_text|foo }}</p>
