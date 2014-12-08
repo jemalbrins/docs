@@ -130,7 +130,7 @@ Host pattern
     If users can access your content with or without the "www." at the beginning, you probably need
     two rules: one where the host pattern is "exampledomain.com" and one where the host pattern is
     either "www.exampledomain.com" (if you know that other subdomains aren't an option) or the more
-    general "*.exampledomain.com" (if "sports.exampledomain.com" and "www.exampledomain.com" both
+    general "\*.exampledomain.com" (if "sports.exampledomain.com" and "www.exampledomain.com" both
     lead to your content).
 
 Path pattern
@@ -143,7 +143,7 @@ Path pattern
     projects' URLs. If all of your URLs will be in the "/news/local" section, therefore, you should
     start your path pattern with "/news/local" - that way, you're being specific. If most of them
     will end in ".html" but even one will end in ".story", then you should end your pattern with
-    ".*".
+    ".\*".
 
 Content URL or referrer dropdown
     The distinction here is simply whether you want the rule to the URL of your content, or to the

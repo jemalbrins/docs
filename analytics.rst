@@ -30,6 +30,7 @@ it is "tribglobal." Example::
 
 The page's title, plus some information about the project's path. This includes the name of the organization, the
 section which contains the project, and the project's hierarchy in the site. Example::
+
   Chicago architecture firms are redesigning China - Chicago Tribune - Chicago Tribune / news -- News application, 3rd Party.
 
   Project name - Organization name - Path -- hierarchy.

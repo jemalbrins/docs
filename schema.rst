@@ -4,7 +4,7 @@ Using Schema.org Markup & Microdata
 Shout out to Taylor Brown for putting these docs together!
 
 `Schema.org
-<http://www.schema.org/>`_ tags are a way to add structured data to webpages, primarily for use by
+<http://www.schema.org/>`__ tags are a way to add structured data to webpages, primarily for use by
 search engines to help them understand content and use it for more purposes. These are necessary for
 rich snippets in search engines, such as these: 
 
@@ -61,7 +61,7 @@ look at the markup around James Cameron in the example.
 
 As a general rule, mark up only the existing content. But sometimes you will need to mark up
 information that doesn't belong in the content. Use <meta> tags when you need to add hidden
-information. Here's an example of this used on `rogerebert.com <rogerebert.com>`_ to add meta
+information. Here's an example of this used on `rogerebert.com <rogerebert.com>`__ to add meta
 information for the star rating:
 
 .. code-block:: html
@@ -106,7 +106,7 @@ Important itemtypes
 
 * `Review <http://schema.org/Review>`_: These have rating properties that show up in search results.
   These can be a bit tricky because of the relationship between reviews and the item being reviewed.
-  Look to `rogerebert.com <http://www.rogerebert.com/>`_ for examples of how to utilize this markup.
+  Look to `rogerebert.com <http://www.rogerebert.com/>`__ for examples of how to utilize this markup.
 
 * `Event <http://schema.org/Event>`_: Will put added info in search results such as the time and
   ticket price.
@@ -121,7 +121,7 @@ Important itemtypes
 * `Recipe <http://schema.org/Recipe>`_: Displays a wealth of information in search results.
   Necessary to compete in recipe search listings.
 
-Reference `Schema.org <http://schema.org/>`_ for any other markup types. If you get stuck, Google
+Reference `Schema.org <http://schema.org/>`__ for any other markup types. If you get stuck, Google
 other sites correctly displaying the rich snippets and examine their source for clues.
 
 Use Cases

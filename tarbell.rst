@@ -72,7 +72,7 @@ Install Tarbell
 ^^^^^^^^^^^^^^^
 
 Install Tarbell, as outlined `here
-<https://tarbell.readthedocs.org/en/latest/install.html>`_. For most users, it's as simple as: ::
+<https://tarbell.readthedocs.org/en/latest/install.html>`__. For most users, it's as simple as: ::
 
     pip install tarbell
 
@@ -85,7 +85,7 @@ Finally, to create the project itself: ::
     tarbell newproject
 
 And follow the prompts, as described in more detail `here
-<https://tarbell.readthedocs.org/en/latest/tutorial.html>`_.
+<https://tarbell.readthedocs.org/en/latest/tutorial.html>`__.
   
 Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the same 
 as a normal Tarbell project, with only a few key differences:
@@ -98,6 +98,7 @@ or create tickets in Unfuddle (or both). The tickets will be automatically gener
 tickets we normally find helpful when dealing with projects. When you do this, Tarbell will ask you
 what your project ID is. You can find this by looking at the URL of your project in Unfuddle, which should
 be something like this::
+
   https://tribune.unfuddle.com/a#/projects/6/ticket_reports/411
 
 The number after ``projects``, in this case, ``6``, is your project ID.
