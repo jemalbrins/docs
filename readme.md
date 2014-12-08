@@ -35,7 +35,15 @@ http://localhost:9123 in your browser to see the local copy of the docs.
 Automatic deployment
 --------------------
 
-The docs write to S3 using the AWS Access Key of the the IAM user `cideploy`.
+These docs are automatically deployed to http://docs.tribapps.com every time
+you push to the `master` branch on GitHub.
+
+This build process is implemented using Travis CI and configured following
+[these instructions](http://docs.travis-ci.com/user/deployment/s3/).
+
+You can view the progress of builds on [this repository's Travis CI page](https://travis-ci.org/newsapps/docs/).
+
+Travis CI deploys to S3 using the AWS Access Key of the the IAM user `cideploy`.
 
 Manual deployment
 -----------------
