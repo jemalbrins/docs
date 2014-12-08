@@ -10,6 +10,6 @@ deploy:
   skip_cleanup: true
   acl: public_read
   endpoint: docs.beta.tribapps.com.s3-website-us-east-1.amazonaws.com
-  region: US Standard
+  region: us-east-1 
   secret_access_key:
     secure: fKmjZeO/3HLNhzyaTYyZIe9A3fhou2ZLL95LzYD4mn7Ja2nPL1ID4khtqQ1fVKCzt8HAdQ47u8/KUepUn848mwLFxISs5cSNYEXqx3cePcplfBBPLCs4K4QSSfT1MoLrnOHSNQJEUwcKb3e0TxdSB16++OTnfE2+H8X+mb+jDq0=
