@@ -166,6 +166,15 @@ to test them before they go live, if at all possible. One way to do so is to use
 path designated for testing/staging environments, allowing OOP ads to be programmed for that section
 without appearing on any live page. This should be coordinated with adops.
 
+Krux
+----
+
+Krux is the replacement vendor for Audience Science. The contract with Audience Science was terminated
+in February 2015. If you want to include Krux code into your project, then you should contact 
+`Ashley McGee <mailto:asmcgee@tribpub.com>`_ and provide her with the application name. She will give 
+you an ID and instructions on how to implement the code. If Ashley is not available, then you can try
+the main `AdOps email <mailto:adops@tribune.com>`_.
+
 Example using Tarbell
 ---------------------
 
