@@ -1,6 +1,11 @@
 Using content from P2P
 ======================
 
+Other documentation
+-------------------
+
+* [Content Services API Documentation](https://content-api.p2p.tribuneinteractive.com/docs/)
+
 Installing p2p-python
 ---------------------
 
