@@ -4,67 +4,42 @@ Paywall
 How to enable the paywall
 -------------------------
 
-Include the following CSS files in the ``<head>`` section of any page you'd like to show the paywall
-on:
-
-.. code-block:: html
-
-    <!-- SSOR Start CSS -->
-    <link href="http://www.chicagotribune.com/hive/stylesheets/ssor.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="http://www.chicagotribune.com/hive/stylesheets/registration_signin/registration.css?v=15" media="all" rel="stylesheet" type="text/css" />
-    <!-- SSOR End CSS -->
-
 Include the following Javascript in any page you'd like to show the paywall on:
 
 .. code-block:: html
 
-    <!-- SSOR Start -->
-    <script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/registration-global.js?v=15"></script>
-    <script>
-        registration.manager.config.initialize({
-            productCode: "chinews",
-            brandingSiteName: "chicagotribune.com",
-            registrationHostname: "https://chinews.signon.trb.com",
-            metricsCookieName: "metrics_id"
-        });
-    </script>
-    <!-- SSOR End -->
-    <!-- Meter Start -->
-    <script>
+    <!--SSOR Start-->
+    <script src="http://ssor.trbdss.com/reg/tribune/PRODUCT_CODE.min.js"></script>
+    <!--SSOR End-->
+
+    <!--Meter Start--> 
+    <script type="text/javascript">
         jQuery.ajax({
-            url: '//' +
-                (location.protocol=='https:' ? 's' : 'www') +
-                '.tribdss.com/meter/PRODUCT_CODE.js',
+            url: '//' + (location.protocol=='https:' ? 's' : 'www') +
+                '.tribdss.com/meter/PRODUCT_CODE.min.js',
             dataType: 'script',
             cache: true,
             success: function() {
-                trb.meteringService.modalCloseUrl = 'http://PATH_TO_MODAL_CLOSE_DIRECTORY/modal-close.html?';
+                trb.meteringService.modalCloseUrl = '/modalClose.html';
             }
         });
     </script>
-    <!-- Meter End -->
+    <!--Meter End-->
 
 You will need to replace ``PRODUCT_CODE`` above with the appropriate code for your property's
-paywall. For most Chicago Tribune projects, the product code is "ctcweb" and for most Los Angeles
+paywall. For most Chicago Tribune projects, the product code is "chinews-apps" and for most Los Angeles
 Times projects, the product code is "latweb". If you don't know the right code, or you're not sure
 how to find it, head down to the `Setting Up Paywall Rules in DSS section
 <#setting-up-paywall-rules-in-dss>`_ below.
 
-You will also need to add your project in place of ``PATH_TO_MODAL_CLOSE`` as the reachable URL in
-the above section (``trb.meteringService.modalCloseUrl``). For example,
-graphics.chicagotribune.com/yourproject.
-
-Finally, add a file named ``modal-close.html`` to your project directory, with the following contents:
+Finally, add a file named ``modalClose.html`` to the top directory of your domain, with the following contents:
 
 .. code-block:: html
 
-    <script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/helper/modal-close.js"></script>
-    <!-- <script src="http://www.chicagotribune.stage.tribdev.com/hive/javascripts/registration_signin/helper/modal-close.js"></script -->
-
-You may have noticed that one of the above lines is commented out; this is because the path to the 
-``modal-close.js`` file is different depending on whether you're deploying this code to a staging 
-environment or production. Make sure that the correct line is uncommented, depending on which 
-environment you're working in.
+    <script>
+    var trb = (opener || window).parent.trb;
+    (trb && trb.registration && trb.registration.modalClose || close)(window);
+    </script>
 
 Example using Tarbell
 ---------------------
@@ -76,7 +51,7 @@ include the appropriate paywall template partial (for either staging or producti
 .. code-block:: django
 
     {% block paywall %}
-        {% include "_paywall_prod.html" %}
+        {% paywall_prod %}
     {% endblock paywall %}
 
 If you'd like to use the staging environment locally but the production environment when deployed, add
@@ -86,9 +61,9 @@ a little logic:
 
     {% block paywall %}
         {% if PREVIEW_SERVER %}
-            {% include "_paywall_stage.html" %}
+            {% paywall_stage %}
         {% else %}
-            {% include "_paywall_prod.html" %}
+            {% paywall_prod %}
         {% endif %}
     {% endblock paywall %}
 
@@ -96,7 +71,7 @@ Setting up paywall rules in DSS
 -------------------------------
 
 In order to set up a paywall for a project, you need to determine the appropriate code for the
-product it belongs to (for example, "ctcweb" for most Chicago Tribune projects). To do this, visit
+product it belongs to (for example, "chinews-apps" for most Chicago Tribune projects). To do this, visit
 the `DSS site in P2P <http://dss.p2p.tribuneinteractive.com/>`_, hover over the market you're
 interested in and click Products, and then click the product that seems to most closely match the
 site you're building. The code will be the first thing listed.
@@ -165,16 +140,17 @@ not be a good idea. Since the code isn't under your control, it can be difficult
 test any changes you want to make. Further, the underlying paywall implementation can change 
 underneath your feet, breaking your page, without you getting advance notice.
 
+If you want to use the new 'Panels' registration modals, which can be seen on chicagotribune.com, then let
+Tech know and they will turn them on for your requested domain. The 'Panels' registration modals do not support
+IE8 or IE9. The prompts do not appear in IE8, and the prompts have slight design quirks in IE9, but they are otherwise
+fully functional.
+
 Use by different markets
 ------------------------
 
 The above code samples all assume you're using Chicago's paywall. If that's not the case, 
-everything should still work as described, but you'll have to swap out the Hive URLs from 
-chicagotribune.com for your own. For instance, the main Chicago SSOR CSS file lives at
-http://www.chicagotribune.com/hive/stylesheets/ssor.css, while the equivalent LA file lives at 
-http://www.latimes.com/hive/stylesheets/ssor.css. As described in the `Setting Up Paywall Rules in
-DSS section <#setting-up-paywall-rules-in-dss>`_, you'll also need to determine the appropriate
-product code and ensure that the relevant rules are in place.
+everything should still work as described, but you'll have to swap out the product code from 
+chinews-apps for your own.
 
 Staging vs. production
 ----------------------
