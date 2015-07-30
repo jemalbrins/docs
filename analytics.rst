@@ -72,61 +72,74 @@ The same as hier2.
 
 Omniture in Tarbell
 ^^^^^^^^^^^^^^^^^^^
-Tarbell's base blueprint provides an Omniture block that can pull variables from your Google spreadsheet. Specifically,
-the path can be set by giving ``analytics_path`` a value.
+Tarbell's Tribune template blueprint uses the Jinja template tags from the `python-tribune-omniture <https://github.com/newsapps/python-tribune-omniture>`_ package.  These template tags render a JavaScript snippet that initializes Omniture tracking with some of the variables mentioned above.
 
-Tarbell's Omniture block is reproduced here in its entirety::
+You'll need to define an ``OMNITURE`` key in the ``DEFAULT_CONTEXT`` variable in ``tarbell_config.py``:: 
 
-  {% block omniture %}
-  <script type="text/javascript">
-      var s_account = "{% if PREVIEW_SERVER %}tribglobaldev{% else %}tribglobal{% endif %}";
-  </script>
-  <!-- START OMNITURE // hive:metrics-tribune -->
+        DEFAULT_CONTEXT = {
+            'OMNITURE': {
+                'domain': 'nfldraft.chicagotribune.com',
+                'sitename': 'Chicago Tribune',
+                'section': 'sports',
+                'subsection': 'bears',
+                'subsubsection': '',
+                'title': 'NFL Draft',
+                'type': 'dataproject',
+            }
+        }
 
-  <!-- SiteCatalyst code version: H.1.
-  Copyright 1997-2005 Omniture, Inc. More info available at
-  http://www.omniture.com -->
-  <script type="text/javascript" src="http://www.chicagotribune.com/hive/javascripts/metrics/s_code_trb.js">
-  </script>
-  <script type="text/javascript">
-  var title = (document.title && document.title.length > 0) ? document.title + ' - ' : '';
-  s.pageName= title + "Chicago Tribune / {{ analytics_path|strip_slashes|replace('/', ' / ') }} -- News application, 3rd Party"; 
-  s.server="www.chicagotribune.com"
-  s.channel="Chicago Tribune:{{ analytics_path|strip_slashes|omniture_channel }}";
-  s.prop38="3rd Party";
-  s.eVar21="3rd Party";
-  s.hier1="Chicago Tribune:{{ analytics_path|strip_slashes|replace('/', ':') }}";
-  s.hier2="{{ analytics_path|strip_slashes|replace('/', ':') }}";
-  s.hier4="{{ analytics_path|strip_slashes|replace('/', ':') }}";
+For more information about the usage of ``python-tribune-omniture``, see https://github.com/newsapps/python-tribune-omniture.
 
-  /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-  var s_code=s.t();if(s_code)document.write(s_code)
-  -->
-  </script><script type="text/javascript">
-  <!--
-  if(navigator.appVersion.indexOf('MSIE')>=0) document.write(unescape('%3C')+'\!-'+'-')
-  //-->
-  </script><!--/DO NOT REMOVE/-->
-  <!-- End SiteCatalyst code version: H.1. -->
-  <!-- START REVENUE SCIENCE PIXELLING CODE -->
-  <script src="http://js.revsci.net/gateway/gw.js?csid=B08725" type="text/javascript"></script>
-  <script type="text/javascript">
-    DM_addEncToLoc("Site", (s.server));
-    DM_addEncToLoc("channel", (s.channel));
-    DM_addEncToLoc("keyword", (s.prop3));
-    DM_cat(s.hier1);
-    DM_tag();
-  </script><!-- END REVENUE SCIENCE PIXELLING CODE -->
-  <!-- Time: Tue May 11 15:01:30 PDT 2010-->
-  <!--x-Instance-Name: i9s27n1-->
-  {% endblock omniture %}
+If you want to override the default JavaScript snippet used to initialize Omniture tracking, override the ``omniture`` block defined in the blueprint's ``_base.html`` template::
+
+        {% block omniture %}
+        {% omnitag request, OMNITURE, None, title, 'dataproject' %}
+        {% endblock omniture %}
+
+If you want to disable Omniture tracking, or load a different script, you can override the ``omniture_scripts`` block::
+
+        {% block omniture_scripts %}
+        {% omniscript 'chicagotribune.com', True, True %}
+        {% endblock omniture_scripts %}
+
 
 Debugging
 ^^^^^^^^^
 
-There is a `debugging bookmarklet available from Adobe <http://blogs.adobe.com/digitalmarketing/analytics/meet-the-new-digitalpulse-debugger/>`_.
-Install, then load your page and click the DigitalPulse bookmark. You should see Omniture values populate the fields in the
+There is a `debugging bookmarklet available from Adobe <https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger.html>`_.
+Install, then load your page and click the Adobe Debugger bookmark. You should see Omniture values populate the fields in the
 pop-up window that opens.
+
+Viewing reports
+^^^^^^^^^^^^^^^
+
+You can access reports at https://my.omniture.com/.  
+
+You'll need an account.  To create one, email data@tribpub.com and ask them to create one for you.
+
+In the upper-left-hand corner menu, click "SiteCatalyst" and then "SiteCatalyst Reporting".
+
+Clicking on the "ChicagoTribune.com" menu item (it might be labeled something else, but there should always be the "can" icon) will show all available suites.
+
+Reporting for all NGUX is in a suite called "NGUX Chicago Tribune".
+
+Click on "View All Reports" -> "Site Content" -> "Pages"
+
+You can then search for a particular page.
+
+Clicking "Advanced" can help you exclude things from a search result.
+
+Caveats
+^^^^^^^
+
+* Reporting is likely a few minutes behind real-time.
+* Any views from inside the network don't appear in reporting.
+
+Getting help
+^^^^^^^^^^^^
+
+Reach out to data@tribpub.com.
+
 
 Google analytics
 ----------------
