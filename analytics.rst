@@ -14,50 +14,36 @@ Omniture variables
 .. note::
   A "path" in Omniture is equivalent (usually) to the subsection a project is associated with. For instance,
   ``http://www.chicagotribune.com/news/local/breaking/`` has an Omniture path of
-  ``Chicago Tribune / news / local / breaking``. Those projects with a URL like ``community.chicagotribune.com``
-  have paths corresponding to the first part of their URL, e.g., ``Chicago Tribune / community``.
+  ``chicagotribune:news:local:breaking``. Those projects with a URL like ``community.chicagotribune.com``
+  have paths corresponding to the first part of their URL, e.g., ``ct:community``.
 
-There are a number of unintuitively named variables that Omniture tracks. These are the ones we care about:
-
-**s_account**
-
-The account that pageviews roll up to in reports. For staging sites, this is "tribglobaldev" and for production,
-it is "tribglobal." Example::
-
-  var s_account = "{% if PREVIEW_SERVER %}tribglobaldev{% else %}tribglobal{% endif %}";
+There are a number of variables that Omniture tracks. These are the ones we care about:
 
 **pageName**
 
-The page's title, plus some information about the project's path. This includes the name of the organization, the
-section which contains the project, and the project's hierarchy in the site. Example::
+The page's title, plus some information about the project's path. This includes the abbreviation of the organization, the domain the project lives on, the section which contains the project, the name of the individual page, and the type of project it is. Example::
 
-  Chicago architecture firms are redesigning China - Chicago Tribune - Chicago Tribune / news -- News application, 3rd Party.
+  ct:graphics:news:features:Eastland-Disaster:dataproject
 
-  Project name - Organization name - Path -- hierarchy.
-
-**server**
-
-Always ``www.chicagotribune.com``.
+  Organization abbreviation : domain : path : page name : project type.
 
 **channel**
 
-This equates to the path of the top-level section the project rolls up to. If you have a project that belongs under
-"news/local/breaking," then the channel would be ``Chicago Tribune:news``, with colons replacing the slashes.
+The path the project rolls up to. If you have a project that belongs under
+"news/local/breaking," then the channel would be ``news:local:breaking``.
 
-**prop38**
+**server**
 
-Refers to the content type of the page. Most things living outside P2P should be classified "3rd Party".
+The domain of the project. Example::
 
-**eVar21**
-
-The same as prop38.
+  graphics.chicagotribune.com
 
 **hier1**
 
 The path with the prefix of the news organization the page belongs to. "Chicago Tribune" for Chicago, but not all
 are exactly the name of the org::
 
-  Chicago Tribune:news:local:breaking
+  chicagotribune:news:local:breaking
 
 **hier2**
 
@@ -65,10 +51,41 @@ The path without the organizational name prefixing it::
 
   news:local:breaking
 
-**hier4**
+**prop1**
 
-The same as hier2.
+The same as the pageName value. So use ``D=pageName``.
 
+**prop2**
+
+The top level section path. So if your project belongs under "news/local/breaking," then the prop2 value should be ``news``.
+
+**prop38**
+
+The type of project. Options include: ``articleproject``, ``dataproject``, ``individualarticle``, ``individualgraphic``, ``landingpage``, ``photogalleryproject``, and ``3rd party``.
+
+**prop57**
+
+The same as the prop38 value. So use ``D=c38`` as the value.
+
+**eVar20**
+
+The news organization the project belongs to, so ``chicagotribune`` for Chicago Tribune projects.
+
+**eVar21**
+
+The same as the prop38 value. So use ``D=c38`` as the value.
+
+**eVar34**
+
+The same as the channel value. So use ``D=ch`` as the value.
+
+**eVar35**
+
+The same as the pageName value. So use ``D=pageName`` as the value.
+
+**events**
+
+Leave empty.
 
 Omniture in Tarbell
 ^^^^^^^^^^^^^^^^^^^

@@ -44,14 +44,11 @@ Finally, add a file named ``modalClose.html`` to the top directory of your domai
 Example using Tarbell
 ---------------------
 
-If you're using Tarbell, much of the above work has already been done for you. All you need to do is
-include the appropriate paywall template partial (for either staging or production) inside the
-``paywall`` block, as follows:
+If you're using Tarbell, much of the above work has already been done for you. You no longer even need to include the template partial, as the production paywall template partial is included in the _base.html by default. If you do not want a registration wall, or paywall, on your project, you just need to include an empty paywall block in your templates. Something like this:
 
 .. code-block:: django
 
     {% block paywall %}
-        {% paywall_prod %}
     {% endblock paywall %}
 
 If you'd like to use the staging environment locally but the production environment when deployed, add
@@ -61,9 +58,9 @@ a little logic:
 
     {% block paywall %}
         {% if PREVIEW_SERVER %}
-            {% paywall_stage %}
+            {{ paywall_stage }}
         {% else %}
-            {% paywall_prod %}
+            {{ paywall_prod }}
         {% endif %}
     {% endblock paywall %}
 
