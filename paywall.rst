@@ -4,7 +4,7 @@ Paywall
 How to enable the paywall
 -------------------------
 
-Include the following Javascript in any page you'd like to show the paywall on:
+Include the following Javascript in any page you'd like to show the paywall on (note that jQuery is required by the SSOR JS, so it will need to be loaded before the SSOR script executes):
 
 .. code-block:: html
 
