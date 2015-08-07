@@ -89,10 +89,7 @@ a little logic:
 DSS and SSOR admin URLs
 -----------------------
 
-`DSS Staging <https://dss.p2p.tribstage.com/>`_
-`DSS Production <https://dss.p2p.tribuneinteractive.com/>`_
-`SSOR Staging <https://ssor.p2p.tribstage.com/>`_
-`SSOR Production <https://ssor.p2p.tribuneinteractive.com/>`_
+`DSS Staging <https://dss.p2p.tribstage.com/>`_ | `DSS Production <https://dss.p2p.tribuneinteractive.com/>`_ | `SSOR Staging <https://ssor.p2p.tribstage.com/>`_ | `SSOR Production <https://ssor.p2p.tribuneinteractive.com/>`_
 
 Setting up paywall rules in DSS
 -------------------------------
