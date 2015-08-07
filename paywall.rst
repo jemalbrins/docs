@@ -86,12 +86,20 @@ a little logic:
         {% endif %}
     {% endblock paywall %}
 
+DSS and SSOR admin URLs
+-----------------------
+
+`DSS Staging <https://dss.p2p.tribstage.com/>`_
+`DSS Production <https://dss.p2p.tribuneinteractive.com/>`_
+`SSOR Staging <https://ssor.p2p.tribstage.com/>`_
+`SSOR Production <https://ssor.p2p.tribuneinteractive.com/>`_
+
 Setting up paywall rules in DSS
 -------------------------------
 
 In order to set up a paywall for a project, you need to determine the appropriate code for the
 product it belongs to (for example, "chinews-apps" for most Chicago Tribune projects). To do this, visit
-the `DSS site in P2P <http://dss.p2p.tribuneinteractive.com/>`_, hover over the market you're
+the `DSS site in P2P <https://dss.p2p.tribuneinteractive.com/>`_, hover over the market you're
 interested in and click Products, and then click the product that seems to most closely match the
 site you're building. The code will be the first thing listed.
 
