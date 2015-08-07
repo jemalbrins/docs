@@ -12,11 +12,33 @@ Include the following Javascript in any page you'd like to show the paywall on (
     <script src="http://ssor.trbdss.com/reg/tribune/PRODUCT_CODE.min.js"></script>
     <!--SSOR End-->
 
-    <!--Meter Start--> 
+    <!--Meter Start-->
     <script type="text/javascript">
         jQuery.ajax({
             url: '//' + (location.protocol=='https:' ? 's' : 'www') +
                 '.tribdss.com/meter/PRODUCT_CODE.min.js',
+            dataType: 'script',
+            cache: true,
+            success: function() {
+                trb.meteringService.modalCloseUrl = '/modalClose.html';
+            }
+        });
+    </script>
+    <!--Meter End-->
+
+Use this code for staging environments:
+
+.. code-block:: html
+
+    <!--SSOR Start-->
+    <script src="http://ssor.trb.stage.tribdev.com/reg/tribune/[PRODUCT_CODE].min.js"></script>
+    <!--SSOR End-->
+
+    <!--Meter Start-->
+    <script type="text/javascript">
+        jQuery.ajax({
+            url: '//' + (location.protocol=='https:' ? 's' : 'www') +
+                '.dss.trb.stage.tribdev.com/meter/[PRODUCT_CODE].min.js',
             dataType: 'script',
             cache: true,
             success: function() {
