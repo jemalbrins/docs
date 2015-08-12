@@ -182,3 +182,14 @@ Staging vs. production
 Chicago has had difficulty getting the staging paywall to work properly. Make sure you're using an
 account that exists in the SSOR staging environment, which is one of the most common hurdles we've
 encountered.
+
+DSS Inspector Tool
+------------------
+
+Tech has created a handy DSS debugging tool that you can add to your browser bookmarks. Place the following code into the bookmark's URL field in order to setup the debugger:
+
+.. code-block:: html
+
+    javascript:void(window.open('','','toolbar=0,scrollbars=1,location=0,status=1,menubar=0,resizable=1,width=550,height=500').document.write('<html><head><script src="http://www.dss.trb.stage.tribdev.com/assets/inspector.js"></script></head><body>Not supported on HTTPS</body></html>'));
+
+The debugger will work on any page where the meter is detected, and will allow you to reset the metered pages count of the logged in user, among other things.
