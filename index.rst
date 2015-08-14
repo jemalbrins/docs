@@ -20,6 +20,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    maps
    paywall
    schema
+   slack
    seo
    tarbell
    testing
