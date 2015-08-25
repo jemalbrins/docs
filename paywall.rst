@@ -8,45 +8,17 @@ Include the following Javascript in any page you'd like to show the paywall on (
 
 .. code-block:: html
 
-    <!--SSOR Start-->
-    <script src="http://ssor.trbdss.com/reg/tribune/PRODUCT_CODE.min.js"></script>
-    <!--SSOR End-->
-
-    <!--Meter Start-->
-    <script type="text/javascript">
-        jQuery.ajax({
-            url: '//' + (location.protocol=='https:' ? 's' : 'www') +
-                '.tribdss.com/meter/PRODUCT_CODE.min.js',
-            dataType: 'script',
-            cache: true,
-            success: function() {
-                trb.meteringService.modalCloseUrl = '/modalClose.html';
-            }
-        });
-    </script>
-    <!--Meter End-->
+    <!-- SSOR and DSS scripts -->
+    <script src="http://ssor.tribdss.com/reg/tribune/[PRODUCT_CODE].min.js"></script>
+    <script src="http://www.tribdss.com/meter/[PRODUCT_CODE].min.js"></script>
 
 Use this code for staging environments:
 
 .. code-block:: html
 
-    <!--SSOR Start-->
+    <!-- SSOR and DSS scripts -->
     <script src="http://ssor.trb.stage.tribdev.com/reg/tribune/[PRODUCT_CODE].min.js"></script>
-    <!--SSOR End-->
-
-    <!--Meter Start-->
-    <script type="text/javascript">
-        jQuery.ajax({
-            url: '//' + (location.protocol=='https:' ? 's' : 'www') +
-                '.dss.trb.stage.tribdev.com/meter/[PRODUCT_CODE].min.js',
-            dataType: 'script',
-            cache: true,
-            success: function() {
-                trb.meteringService.modalCloseUrl = '/modalClose.html';
-            }
-        });
-    </script>
-    <!--Meter End-->
+    <script src="http://dss.trb.stage.tribdev.com/meter/[PRODUCT_CODE].min.js"></script>
 
 You will need to replace ``PRODUCT_CODE`` above with the appropriate code for your property's
 paywall. For most Chicago Tribune projects, the product code is "chinews-apps" and for most Los Angeles
