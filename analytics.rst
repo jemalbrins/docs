@@ -17,11 +17,15 @@ Omniture variables
   ``chicagotribune:news:local:breaking``. Those projects with a URL like ``community.chicagotribune.com``
   have paths corresponding to the first part of their URL, e.g., ``ct:community``.
 
+  A "project type" is simply a descriptor for the kind of website you're tagging. There are seven predetermined
+  project type options you can choose: articleproject, dataproject, individualarticle, individualgraphic, landingpage,
+  photogalleryproject, 3rdparty.
+
 There are a number of variables that Omniture tracks. These are the ones we care about:
 
 **pageName**
 
-The page's title, plus some information about the project's path. This includes the abbreviation of the organization, the domain the project lives on, the section which contains the project, the name of the individual page, and the type of project it is. Example::
+The page's title, plus some information about the project's path. This includes the abbreviation of the organization, the domain the project lives on, the section that contains the project, the name of the individual page, and the type of project it is. Example::
 
   ct:graphics:news:features:Eastland-Disaster:dataproject
 
