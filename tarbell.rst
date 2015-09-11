@@ -305,3 +305,9 @@ get_p2p_content
 ^^^^^^^^^^^^^^^
 
 DEPRECATED: Use context function get_p2p_content_item instead.
+
+
+Cookbook
+--------
+
+For examples of code snippets that can be used to do useful things in Tarbell, check out the `tarbell-cookbook <https://github.com/newsapps/tarbell-cookbook>`_ repository.
