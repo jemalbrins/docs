@@ -1,5 +1,5 @@
-Using content from P2P
-======================
+Consuming and publishing to P2P
+===============================
 
 Other documentation
 -------------------
@@ -102,3 +102,47 @@ You can also populate the slug for the gallery macro with a Google spreadsheet::
         {% endif %}
       </div>
   {% endfor %}
+
+
+Keeping things tidy in P2P
+--------------------------
+
+Sometimes, whether publishing with Tarbell or a manually-edited htmlstory, you'll post stories directly to P2P.  Here are some guidelines:
+
+Amazon S3 Photo bucket
+~~~~~~~~~~~~~~~~~~~~~~
+
+If you are uploading more than one image you MUST put them in a folder. This folder should be reasonably similar to the p2p slug and must include the date. I don’t know if we can manage any more generically named “getting-around” folders. Things are getting pretty chaotic in the photo bucket, and the goal here is to bring some level of organization.
+
+SEO/Other P2P fields
+~~~~~~~~~~~~~~~~~~~~
+
+.. image:: p2p-seo.png 
+
+Kicker
+   This is a new option for us. We should select “Data” for everything we do, to brand our team’s content. (1) 
+
+Headline
+    This should be front loaded with keywords and otherwise be SEO friendly. Questions often do well here, provided our content answers the question. 77-character maximum, but ideal is 49. (2)
+
+Byline
+   Previously, we had been attributing everything to Trib Graphics, but this is changing. We should be putting our own names in a comma-separated list. As a sidetone, the titleline no longer does anything, so no need to keep putting our Twitter handle there. (3)
+
+Story Summary
+   This should favor keywords and concise writing over poetry. It's a recent addition and should be larger than the Meta Description but shorter than the main chatter. This is used throughout the site as a synopsis visible to readers but is not part of our SEO system. (4)
+
+Slug
+   This is the first layer of SEO. Should mimic the headline to some extent, but keywords here are important. (5)
+
+SEO Title
+   Should be at least very very similar to the headline. 77-character maximum, but ideal is 49. (6)
+
+SEO Meta Description
+   Should be a straight synopsis using lots of keywords and no flowery writing. This shows up in search results on Google, etc. 156-character limit. (7)
+
+SEO keywords
+   Comma-Separated list of no more than 10 words or phrases. Should be what people would actually search for. (8)
+
+Thumbnail
+    Engaging and eye-catching. Screenshots of tables of segments of a chart usually will not cut it. Find real photos or craft a collage/illustration that represents the subject matter well, but we don’t need to bend over backwards to find an image that says, for instance, "bulls graphic.” We just need to say “bulls." (not pictured)
+
