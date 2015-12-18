@@ -24,9 +24,10 @@ Previewing
 To build and preview any changes before deployment, run:
 
 ```
+workon docs
 make html
-cd _build/html
-python -m SimpleHTTPServer 9123
+cd _build/html; python -m SimpleHTTPServer 9123
+
 ```
 
 Replace 9123 with an unusued port, if you already have something running there. Then visit
