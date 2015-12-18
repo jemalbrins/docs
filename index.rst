@@ -26,3 +26,4 @@ Tribune. Much of it was written by `the Chicago News Apps team
    testing
    ngux
    p2p
+   tribune_stuff
