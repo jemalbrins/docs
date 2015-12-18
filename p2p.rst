@@ -18,7 +18,7 @@ that has been created in P2P as long as you have the slug.
 
 Using p2p-python
 ----------------
-TK -- RTM says this should be a short couple of grafs that links off to the TK github readme. Include stuff like
+TK -- This should be a short couple of grafs that links off to the TK github readme. Include stuff like
 how to import, how to set slugs, and working with images/storygalleries.
 
 .. note::
