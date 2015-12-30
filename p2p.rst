@@ -146,3 +146,61 @@ SEO keywords
 Thumbnail
     Engaging and eye-catching. Screenshots of tables of segments of a chart usually will not cut it. Find real photos or craft a collage/illustration that represents the subject matter well, but we don’t need to bend over backwards to find an image that says, for instance, "bulls graphic.” We just need to say “bulls." (not pictured)
 
+Sending P2P stories to the copy desk
+------------------------------------
+
+After you've done initial editing on the story and filled out the metadata fields in P2P, the story is ready to be sent to the copy desk.  To do this:
+
+* Email should be to ct-digital-editors <Ct-digital-editors@chicagotribune.com>
+* Email should cc the team, zzctc-trib-dataviz <zzctc-trib-dataviz@tribpub.com>
+* Subject should include a very short description of graphic story and declare it ready for editing, e.g. "Advanced Placement test scores graphic ready for editing"  
+* Body should include:
+    * P2P slug (if P2P story)
+    * Slug of related story and any contact information for the reporter(s) for that story
+    * The run date for this item or related story (if it's known)  
+    * Beta link on S3 (if off-platform Tarbell project)
+    * Method for editing.  In the case of a Tarbell project, this should include the Google Spreadsheet URL.  Make sure to set sharing permissions so anyone with the link can edit it. Be explicit about where to find content in different worksheets and anything that should not be edited.  Also make use of comments in the Tarbell spreadsheet to guide people as they're editing.   
+    * (At least one) contact  
+
+Depending on the deadline pressure, look for a response from the copy desk.  Someone should reply with an "I'll get this".  There's no official time frame for this reply, but if you don't get one, send a polite reply-all to your original email to make sure that the story is accounted for.  Failing that, talk to Jonathon Berlin (Dataviz editor), Ryan Marx (Dataviz assistant editor) or Stu Werner (copy desk chief).    
+
+This is a rough outline of the process.  When in doubt, be explicit and include any and all information someone might need to edit the graphic/story.
+
+Example email
+~~~~~~~~~~~~~
+
+This is an example email to the copy desk announcing that a story is ready for editing. 
+
+        From: Geoff Hing <ghing@tribpub.com>
+
+        Subject: Advanced Placement test scores graphic ready for editing
+
+        Cc: zzctc-trib-dataviz <zzctc-trib-dataviz@tribpub.com>
+
+        To: Ct-digital-editors <Ct-digital-editors@chicagotribune.com>
+
+        P2P slug: ct-ap-results-schools-charts
+
+        This is related to the story ct-ap-results-schools.  It doesn't
+        look like that story is in P2P yet, but it is in NewsGate.  The reporter
+        for that story is Diane Rado <drado@tribune.com>.
+
+        The target run date appears to be fluid.
+
+        This is a Tarbell project published to P2P.  You should not edit the
+        content in P2P, but instead edit it in the Google Spreadsheet at
+        https://docs.google.com/spreadsheets/d/{spreadsheet_key_obfuscated}/edit
+
+        The headline and introductory text, chart labels and other labels are
+        all set in the `values` worksheet
+
+        The chatter for the charts that you see when you first visit the story,
+        as well as the section headings are edited in the `intro_charts`
+        worksheet.
+
+        You should ignore the `interesting_schools` worksheet.
+
+        This is for our internal use and doesn't affect anything that
+        gets published.
+
+        If you have any questions or comments contact me at ghing@tribpub.com.
