@@ -27,3 +27,22 @@ Tribune. Much of it was written by `the Chicago News Apps team
    ngux
    p2p
    tribune_stuff
+
+Editing these documents
+-----------------------
+
+These documents are written in a markup language called `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ (rst) and build with a documentation generator called `Sphinx <http://sphinx-doc.org/>`_.  reStructuredText is a bit more complicated to use than Markdown, but is better suited for documentation because it has conventions for linking between documentation sections.  Check out the "User Documentation" section at http://docutils.sourceforge.net/ for help.  In most cases, you should be able to pick up the syntax from the existing files. 
+
+With your text editor
+~~~~~~~~~~~~~~~~~~~~~
+
+Clone the repository at https://github.com/newsapps/docs and follow the instructions in the README.
+
+On GitHub
+~~~~~~~~~
+
+Sign into GitHub, navigate to https://github.com/newsapps/docs and select a file.  Click the edit icon, make your edits and sepcify a commit message.
+
+Your changes will be automatically republished.
+
+For more information on editing files in GitHub, see `this documentation <https://help.github.com/articles/editing-files-in-your-repository/>`_. 
