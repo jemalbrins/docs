@@ -1,8 +1,42 @@
 Assorted Tribune Stuff
 ======================
 
-Accessing the Graphics file server
-----------------------------------
+Accounts
+--------
+
+These are accounts for which you might need access for your work.
+
+Amazon Web Services
+~~~~~~~~~~~~~~~~~~~
+
+Our news applications, some databases, static sites and assets are hosted on `Amazon Web Services <http://aws.amazon.com/>`_.
+
+You can sign in to the web console for our team at https://newsapps.signin.aws.amazon.com/console.
+
+Getting access
+^^^^^^^^^^^^^^
+
+Our team has complete control over this account, so you just need someone with administrator access to create an Identity and Access Management (IAM) user for you and to enable console login.  You'll also need to create a set of access keys to use the API to publish with Tarbell or to upload files to S3 using many popular file transfer clients.
+
+GitHub
+~~~~~~
+
+We host our public code repositories on GitHub.  You can access our "organization" page at https://github.com/newsapps/.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Edit these docs!
+* Push fixes or updates to our public software projects
+
+Getting access
+^^^^^^^^^^^^^^
+
+We have full control over this account.  First create a GitHub account for yourself (if you haven't already).  Then get someone with admin privileges to add you to our organization.  This account uses completely separate credentials from any of our other accounts.
+
+
+Graphics file server
+~~~~~~~~~~~~~~~~~~~~
 
 To mount the graphics network drive on a Mac:
 
@@ -15,3 +49,76 @@ To mount the graphics network drive on a Mac:
     * Select "graphics" from the list of volumes if it hasn't already been selected
     * Click the "OK" button  
     * "ctc-graphics.tribune.ad.trib" should now appear in the "Shared" section in the left-hand-side pane of your Finder window 
+
+Getting access
+^^^^^^^^^^^^^^
+
+TODO: Update with instructions for how to request access.
+
+Media server
+~~~~~~~~~~~~
+
+Media server provides a way to search for staff, wire and file photos.  It is also the place to file graphics for print.  You can access the media server at http://mediaserver.usa.tribune.com/.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* File print graphics
+* Find thumbnail images for P2P  
+
+Getting access
+^^^^^^^^^^^^^^
+
+The media server uses your Tribune AD credentials for authentication.
+
+TODO: Update with instructions for how to request access.
+
+Newsgate
+~~~~~~~~
+
+Newsgate is the content management system for print publication. Many stories originate here before they hit P2P.  Some never hit P2P at all.
+
+You use remote desktop software to access the application at https://newsgate.tribpub.com.  You'll probably need to install brower plugin and the service works with Firefox and Safari but may not work with Chrome.
+
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To read text of a story to develop a graphic.
+
+Getting access
+^^^^^^^^^^^^^^
+
+This service uses your Tribune AD credentials.
+
+TODO: Write how to request access to Newsgate.
+
+P2P
+~~~
+
+P2P is the content management system for the Tribune's website.
+
+You can access P2P at https://p2p.tribuneinteractive.com.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Edit metadata for web stories
+* Edit web stories
+* Publish on-platform Tarbell projects  
+
+Getting access
+^^^^^^^^^^^^^^
+
+TODO: Write how to get access to P2P.p
+
+
+Unfuddle
+~~~~~~~~
+
+Unfuddle is where we host our project tickets and code repositories.  You can access it at https://tribune.unfuddle.com/.
+
+Getting access
+^^^^^^^^^^^^^^
+
+We have complete control over this account, so you just need someone with administrator access to create an account for you.  This will use a separate set of login credentials from your Tribune AD credentials. 
