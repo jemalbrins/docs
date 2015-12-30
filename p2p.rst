@@ -4,7 +4,7 @@ Consuming and publishing to P2P
 Other documentation
 -------------------
 
-* [Content Services API Documentation](https://content-api.p2p.tribuneinteractive.com/docs/)
+* `Content Services API Documentation <https://content-api.p2p.tribuneinteractive.com/docs/>`_
 
 Installing p2p-python
 ---------------------
