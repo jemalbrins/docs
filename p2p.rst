@@ -204,3 +204,9 @@ This is an example email to the copy desk announcing that a story is ready for e
         gets published.
 
         If you have any questions or comments contact me at ghing@tribpub.com.
+
+
+Promoting your story on social media
+------------------------------------
+
+TODO: Write this
