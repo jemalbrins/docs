@@ -18,6 +18,22 @@ Getting access
 
 Our team has complete control over this account, so you just need someone with administrator access to create an Identity and Access Management (IAM) user for you and to enable console login.  You'll also need to create a set of access keys to use the API to publish with Tarbell or to upload files to S3 using many popular file transfer clients.
 
+Dropbox
+-------
+
+The newsapps team had a shared Dropbox folder that was a great way to share and sync passwords on a Mac and also provide SSH keys.  This is still a good, useful practice for the DataViz team.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Access shared passwords using the Mac Keychain
+* Access shared SSH keys and configuration
+
+Getting access
+~~~~~~~~~~~~~~
+
+You'll need a personal Dropbox account.  Then, ask someone on the team with admin access to share the folder with you.
+
 GitHub
 ~~~~~~
 
@@ -33,6 +49,22 @@ Getting access
 ^^^^^^^^^^^^^^
 
 We have full control over this account.  First create a GitHub account for yourself (if you haven't already).  Then get someone with admin privileges to add you to our organization.  This account uses completely separate credentials from any of our other accounts.
+
+Google Drive
+~~~~~~~~~~~~
+
+The News Apps team had a shared Google Drive folder called Trib Docs which is now used by the Dataviz team.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Automatic access to shared Tarbell spreadsheets.
+* Edit and view planning documents.  
+
+Getting access
+^^^^^^^^^^^^^^
+
+You'll need a Google account (if you use Gmail you already have one). Ask a team member with admin access to share the folder with you.  You'll access with your personal Google account credentials.
 
 
 Graphics file server
@@ -92,6 +124,23 @@ Getting access
 This service uses your Tribune AD credentials.
 
 TODO: Write how to request access to Newsgate.
+
+.. _accounts--omniture:
+
+Omniture
+~~~~~~~~
+
+This is an analytics service provided by Adobe.  The Tribune uses it as the main analytics tool for http://chicagotribune.com.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To view story performance for yourself.
+
+Getting access
+^^^^^^^^^^^^^^
+
+Email data@tribpub.com and ask them to create an account for you.
 
 P2P
 ~~~

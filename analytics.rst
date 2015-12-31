@@ -136,7 +136,7 @@ Viewing reports
 
 You can access reports at https://my.omniture.com/.  
 
-You'll need an account.  To create one, email data@tribpub.com and ask them to create one for you.
+You'll need an account (See :ref:`accounts--omniture`).
 
 In the upper-left-hand corner menu, click "SiteCatalyst" and then "SiteCatalyst Reporting".
 
