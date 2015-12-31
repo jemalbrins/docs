@@ -138,6 +138,8 @@ You can access reports at https://my.omniture.com/.
 
 You'll need an account (See :ref:`accounts--omniture`).
 
+For the company name, enter "Tribune Interactive".
+
 In the upper-left-hand corner menu, click "SiteCatalyst" and then "SiteCatalyst Reporting".
 
 Clicking on the "ChicagoTribune.com" menu item (it might be labeled something else, but there should always be the "can" icon) will show all available suites.
