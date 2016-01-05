@@ -87,6 +87,7 @@ Getting access
 
 TODO: Update with instructions for how to request access.
 
+
 Media server
 ~~~~~~~~~~~~
 
@@ -102,6 +103,18 @@ Getting access
 ^^^^^^^^^^^^^^
 
 The media server uses your Tribune AD credentials for authentication.
+
+TODO: Update with instructions for how to request access.
+
+Shared network drives
+~~~~~~~~~~~~~~~~~~~~~
+
+There are various shared drives on the Tribune Network
+
+* smb://ctc-edit-mac01/Mac_Folders - for sharing files between Macs and PCs
+
+Getting access
+^^^^^^^^^^^^^^
 
 TODO: Update with instructions for how to request access.
 
