@@ -153,6 +153,7 @@ After you've done initial editing on the story and filled out the metadata field
 
 * Email should be to ct-digital-editors <Ct-digital-editors@chicagotribune.com>
 * Email should cc the team, zzctc-trib-dataviz <zzctc-trib-dataviz@tribpub.com>
+    * If this story accompanies another story, the email should cc the reporter and the editor for the related story.  
 * Subject should include a very short description of graphic story and declare it ready for editing, e.g. "Advanced Placement test scores graphic ready for editing"  
 * Body should include:
     * P2P slug (if P2P story)
