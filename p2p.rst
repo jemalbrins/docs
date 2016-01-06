@@ -146,6 +146,8 @@ SEO keywords
 Thumbnail
     Engaging and eye-catching. Screenshots of tables of segments of a chart usually will not cut it. Find real photos or craft a collage/illustration that represents the subject matter well, but we don’t need to bend over backwards to find an image that says, for instance, "bulls graphic.” We just need to say “bulls." (not pictured)
 
+
+
 Sending P2P stories to the copy desk
 ------------------------------------
 
@@ -205,6 +207,33 @@ This is an example email to the copy desk announcing that a story is ready for e
         gets published.
 
         If you have any questions or comments contact me at ghing@tribpub.com.
+
+
+What to do when you are "done"
+------------------------------
+
+Send an email to:
+
+* Web team (zzctc-ctweb@tribpub.com)
+* Social media team (SocialMediaAlerts@tribpub.com)
+* Dataviz team (zzctc-trib-dataviz@tribpub.com)
+* Scott Kleinberg (skleinberg@chicagotribune.com).
+
+The subject should include a descriptive subject and a clear declaration that it is *LIVE* and *READY* 
+
+The email should include:
+
+* Slug from p2p, if applicable
+* Direct url 
+* Completed p2p story link slug (if applicable, such as with off-platform projects)
+* Redirect URL in p2p, if applicable
+* Brief description of the content, and the topics/stories to which it could relate.
+* Whether it is live or not.
+* Any embargo, and if the graphic is otherwise ready to be live. **It is our responsiblity to communicate embargoes, and embargoed content should never go live before the embargo lifts.**
+
+Make sure @ChiTribGraphics tweets and Facebooks it. Remember that FB is much more important as far as driving traffic to our site, the metrics show.
+
+Follow up with the web team (in person or by email) to push for the best placement we can get. Same goes for social media team.
 
 
 Promoting your story on social media
