@@ -85,7 +85,7 @@ To mount the graphics network drive on a Mac:
 Getting access
 ^^^^^^^^^^^^^^
 
-TODO: Update with instructions for how to request access.
+If you don't already have access with your network ID, access can be requested by manager through http://useraccess.tribune.com/ and then IT fulfills the request
 
 
 Media server
@@ -104,7 +104,7 @@ Getting access
 
 The media server uses your Tribune AD credentials for authentication.
 
-TODO: Update with instructions for how to request access.
+Manager must request access through http://useraccess.tribune.com/ and then IT fulfills the request
 
 Shared network drives
 ~~~~~~~~~~~~~~~~~~~~~
@@ -116,7 +116,7 @@ There are various shared drives on the Tribune Network
 Getting access
 ^^^^^^^^^^^^^^
 
-TODO: Update with instructions for how to request access.
+Manager must request access through http://useraccess.tribune.com/ and then IT fulfills the request
 
 Newsgate
 ~~~~~~~~
@@ -136,7 +136,7 @@ Getting access
 
 This service uses your Tribune AD credentials.
 
-TODO: Write how to request access to Newsgate.
+Manager must request access through http://useraccess.tribune.com/ and then IT fulfills the request
 
 .. _accounts--omniture:
 
@@ -172,7 +172,7 @@ Why you might need access
 Getting access
 ^^^^^^^^^^^^^^
 
-TODO: Write how to get access to P2P.p
+For access, contact Destiny Gdalman at dgdalman@chicagotribune.com
 
 
 Unfuddle
