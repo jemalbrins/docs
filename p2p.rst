@@ -211,3 +211,30 @@ Promoting your story on social media
 ------------------------------------
 
 TODO: Write this
+
+After the story has published
+-----------------------------
+
+Tarbell projects
+~~~~~~~~~~~~~~~~
+
+Turn off editing permissions for anyone with the sharing link for the Tarbell Google Spreadsheet.
+
+Download the Tarbell Google Spreadsheet as an .xlsx file, commit and push it to the repo for safekeeping.
+
+Delete any files you accidently published with Tarbell (because you forgot to add them to the `EXCLUDES` setting) from S3.
+
+Double-check the README file in your project and make sure it documents all your process and what someone else would need to do to build the project.  Update it if it's missing anything.
+
+Update the metadata about the project in your `package.json` file.  The purpose of this is to have structured data about the project that we could one day automatically parse in order to build an archive/database of our projects.  The `package.json documentation <https://docs.npmjs.com/files/package.json>`_ describes all the available fields. Fields that you'll definitely want to fill out are: `repository`, `author`, `description` and `keywords`.  Custom stuff for us goes in the `tribune` field.  The values in here are still experimental, but you could try something like this::
+
+        "tribune": {
+          "url": "http://www.chicagotribune.com/ct-chicago-school-neighborhood-enrollment-charts-20160106-htmlstory.html",
+          "p2p_slug": "ct-chicago-school-neighborhood-enrollment-charts-20160106",
+          "related_url": "http://www.chicagotribune.com/news/ct-chicago-schools-choice-neighborhood-enrollment-met-20160108-story.html",
+          "related_p2p_slug": "ct-chicago-schools-choice-neighborhood-enrollment-met-20160108",
+          "related_cci_slug": "CT-CHICAGO-SCHOOL-NEIGHBORHOOD-ENROLLMENT-MET",
+          "data_url": "smb://ctc-graphics.tribune.ad.trb/graphics/data/ct-chicago-school-neighborhood-enrollment-met"
+        }
+
+The `package.json for some school choice charts <https://tribune.unfuddle.com/a#/projects/60/repositories/448/file?path=%2Fpackage.json&commit=4084e211b9faec42c9245aa98e44a3783a2ac45a>`_ provides a full example.        
