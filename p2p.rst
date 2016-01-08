@@ -235,15 +235,6 @@ Make sure @ChiTribGraphics tweets and Facebooks it. Remember that FB is much mor
 
 Follow up with the web team (in person or by email) to push for the best placement we can get. Same goes for social media team.
 
-
-Promoting your story on social media
-------------------------------------
-
-TODO: Write this
-
-After the story has published
------------------------------
-
 Tarbell projects
 ~~~~~~~~~~~~~~~~
 
@@ -267,3 +258,8 @@ Update the metadata about the project in your `package.json` file.  The purpose 
         }
 
 The `package.json for some school choice charts <https://tribune.unfuddle.com/a#/projects/60/repositories/448/file?path=%2Fpackage.json&commit=4084e211b9faec42c9245aa98e44a3783a2ac45a>`_ provides a full example.        
+
+Promoting your story on social media
+------------------------------------
+
+TODO: Write this
