@@ -18,14 +18,15 @@ Tribune. Much of it was written by `the Chicago News Apps team
    caching
    comments
    maps
+   ngux
    paywall
+   p2p
    schema
    slack
    seo
+   system_setup
    tarbell
    testing
-   ngux
-   p2p
    tribune_stuff
 
 Editing these documents
