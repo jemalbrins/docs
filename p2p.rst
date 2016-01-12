@@ -117,7 +117,7 @@ If you are uploading more than one image you MUST put them in a folder. This fol
 SEO/Other P2P fields
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: p2p-seo.png 
+.. image:: img/p2p-seo.png 
 
 Kicker
    This is a new option for us. We should select “Data” for everything we do, to brand our team’s content. (1) 
