@@ -188,6 +188,14 @@ Set Sublime Text as your default editor for commit messages. If you want to use 
 
     git config --global core.editor "subl -n -w"
 
+Tell git to use the OSX keychain to store passwords.
+
+.. code:: bash
+
+    git config --global credential.helper osxkeychain
+    
+
+
 
 Clone the secrets repository 
 ----------------------------
@@ -197,7 +205,9 @@ It's a bad practice to keep usernames and passwords for various services in your
 .. code:: bash
 
     cd ~/code
-    git clone git@tribune.unfuddle.com:tribune/secrets.git
+    git clone https://tribune.unfuddle.com/git/tribune_secrets/ secrets
+    
+If you have not already saved your unfuddle username and password git will ask you for them. Once you enter them you shouldn't have to do this again unless you change your username and password.
 
 
 Make sure your path is set to use the Homebrew-installed version of Python
