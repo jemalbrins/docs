@@ -35,15 +35,7 @@ You can install it from the `App Store <https://itunes.apple.com/us/app/xcode/id
 
 Do this step first, because it can take a long time to install.  While you're waiting, you can move on to a few of the following steps.
 
-Install a better text editor
-----------------------------
 
-Lots of people in this group use `Sublime Text <https://www.sublimetext.com/>`_.  `Atom <https://atom.io/>`_ is another good one.
-
-Configure the Sublime Text command line
----------------------------------------
-
-Follow `these instructions <https://www.sublimetext.com/docs/2/osx_command_line.html>`_.
 
 Get a better terminal program
 -----------------------------
@@ -56,6 +48,23 @@ Create a directory for your non-Tarbell coding projects
 .. code:: bash
 
     mkdir ~/code
+    
+Create a directory for your user scripts
+----------------------------------------
+
+.. code:: bash
+
+    mkdir ~/bin    
+    
+Install a better text editor
+----------------------------
+
+Lots of people in this group use `Sublime Text <https://www.sublimetext.com/>`_.  `Atom <https://atom.io/>`_ is another good one.
+
+Configure the Sublime Text command line
+---------------------------------------
+
+Follow `these instructions <https://www.sublimetext.com/docs/2/osx_command_line.html>`_.
 
 
 Create an SSH keypair
@@ -88,13 +97,6 @@ Then copy your newly-created public key to the clipboard:
 Click "New Public Key", give your key a name like "Tribune MacBook" and paste the key that you copied to the clipboard into the "Value" text area.
 
 Click the "Add Key" button to save the key.
-
-Create a directory for your user scripts
-----------------------------------------
-
-.. code:: bash
-
-    mkdir ~/bin
 
 Create a .bashrc file
 --------------------
