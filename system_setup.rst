@@ -248,6 +248,8 @@ Install grunt and gulp globally
 Configure Tarbell
 -----------------
 
+You should be able to follow the `Tarbell installation docs <http://tarbell.readthedocs.org/en/latest/install.html>`_ to configure Tarbell, but make sure to read the instructions below before you start.
+
 Before you start, you'll need a few accounts for services we use:
 
 * Google
@@ -291,7 +293,7 @@ Install the tester Tarbell project:
 
 Open http://127.0.0.1:5000 in your browser.  You should see a welcome page.
 
-Now lets make sure you can install front-end build tools:
+Now lets make sure you can install front-end build tools. Run these commands from within ~/tarbell/tester:
 
 .. code:: bash
 
