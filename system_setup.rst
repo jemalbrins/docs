@@ -26,6 +26,15 @@ TODO: define these terms
 * terminal  
 * home directory  
 
+Get accounts in order
+---------------------
+
+Before you start, you'll need a few accounts for services we use:
+
+* Google
+* Amazon AWS, in particular access keys
+* Unfuddle, in particular you need permissions that allow you to create repositories
+
 Install Xcode
 -------------
 
@@ -249,13 +258,6 @@ Configure Tarbell
 -----------------
 
 You should be able to follow the `Tarbell installation docs <http://tarbell.readthedocs.org/en/latest/install.html>`_ to configure Tarbell, but make sure to read the instructions below before you start.
-
-Before you start, you'll need a few accounts for services we use:
-
-* Google
-* Amazon AWS, in particular access keys
-
-Once you have the credentials for these accounts in hand, run: 
 
 As part of the configuration process, you'll be asked to create an Oauth client Id for Google's APIs.  Setting up the client ID can be tricky.  Ask someone for help if you get stuck.
 
