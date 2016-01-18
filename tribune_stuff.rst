@@ -50,6 +50,21 @@ Getting access
 
 We have full control over this account.  First create a GitHub account for yourself (if you haven't already).  Then get someone with admin privileges to add you to our organization.  This account uses completely separate credentials from any of our other accounts.
 
+Google analytics
+~~~~~~~~~~~~~~~~
+
+We use Google analytics to provide more granular tracking of off-platform projects.
+
+Why you might need access
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Set up analytics for a Tarbell project that you're publishing off-platform (i.e. on apps.chicagotribune.com or graphics.chicagotribune.com).
+
+Getting access
+^^^^^^^^^^^^^^
+
+You'll need a google account.  Ask a team member with admin access to give you access to the analytics.  You'll access with your personal Google account credentials.
+
 Google Drive
 ~~~~~~~~~~~~
 
