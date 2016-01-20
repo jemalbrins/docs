@@ -124,6 +124,14 @@ Add these lines to your `~/.basrhrc`:
    export PATH=$HOME/bin:$PATH
    export EDITOR='subl -w'
 
+Then reload your `~/.bashrc` so the environment variables we just set are loaded into the current shell's environment.
+We only need to do this right now.  Future steps will make this happen automatically:
+
+.. code:: bash
+
+    # '.' is shorthand for the bash command 'source'
+    . ~/.bashrc
+
 Make sure your .bashrc is loaded by login shells
 ------------------------------------------------
 
