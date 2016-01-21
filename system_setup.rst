@@ -89,7 +89,7 @@ If this outputs a message saying you need to create a new SSH key, generate an S
 
 .. code:: bash
 
-    ssh keygen
+    ssh-keygen -t rsa
 
 
 Add the key to Unfuddle
