@@ -226,6 +226,13 @@ It's a bad practice to keep usernames and passwords for various services in your
     
 If you have not already saved your unfuddle username and password git will ask you for them. Once you enter them you shouldn't have to do this again unless you change your username and password.
 
+Then, add these lines to your `~/.bashrc` so that you can publish to P2P with ease:
+
+.. code:: bash
+
+   . /path/to/secrets/production_secrets.sh
+
+Obviously, change `path/to` to the directory path of your secrets directory. Then reload your `~/.bashrc` again so the environment variables we just set are loaded into the current shell's environment when we test later.
 
 Make sure your path is set to use the Homebrew-installed version of Python
 --------------------------------------------------------------------------
