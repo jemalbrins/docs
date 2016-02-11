@@ -163,6 +163,10 @@ Getting help
 
 Reach out to data@tribpub.com.
 
+Related Documentation
+^^^^^^^^^^^^^^^^^^^^^
+
+`Instructions <https://docs.google.com/document/d/1F8jqqS9hvTeS-8rxXTvrIqSIjoq3k60GUif92cnmxys/edit#heading=h.qof9wwfa7q7u>`_ for implementing Omniture tags using the NGUX third party navigation service, for use on non-Tarbell and non-Django News Apps.
 
 Google analytics
 ----------------
