@@ -19,7 +19,7 @@ Getting access
 Our team has complete control over this account, so you just need someone with administrator access to create an Identity and Access Management (IAM) user for you and to enable console login.  You'll also need to create a set of access keys to use the API to publish with Tarbell or to upload files to S3 using many popular file transfer clients.
 
 Dropbox
--------
+~~~~~~~
 
 The newsapps team had a shared Dropbox folder that was a great way to share and sync passwords on a Mac and also provide SSH keys.  This is still a good, useful practice for the DataViz team.
 
