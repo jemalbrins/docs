@@ -12,10 +12,12 @@ Tribune. Much of it was written by `the Chicago News Apps team
 
 .. toctree::
    :maxdepth: 2
- 
+
+   accounts
    ads
    analytics
    caching
+   contacts
    comments
    maps
    ngux
@@ -27,7 +29,6 @@ Tribune. Much of it was written by `the Chicago News Apps team
    system_setup
    tarbell
    testing
-   tribune_stuff
 
 Editing these documents
 -----------------------

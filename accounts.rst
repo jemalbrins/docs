@@ -1,6 +1,3 @@
-Assorted Tribune Stuff
-======================
-
 Accounts
 --------
 
