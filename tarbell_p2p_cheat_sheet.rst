@@ -1,4 +1,3 @@
-============
 Command line/Tarbell/P2P cheat sheet
 ============
 *UPDATED: February 2016*
