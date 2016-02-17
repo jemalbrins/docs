@@ -1,12 +1,12 @@
-Command line/Tarbell/P2P cheat sheet
-============
+Tarbell/P2P/Command line cheat sheet
+====================================
 *UPDATED: February 2016*
 
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
 
 Starting new project (with P2P template)
-----------------------
+----------------------------------------
    1. ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
    #. Choose the **Tribune template (p2p).**
    #. Tarbell will ask about installing **requirements**. Unless you're told otherwise by a project collaborator, you don't need to install requirements when asked. 
@@ -29,7 +29,7 @@ Starting new project (with P2P template)
 
 
 Tarbell
-----------------------
+-------
 `Tarbell documentation <https://tarbell.readthedocs.org/en/latest/>`_
    
    - Starting a new project:
@@ -70,6 +70,11 @@ Tarbell
          </script>
       {% endblock scripts %}
 
+
+    .. note::
+
+         When linking to things like images and stylesheets, your url should look like this: ``http://{{ ROOT_URL }}/path/to/image/or/other/asset.jpg``. The ``ROOT_URL`` variable makes sure that your page can reference the assets regardless of whether you are running it locally or on P2P.
+
    - Where do your hand-written scripts go? Litte scripts, such as a dataTables or clicker initilization can go in the **scripts** block::
 
       {% block scripts %}
@@ -77,18 +82,18 @@ Tarbell
             // Code here
          </script>
       {% endblock %}
-   - **Reminder:** When linking to things like images and stylesheets, your url should look like this: ``http://{{ ROOT_URL }}/path/to/image/or/other/asset.jpg``. The ``ROOT_URL`` variable makes sure that your page can reference the assets regardless of whether you are running it locally or on P2P.
-   - Helpful commands for the command line
+   - Helpful Tarbell commands for the command line
       - ``tarbell`` On it's own, this command brings up a more detailed list of possible commands
       - ``tarbell install <git@repo_url>`` Downloads and installs tarbell projects locally
       - ``tarbell spreadsheet`` Automatically opens an associated spreadsheet in a new browser tab.
       - ``tarbell publish`` or ``tarbell publish staging`` Whether publishing to P2P or off platform, this makes your project viewable in the tower at `apps.beta.tribapps.com <https://apps.beta.tribapps.com>`_
-      - ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably `graphics.chicagotribune.com <http://graphics.chicagotribune.com >`_
+      - ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably `graphics.chicagotribune.com <http://graphics.chicagotribune.com>`_
 
 Jinja
 -----
 Jinja is the templating language you will use in Tarbell projects. It's very handy. The `Jinja documentation <http://jinja.pocoo.org/docs/dev/>`_ is very straightforward and accessible. You'll almost certainly need a `for loop <http://jinja.pocoo.org/docs/dev/templates/#list-of-control-structures>`_ and maybe a couple `if statements <http://jinja.pocoo.org/docs/dev/templates/#if>`_ 
 Also, remember what this syntax means:
+   
    - To ouput the value of a variable, use double curly braces::
       
       {{ This is the value of a variable }}
@@ -103,7 +108,7 @@ Also, remember what this syntax means:
 
 
 Sass
-----------------------
+----
 
 Sass is an expansion/improvement on old-school styles `Sass documentation <http://sass-lang.com/>`_ Among it's useful features:
 
@@ -142,7 +147,7 @@ Git
 
 
 JS/CSS tools
------------------------
+------------
 *Many of these will be temporary as we flesh out our tarbell blueprint and related tools. In the near future, you will download some of these components using node/npm and include them in your project as needed.*
 
 - base css (can be accessed via sass)
