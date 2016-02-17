@@ -17,20 +17,16 @@ Starting new project (with P2P template)
    #. You don't need to create tickets. You should already have created one before starting this process. In fact, the repo address from the previous step should be added to your ticket. Get the address `here <https://tribune.unfuddle.com/a#/repositories>`_.
    #. ``npm install:`` Should be done right away after staring a new project. This let's you use grunt/gulp
 
-Node/NPM
-----------------------
-   - ``grunt`` (or ``gulp``): Makes sass into css. It also does lots of other things.
-   - ``grunt watch`` (or ``gulp watch``): Run this in it's own tab and it will automatically run grunt (or gulp) when it detects changes to a file. 
+.. note::
+  
+  **Working on a Tarbell project**
 
-Git 
-----------------------
-`Git documentation <https://git-scm.com/doc>`_
+  You'll want to have three tabs open in your terminal. For each of them, change into the project directory (``cd``)
 
-   - ``git status:`` See what uncommitted changes exist in a directory
-   - ``git add`` Tell git to watch a file or files for changes
-   - ``git commit`` Tell git that the changes you made should be kept.
-   - ``git pull`` Brings changes from elsewhere onto your machine. **Never push before you pull.**
-   - ``git push`` Overwrites content elsewhere with your changes. **Never push before you pull.**
+  - **Tab 1:** Run ``tarbell serve`` and leave the tab open. Now you can view your project at `localhost:5000 <https://localhost:5000>`_
+  - **Tab 2:** Run ``grunt watch`` and leave the tab open. Now any time you make a change to your sass, new css is generated. This is true for javascript bundling and any other tasks you've got running with grunt.
+  - **Tab 3:** This is the tab you use to make git commits or any other typing.
+
 
 Tarbell
 ----------------------
@@ -81,7 +77,7 @@ Tarbell
             // Code here
          </script>
       {% endblock %}
-   - **Reminder:** When linking to things like images and stylesheets, your url should look like this: ``http://{{ ROOT_URL/path/to/image/or/other/asset }}``. The ``ROOT_URL`` variable makes sure that your page can reference the assets regardless of whether you are running it locally or on P2P.
+   - **Reminder:** When linking to things like images and stylesheets, your url should look like this: ``http://{{ ROOT_URL }}/path/to/image/or/other/asset.jpg``. The ``ROOT_URL`` variable makes sure that your page can reference the assets regardless of whether you are running it locally or on P2P.
    - Helpful commands for the command line
       - ``tarbell`` On it's own, this command brings up a more detailed list of possible commands
       - ``tarbell install <git@repo_url>`` Downloads and installs tarbell projects locally
@@ -90,7 +86,7 @@ Tarbell
       - ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably `graphics.chicagotribune.com <http://graphics.chicagotribune.com >`_
 
 Jinja
----
+-----
 Jinja is the templating language you will use in Tarbell projects. It's very handy. The `Jinja documentation <http://jinja.pocoo.org/docs/dev/>`_ is very straightforward and accessible. You'll almost certainly need a `for loop <http://jinja.pocoo.org/docs/dev/templates/#list-of-control-structures>`_ and maybe a couple `if statements <http://jinja.pocoo.org/docs/dev/templates/#if>`_ 
 Also, remember what this syntax means:
    - To ouput the value of a variable, use double curly braces::
@@ -108,6 +104,7 @@ Also, remember what this syntax means:
 
 Sass
 ----------------------
+
 Sass is an expansion/improvement on old-school styles `Sass documentation <http://sass-lang.com/>`_ Among it's useful features:
 
    - ``$variables`` Must begin with a **$.**
@@ -116,12 +113,32 @@ Sass is an expansion/improvement on old-school styles `Sass documentation <http:
 
 Bash/Command line hints
 -----------------------
+
 Here is a good tutorial on command line stuff. Some basics you'll probably want:
+
    - ``ls <path/to/directory>`` Lists all the files in a given directory
-   - ``pwd`` Outputs your **p**resent **w**orking **d**irectory
-   - ``cd <path/to/target/directory>`` **c**hanges **d**irectory to the given path 
+   - ``pwd`` Outputs your present working directory
+   - ``cd <path/to/target/directory>`` changes directory to the given path 
    - ``subl <path/to/target/directory>`` If configured properly, will open the contents of the given file/directory in sublime
    - ``~`` is the shorthand version of the logged-in user's root directory.
+
+Node/NPM
+--------
+
+   - ``grunt`` (or ``gulp``): Makes sass into css. It also does lots of other things.
+   - ``grunt watch`` (or ``gulp watch``): Run this in it's own tab and it will automatically run grunt (or gulp) when it detects changes to a file. 
+
+Git 
+---
+
+`Git documentation <https://git-scm.com/doc>`_
+
+   - ``git status`` See what uncommitted changes exist in a directory
+   - ``git add`` Tell git to watch a file or files for changes
+   - ``git commit`` Tell git that the changes you made should be kept.
+   - ``git pull`` Brings changes from elsewhere onto your machine. **Never push before you pull.**
+   - ``git push`` Overwrites content elsewhere with your changes. **Never push before you pull.**
+
 
 
 JS/CSS tools
