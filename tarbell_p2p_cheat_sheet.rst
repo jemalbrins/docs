@@ -33,8 +33,8 @@ Git
 `Git documentation <https://git-scm.com/doc>`_
 
    - ``git status:`` See what uncommitted changes exist in a directory
-   - ``git add:`` Tell git to watch a file or files for changes
-   - ``git commit:`` Tell git that the changes you made should be kept.
+   - ``git add`` Tell git to watch a file or files for changes
+   - ``git commit`` Tell git that the changes you made should be kept.
    - ``git pull`` Brings changes from elsewhere onto your machine. **Never push before you pull.**
    - ``git push`` Overwrites content elsewhere with your changes. **Never push before you pull.**
 
