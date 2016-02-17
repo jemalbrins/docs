@@ -28,6 +28,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    seo
    system_setup
    tarbell
+   tarbell_p2p_cheat_sheet
    testing
 
 Editing these documents

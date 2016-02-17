@@ -5,11 +5,6 @@ Command line/Tarbell/P2P cheat sheet
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
 
-PREVIEWING THIS DOCUMENT LOCALLY
----
-```make html```
-```cd _build/html; python -m SimpleHTTPServer 9123```
-
 Starting new project (with P2P template)
 ----------------------
    1. ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
@@ -131,7 +126,7 @@ Here is a good tutorial on command line stuff. Some basics you'll probably want:
 
 JS/CSS tools
 -----------------------
-*Many of these will be temporary as we flesh out our tarbell blueprint and related tools. In the near future, you will download some of these components using node/npm and include them in you project as needed.*
+*Many of these will be temporary as we flesh out our tarbell blueprint and related tools. In the near future, you will download some of these components using node/npm and include them in your project as needed.*
 
 - base css (can be accessed via sass)
    https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/tribuneBase/tribune-graphics-base-1.3.css
