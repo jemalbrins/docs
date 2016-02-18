@@ -167,7 +167,7 @@ JS/CSS tools
          type:"buttons",    /* Options are "none", "buttons" or "dropdown" */
          transitionSpeed: 0, /* 0=instant, 1000 = 1 second */
          showForwardBackButtons:false, /* duh! */
-         alignNav:"left" /* Also can be "left" */
+         alignNav:"left", /* Also can be "left" */
          matchPanelHeightsToggle:false, /* This will make all panels the same height */
          showFirst:"" // The ID of the panel which should be visible on init
       });
