@@ -5,6 +5,26 @@ Tarbell/P2P/Command line cheat sheet
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
 
+.. note::
+  
+  **About code and command line samples**
+
+  At times, these docs will provide sample commands and code snippets in a block of text styled ``like this``. In general, you can use them directly. On occasion, you will need to add some relevant information, such as a Git url. In these instances, the example will include a portion bracketed with carats ``<like this>``. These should be replaced with whatever information is needed. An example::
+    
+    tarbell install <git@repo_url>
+
+  How you should type it:: 
+
+    tarbell install  git@tribune.unfuddle.com:tribune/python-tribune-viztools.git
+
+  In other instances, a command or code snippet might include a URL path. In these instances, the examples will include ``path/to/asset`` which should be replaced with the actual url. An example::
+
+    cd path/to/project
+
+  How you should type it::
+
+    cd ~/code/my_project
+
 Starting new project (with P2P template)
 ----------------------------------------
    1. ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
