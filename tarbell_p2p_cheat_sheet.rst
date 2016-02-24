@@ -15,7 +15,7 @@ Starting new project (with P2P template)
    #. Tarbell will ask about using **Unfuddle**. You should. The default project of **60** is the graphics projects and should be used in nearly all cases.
    #. Yes, create a **repo.**
    #. You don't need to create tickets. You should already have created one before starting this process. In fact, the repo address from the previous step should be added to your ticket. Get the address `here <https://tribune.unfuddle.com/a#/repositories>`_.
-   #. ``npm install:`` Should be done right away after staring a new project. This let's you use grunt/gulp
+   #. ``npm install`` Should be done right away after staring a new project. This let's you use grunt/gulp
 
 .. note::
   
