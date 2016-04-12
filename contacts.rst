@@ -1,6 +1,7 @@
 Contacts
 ========
 
+* Archives: Justine Tobiasz, Researcher.  This is for the physical archives, not archives.chicagotribune.com.
 * DSS/Commenting: Drew Clayton
 * Mobile Apps: Joe Mirretti 
 * Digital Edition: Joe Mirretti
