@@ -6,6 +6,7 @@ Contacts
 * Mobile Apps: Joe Mirretti 
 * Digital Edition: Joe Mirretti
 * Newsletters: Joe Mirretti
+* Reprints: Elaine Varvatos, Manager, Editorial Admin.  We often get these requests to the archives email.  
 * Search: Andrew Baltazar
 * Ad Maps/Ad Products (Taboola, YieldMo, Polar, etc.): Steve Mak
 * Photos: Steve Mak
