@@ -217,7 +217,6 @@ Send an email to:
 * Web team (zzctc-ctweb@tribpub.com)
 * Social media team (SocialMediaAlerts@tribpub.com)
 * Dataviz team (zzctc-trib-dataviz@tribpub.com)
-* Scott Kleinberg (skleinberg@chicagotribune.com).
 
 The subject should include a descriptive subject and a clear declaration that it is *LIVE* and *READY* 
 
