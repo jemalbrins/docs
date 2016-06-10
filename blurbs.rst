@@ -15,9 +15,10 @@ Edit project-spreasheet
 -----------------------
 
 Do you know how many blurbs you'll make? Have you come up with their slugs? Are you exactly where you should be in life? Luckily, you only need to know the answer to the first two questions.
+
 	1. Make a new tab in the spreadsheet, call it "blurbs" because you're real creative.
 	2. Make 4 new columns, called p2p_slug, title, keywords, template. No quotes, no caps. Keep it simple.
-	3. Each row/entry in this tab will correspond to a blurb. Populate all the columns you created, lest you're wasteful and your code complains. 
+	3. Each row/entry in this tab will correspond to a blurb. Populate all the columns you created, lest you're wasteful and your code complains.
 		* Note: as a convention, the name in template should start with a _ (i.e. ``_introblurbtemplate.html``)
 
 Edit tarbell_config.py
@@ -33,6 +34,8 @@ Your current tarbell_config probably only has declarations of SPREADSHEET_KEY, E
 Are you ready to copy and paste code? The best part! It's always good to kind of know what's going on though, so read the TL;DR above if you haven't.
 
 Right after we declare the file's encoding and "Tarbell project configuration", import
+
+.. code-block:: python
 	import p2p 
 	from tarbell.utils import puts
 	from clint.textui import colored
@@ -42,6 +45,7 @@ Right after we declare the file's encoding and "Tarbell project configuration", 
 
 Immediately after, we'll set the custom routes
 
+.. code-block:: python
 	blueprint = Blueprint('suburb-speed-tickets', __name__)
 	# custom routes
 
@@ -56,6 +60,7 @@ Immediately after, we'll set the custom routes
 
 Then we'll insert a bunch of code:
 
+.. code-block:: python
 	def is_production_bucket(bucket_url, buckets):
 	    for name, url in buckets.items():
 	        if url == bucket_url and name == 'production':
@@ -79,6 +84,7 @@ Then we'll insert a bunch of code:
 
 This is the important part: notice that we're looping through ``context['blurbs']`` and pulling information from the spreadsheet. if there's a key error, it most likely happened there (make sure the wording matches)
 
+.. code-block:: python
 	def p2p_publish_blurb(site, s3):
 	    if not is_production_bucket(s3.bucket, site.project.S3_BUCKETS):
 	        puts(colored.red(
@@ -113,7 +119,7 @@ This is the important part: notice that we're looping through ``context['blurbs'
 
 	P2P_PUBLISH_HOOK = p2p_publish_blurb
 
-You can now run
+You can now run::
 	tarbell publish production
 and pray. 
 
