@@ -35,16 +35,21 @@ Are you ready to copy and paste code? The best part! It's always good to kind of
 
 Right after we declare the file's encoding and "Tarbell project configuration", import
 
-	`import p2p 
+.. code-block::python
+
+	import p2p 
 	from tarbell.utils import puts
 	from clint.textui import colored
 	from simplejson.scanner import JSONDecodeError
 	from flask import Blueprint, g, render_template
 	from tarbell.hooks import register_hook`
 
+
 Immediately after, we'll set the custom routes
 
-	`blueprint = Blueprint('suburb-speed-tickets', __name__)
+.. code-block::python
+
+	blueprint = Blueprint('suburb-speed-tickets', __name__)
 	# custom routes
 
 	@blueprint.route('/blurbs/<p2p_slug>.html')
@@ -56,9 +61,12 @@ Immediately after, we'll set the custom routes
 		# return render_template(blurb['template'], ROOT_URL=context['ROOT_URL'], **blurb)
 		return render_template(blurb['template'], blurb=blurb, **context)`
 
+
 Then we'll insert a bunch of code:
 
-	`def is_production_bucket(bucket_url, buckets):
+.. code-block::python
+
+	def is_production_bucket(bucket_url, buckets):
 	    for name, url in buckets.items():
 	        if url == bucket_url and name == 'production':
 	            return True
@@ -77,11 +85,14 @@ Then we'll insert a bunch of code:
 	               "not handle them correctly.")
 	        puts("\n" + colored.red(msg))
 	        rendered = ftfy.fix_text(rendered, uncurl_quotes=True)
-	    return rendered`
+	    return rendered
+
 
 This is the important part: notice that we're looping through ``context['blurbs']`` and pulling information from the spreadsheet. if there's a key error, it most likely happened there (make sure the wording matches)
 
-	`def p2p_publish_blurb(site, s3):
+.. code-block::
+
+	def p2p_publish_blurb(site, s3):
 	    if not is_production_bucket(s3.bucket, site.project.S3_BUCKETS):
 	        puts(colored.red(
 	            "\nNot publishing to production bucket. Skipping P2P publiction."))
@@ -115,8 +126,12 @@ This is the important part: notice that we're looping through ``context['blurbs'
 
 	P2P_PUBLISH_HOOK = p2p_publish_blurb`
 
-You can now run::
+
+You can now run
+.. code-block::
+
 	tarbell publish production
+	
 and pray. 
 
 Check p2p and look for the slug that corresponds to each template, you can preview it there.
