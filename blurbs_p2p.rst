@@ -13,6 +13,7 @@ Adding your blurb to a story
 ----------------------------
 
 Your blurb, by blurbs' nature, as is known by all blurb masters, probably goes inside a story. Find what that story's slug is and find it in p2p, too. Alternatively, if you're just testing your blurb blurbs (as you should), find your tester story of choice. A handy one is
+
 	``chi-test-test-test-20150423``
 
 At the top of your blurb's page, click on "Relationships" and then add your blurb to the story you chose. Before you leave your blurb's page, set its state to "Live." We live dangerously.
