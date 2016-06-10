@@ -27,6 +27,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    slack
    seo
    system_setup
+   servers
    tarbell
    tarbell_p2p_cheat_sheet
    testing
