@@ -19,6 +19,7 @@ Do you know how many blurbs you'll make? Have you come up with their slugs? Are 
 1. Make a new tab in the spreadsheet, call it "blurbs" because you're real creative.
 2. Make 4 new columns, called p2p_slug, title, keywords, template. No quotes, no caps. Keep it simple.
 3. Each row/entry in this tab will correspond to a blurb. Populate all the columns you created, lest you're wasteful and your code complains.
+
 	* Note: as a convention, the name in template should start with a _ (i.e. ``_introblurbtemplate.html``)
 
 Edit tarbell_config.py
@@ -28,9 +29,9 @@ You're close! Jk, this is where things can go wrong the most.
 
 Your current tarbell_config probably only has declarations of ``SPREADSHEET_KEY``, ``EXCLUDES`` and ``S3_BUCKETS``. It's about to have more stuff, because we'll add some functions and imports. On a high-level, we are going to:
 
-	* Loop through the blurbs' info to create and render each template
-	* Upload that template to p2p
-	* Add custom routes for each blurb so it can live in its own lovingly-crafted URL
+* Loop through the blurbs' info to create and render each template
+* Upload that template to p2p
+* Add custom routes for each blurb so it can live in its own lovingly-crafted URL
 
 Are you ready to copy and paste code? The best part! It's always good to kind of know what's going on though, so read the TL;DR above if you haven't.
 
