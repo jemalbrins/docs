@@ -16,9 +16,9 @@ Edit project-spreasheet
 
 Do you know how many blurbs you'll make? Have you come up with their slugs? Are you exactly where you should be in life? Luckily, you only need to know the answer to the first two questions.
 
-1. Make a new tab in the spreadsheet, call it "blurbs" because you're real creative.
-2. Make 4 new columns, called p2p_slug, title, keywords, template. No quotes, no caps. Keep it simple.
-3. Each row/entry in this tab will correspond to a blurb. Populate all the columns you created, lest you're wasteful and your code complains.
+* Make a new tab in the spreadsheet, call it "blurbs" because you're real creative.
+* Make 4 new columns, called p2p_slug, title, keywords, template. No quotes, no caps. Keep it simple.
+* Each row/entry in this tab will correspond to a blurb. Populate all the columns you created, lest you're wasteful and your code complains.
 
 	* Note: as a convention, the name in template should start with a _ (i.e. ``_introblurbtemplate.html``)
 
@@ -130,6 +130,7 @@ This is the important part: notice that we're looping through ``context['blurbs'
 
 
 You can now run
+
 .. code-block::
 
 	tarbell publish production
@@ -137,3 +138,5 @@ You can now run
 and pray. 
 
 Check p2p and look for the slug that corresponds to each template, you can preview it there.
+
+*last revised: June 10, 2016*
