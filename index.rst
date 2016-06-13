@@ -30,6 +30,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    servers
    tarbell
    tarbell_p2p_cheat_sheet
+   tarbell_blurb
    testing
 
 Editing these documents
