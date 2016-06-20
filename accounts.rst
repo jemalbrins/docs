@@ -192,6 +192,8 @@ Unfuddle
 
 Unfuddle is where we host our project tickets and code repositories.  You can access it at https://tribune.unfuddle.com/.
 
+Note that you apparently need to be an "Account Administrator" to be able to create repositories.
+
 Getting access
 ^^^^^^^^^^^^^^
 
