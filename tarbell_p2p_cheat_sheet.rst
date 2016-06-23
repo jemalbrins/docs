@@ -35,16 +35,17 @@ Starting new project (with P2P template)
    #. Tarbell will ask about using **Unfuddle**. You should. The default project of **60** is the graphics projects and should be used in nearly all cases.
    #. Yes, create a **repo.**
    #. You don't need to create tickets. You should already have created one before starting this process. In fact, the repo address from the previous step should be added to your ticket. Get the address `here <https://tribune.unfuddle.com/a#/repositories>`_.
-   #. ``npm install`` Should be done right away after staring a new project. This let's you use grunt/gulp
+   #. ``npm install`` Should be done right away after staring a new project. This let's you use the tools we need to turn SASS into CSS, compile javascript and do other very fun things.
+   #. Your spreadsheet should be shared automatically with the team, but just make sure. It should be in Google Drive/Trib Docs/Data Team/Tarbell projects
 
 .. note::
   
   **Working on a Tarbell project**
 
-  You'll want to have three tabs open in your terminal. For each of them, change into the project directory (``cd``)
+  You'll want to have three tabs open in your terminal. It doesn't matter which order you do these things (or which tabs they are). You just need them open. For each of them, change into the project directory (``cd``)
 
-  - **Tab 1:** Run ``tarbell serve`` and leave the tab open. Now you can view your project at `localhost:5000 <https://localhost:5000>`_
-  - **Tab 2:** Run ``grunt watch`` and leave the tab open. Now any time you make a change to your sass, new css is generated. This is true for javascript bundling and any other tasks you've got running with grunt.
+  - **Tab 1:** Run ``tarbell serve`` and leave the tab open. Now you can view your project at `localhost:5000 <https://localhost:5000>`_. As long as this tab is open, you have a web server.
+  - **Tab 2:** Run ``npm run build && npm run watch`` and leave the tab open. Now any time you make a change to your sass, new css is generated. This is true for javascript bundling and any other tasks you've got running with build tools such as npm, grunt or gulp.
   - **Tab 3:** This is the tab you use to make git commits or any other typing.
 
 
@@ -150,8 +151,8 @@ Here is a good tutorial on command line stuff. Some basics you'll probably want:
 Node/NPM
 --------
 
-   - ``grunt`` (or ``gulp``): Makes sass into css. It also does lots of other things.
-   - ``grunt watch`` (or ``gulp watch``): Run this in it's own tab and it will automatically run grunt (or gulp) when it detects changes to a file. 
+   - ``npm run build``: Makes sass into css. It also does lots of other things.
+   - ``npm run watch``: Run this in it's own tab and it will automatically run your build tools when it detects changes to a file. 
 
 Git 
 ---
@@ -171,15 +172,15 @@ JS/CSS tools
 *Many of these will be temporary as we flesh out our tarbell blueprint and related tools. In the near future, you will download some of these components using node/npm and include them in your project as needed.*
 
 - base css (can be accessed via sass)
-   https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/tribuneBase/tribune-graphics-base-1.3.css
+   `https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/tribuneBase/tribune-graphics-base-1.3.css`
 
 - skeleton (can also be used via sass)
-      https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/skeleton.css 
+      `https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/skeleton.css`
 
 - makePanels
-   - https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/makePanels/1.4/jquery.makePanels.1.4.css
+   - `https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/makePanels/1.4/jquery.makePanels.1.4.css`
 
-   - <script type='text/javascript' src="https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/makePanels/1.4/jquery.makePanels.1.4.min.js"></script>
+   - `<script type='text/javascript' src="https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/makePanels/1.4/jquery.makePanels.1.4.min.js"></script>`
    
    - Initialize makePanels.js::
 
@@ -207,6 +208,6 @@ JS/CSS tools
          "responsive": true /* Should the table hide columns in the child row? */
       });  
 - jQuery
-   <script type='text/javascript' src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+   `<script type='text/javascript' src="http://code.jquery.com/jquery-2.1.1.min.js"></script>`
 
     
