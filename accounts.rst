@@ -192,7 +192,19 @@ Unfuddle
 
 Unfuddle is where we host our project tickets and code repositories.  You can access it at https://tribune.unfuddle.com/.
 
+Note that you apparently need to be an "Account Administrator" to be able to create repositories.
+
 Getting access
 ^^^^^^^^^^^^^^
 
 We have complete control over this account, so you just need someone with administrator access to create an account for you.  This will use a separate set of login credentials from your Tribune AD credentials. 
+
+chicagotribune.com and others
+~~~~~~~~
+
+Getting pay-walled is the worst. Follow steps below to get access to the Chicago Tribune, LA Times, and more.
+
+Getting access
+^^^^^^^^^^^^^^
+
+As of May 2016, this site is the way to do it: http://chicagotribune.com/employeeaccess. Enter your email and validate via links!
