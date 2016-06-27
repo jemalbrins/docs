@@ -25,13 +25,11 @@ To build and preview any changes before deployment, run:
 
 ```
 workon docs
-make html
-cd _build/html; python -m SimpleHTTPServer 9123
+make livehtml
 
 ```
 
-Replace 9123 with an unusued port, if you already have something running there. Then visit
-http://localhost:9123 in your browser to see the local copy of the docs.
+Then visit http://localhost:8000 in your browser to see the local copy of the docs.
 
 Automatic deployment
 --------------------
