@@ -1,6 +1,14 @@
-.. _blurb-p2p:
+.. _p2p-blurbs:
 
-Are you just getting started? Go to the tarbell section :ref:`_blurb-tarbell`
+======
+Blurbs
+======
+
+Blurbs are the name used in P2P for chunks of HTML content that get included in a story through an `<iframe>`. We've used blurbs to include live bar charts of election results on the homepage or to include an interactive chart inline with a story's text.
+
+.. note::
+
+        Are you trying to publish blurbs from a Tarbell project?  You'll need to do some configuration in your project Go to the tarbell section :ref:`tarbell-blurbs` to find out how.
 
 Check that your blurb blurbs in p2p
 -----------------------------------
