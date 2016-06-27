@@ -1,6 +1,6 @@
-===============================
-Consuming and publishing to P2P
-===============================
+=============================
+P2P: Consuming and publishing
+=============================
 
 .. toctree::
     :maxdepth: 1
@@ -8,4 +8,4 @@ Consuming and publishing to P2P
     p2p/api  
     p2p/consuming
     p2p/workflow
-    p2p/blurb
+    p2p/blurbs
