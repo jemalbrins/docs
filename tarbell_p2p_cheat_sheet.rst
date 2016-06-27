@@ -1,6 +1,7 @@
 Tarbell/P2P/Command line cheat sheet
 ====================================
-*UPDATED: February 2016*
+
+*UPDATED: June 2016*
 
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
@@ -25,8 +26,19 @@ This guide is intended to help those who need a quick mental refresher when laun
 
     cd ~/code/my_project
 
+.. note::
+
+    **Make sure the tools library is up-to-date**
+
+    While Tarbell will pull the freshest possible copy of the blueprint each time you start a new project, it won't automatically install the newest version of our :ref:`tarbell-tools-library`.
+
+    To make sure the tools library is up-to-date, run this command::
+
+        pip install --upgrade git+https://tribune.unfuddle.com/git/tribune_python-tribune-viztools/@0.4.1#egg=tribune_viztools
+
 Starting new project (with P2P template)
 ----------------------------------------
+
    1. ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
    #. Choose the **Tribune template (p2p).**
    #. Tarbell will ask about installing **requirements**. Unless you're told otherwise by a project collaborator, you don't need to install requirements when asked. 
