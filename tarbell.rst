@@ -312,6 +312,8 @@ Cookbook
 
 For examples of code snippets that can be used to do useful things in Tarbell, check out the `tarbell-cookbook <https://github.com/newsapps/tarbell-cookbook>`_ repository.
 
+.. include:: tarbell/front_end_assets.rst
+
 .. include:: tarbell/blurbs.rst
 
 .. include:: tarbell/tools_library.rst

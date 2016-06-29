@@ -60,6 +60,18 @@ Starting new project (with P2P template)
   - **Tab 2:** Run ``npm run build && npm run watch`` and leave the tab open. Now any time you make a change to your sass, new css is generated. This is true for javascript bundling and any other tasks you've got running with build tools such as npm, grunt or gulp.
   - **Tab 3:** This is the tab you use to make git commits or any other typing.
 
+.. note::
+
+        Does running ``npm run build`` or ``npm run watch`` raise an error like this?::
+
+             npm ERR! Darwin 14.5.0
+             npm ERR! argv "/usr/local/Cellar/node/5.4.0/bin/node" "/usr/local/bin/npm" "run" "build"
+             npm ERR! node v5.4.0
+             npm ERR! npm  v3.3.12
+             npm ERR! missing script: build
+
+        The project was probably created before we switched to npm scripts.  To update your ``package.json`` and fix this, see :ref:`tarbell-updating-to-npm-scripts`.     
+
 
 Tarbell
 -------
