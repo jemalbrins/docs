@@ -46,7 +46,8 @@ Right after we declare the file's encoding and "Tarbell project configuration", 
 	from clint.textui import colored
 	from simplejson.scanner import JSONDecodeError
 	from flask import Blueprint, g, render_template
-	from tarbell.hooks import register_hook`
+	from tarbell.hooks import register_hook
+        import ftfy
 
 
 Immediately after, we'll set the custom routes
@@ -66,7 +67,7 @@ Immediately after, we'll set the custom routes
 		context = site.get_context()
 		
 		blurb = next(b for b in context['blurbs'] if b['p2p_slug'] == p2p_slug)
-		return render_template(blurb['template'], blurb=blurb, **context)`
+		return render_template(blurb['template'], blurb=blurb, **context)
 
 
 Then we'll insert helper functions and a publishing function to override the default P2P publishing functionality to publish to blurbs instead of a single HTML story. 
@@ -141,10 +142,10 @@ This is the important part: notice that we're looping through ``context['blurbs'
                 puts("\n" + colored.green("Published to P2P with slug {}".format(blurb['p2p_slug'])))
 
 
-                # Setting the `P2P_PUBLISH_HOOK` setting is actually what overrides the 
-                # default publishing behavior (to an HTML story) with the behavior
-                # we just defined (to blurbs)
-                P2P_PUBLISH_HOOK = p2p_publish_blurb
+        # Setting the `P2P_PUBLISH_HOOK` setting is actually what overrides the 
+        # default publishing behavior (to an HTML story) with the behavior
+        # we just defined (to blurbs)
+        P2P_PUBLISH_HOOK = p2p_publish_blurb
 
 
 You can now run
