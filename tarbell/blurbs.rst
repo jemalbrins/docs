@@ -46,7 +46,6 @@ Right after we declare the file's encoding and "Tarbell project configuration", 
 	from clint.textui import colored
 	from simplejson.scanner import JSONDecodeError
 	from flask import Blueprint, g, render_template
-	from tarbell.hooks import register_hook
         import ftfy
 
 
