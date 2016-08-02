@@ -39,16 +39,15 @@ This guide is intended to help those who need a quick mental refresher when laun
 Starting new project (with P2P template)
 ----------------------------------------
 
-   1. ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
-   #. Choose the **Tribune template (p2p).**
-   #. Tarbell will ask about installing **requirements**. Unless you're told otherwise by a project collaborator, you don't need to install requirements when asked. 
-   #. Tarbell will ask about **Sass**. You should almost always generate styles using Sass. It's better.
-   #. Tarbell will ask about **Browserify**. Fewer projects will require bundled Javascript requiring Browserify.
-   #. Tarbell will ask about using **Unfuddle**. You should. The default project of **60** is the graphics projects and should be used in nearly all cases.
-   #. Yes, create a **repo.**
-   #. You don't need to create tickets. You should already have created one before starting this process. In fact, the repo address from the previous step should be added to your ticket. Get the address `here <https://tribune.unfuddle.com/a#/repositories>`_.
-   #. ``npm install`` Should be done right away after staring a new project. This let's you use the tools we need to turn SASS into CSS, compile javascript and do other very fun things.
-   #. Your spreadsheet should be shared automatically with the team, but just make sure. It should be in Google Drive/Trib Docs/Data Team/Tarbell projects
+   1. **Create the tarbell project.** ``tarbell newproject <projectname>`` will start a new project and begin the process of configuring it.
+           a. Choose the **Tribune template (p2p).**
+           #. Tarbell will ask about installing **requirements**. Unless you're told otherwise by a project collaborator, you don't need to install requirements when asked. 
+           #. Tarbell will ask about using **Unfuddle**. You should. The default project of **60** is the graphics projects and should be used in nearly all cases.
+           #. Yes, create a **repo.**
+           #. You don't need to create tickets. You should already have created one before starting this process. In fact, the repo address from the previous step should be added to your ticket. Get the address `here <https://tribune.unfuddle.com/a#/repositories>`_.
+   #. **Change directory to your project directory.** This is the directory that is reported at the end of the ``tarbell newproject`` output.  For example: ``cd ~/tarbell/your-new-project``. 
+   #. **Install project build dependencies.** After changing to your project directory, run ``npm install``. This should be done right away after staring a new project. This let's you use the tools we need to turn SASS into CSS, bundle and minify JavaScript and do other very fun things.
+   #. **Share your project spreadsheet.** Your spreadsheet should be shared automatically with the team, but just make sure. It should be in Google Drive/Trib Docs/Data Team/Tarbell projects
 
 .. note::
   
