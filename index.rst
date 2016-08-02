@@ -20,6 +20,7 @@ Tribune. Much of it was written by `the Chicago News Apps team
    contacts
    comments
    maps
+   meetings
    ngux
    paywall
    p2p
