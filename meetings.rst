@@ -5,7 +5,7 @@ Meetings
 DataViz Weekly check-in
 -----------------------
 
-When: Monday, time being determined 
+When: Monday, 3 p.m. 
 
 Main goal: TK
 
