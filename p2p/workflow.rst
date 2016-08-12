@@ -155,7 +155,32 @@ Update the metadata about the project in your `package.json` file.  The purpose 
 
 The `package.json for some school choice charts <https://tribune.unfuddle.com/a#/projects/60/repositories/448/file?path=%2Fpackage.json&commit=4084e211b9faec42c9245aa98e44a3783a2ac45a>`_ provides a full example.        
 
+Adding your story to the Data Stories & Visuals page
+----------------------------------------------------------------
+
+1. Grab the slug of your story.
+2. Login to P2P.
+3. Click on the magnifying glass on the left side of the screen and use the "Collection Search" bar to search for chi_news_data_latest. Click on the search result called Latest Data Stories.
+4. Paste your story slug into the "Add item" box, where it says "Search by slug." Your story should pop up. Clicking on it will add it to the collection of stories.
+5. Hit the save button with the green checkmark at the top of the page.
+6. Click on "Sections" at the top of the page.
+7. Scroll down to /news and expand the section by clicking on the plus sign next to it.
+8. Scroll down to /news/data and click on it.
+9. Hit save at the top of the page that pops up.
+10. Go to http://www.chicagotribune.com/news/data/. If your story was recently published, you should see it at the top of the page under "Latest projects."
+
+Adding your (evergreen) story to the Graphics evergreen spreadsheet
+-------------------------------------------------------------------
+
+1. Go to this spreadsheet: https://docs.google.com/spreadsheets/d/1VR_ynZTYimrCMP_tBkbq9E_svnBPM74MR2ld7hKARGI/edit#gid=0
+2. Add a line at the top of the spreadsheet. Add the title and URL of your story.
+3. Add tweet options and tags for your story.
+
 Promoting your story on social media
 ------------------------------------
 
-TODO: Write this
+Though there isn't a streamlined strategy at this point for official Trib Graphics social media accounts, there are a few things individual reporters can do to promote their work:
+
+1. Promote your work using your own Twitter and Facebook accounts early in the day and early in the week. Add a photo or gif. Check the @chitribgraphics Twitter for best practices.
+2. Create your own Reddit account if you don't already have one, and -- if your story is Chicago-related -- post it to /chicago. Do not post *just* Tribune work, and do not post just Tribune work too often; there is a chance of being kicked off /chicago if you're only posting your own content. Reddit can be a great place to ask for feedback and interact with readers.
+3. If you have an interesting visual angle to your story and an instagram account, feel free to experiment with ways to promote on Instagram. Report back to the team if you're successful or with techniques for others to try.
