@@ -131,6 +131,7 @@ Tarbell
       - ``tarbell install <git@repo_url>`` Downloads and installs tarbell projects locally
       - ``tarbell spreadsheet`` Automatically opens an associated spreadsheet in a new browser tab.
       - ``tarbell publish`` or ``tarbell publish staging`` Whether publishing to P2P or off platform, this makes your project viewable in the tower at `apps.beta.tribapps.com <https://apps.beta.tribapps.com>`_
+        - Make sure you ``source`` your production_secrets.sh script, in the same folder of the project you want to publish
       - ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably `graphics.chicagotribune.com <http://graphics.chicagotribune.com>`_
 
 Jinja
@@ -149,7 +150,7 @@ Also, remember what this syntax means:
    - Jinja comments will not show up in your rendered pages. They are a good place to stash notes instead of HTML comments (``<!-- -->``). The readers don't need to see that. Comments are wrapped with a hashtag::
 
       {# This is a comment #}
-
+    - NOTE: Do not use in-line javascript comments (``//``) in jinja template files like ``_content.html``. The minified file will comment-out entire blocks of code otherwise.
 
 Sass
 ----
