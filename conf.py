@@ -17,7 +17,9 @@ import os
 
 from datetime import date
 
+# These are needed to enable Markdown support in Sphinx
 from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -273,3 +275,12 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+# app setup hook
+def setup(app):
+    # See http://recommonmark.readthedocs.io/en/latest/auto_structify.html
+    app.add_config_value('recommonmark_config', {
+        'enable_auto_toc_tree': True,
+        'emable_auto_doc_ref': True,
+        'enable_eval_rst': True,
+    }, True)
+    app.add_transform(AutoStructify)
