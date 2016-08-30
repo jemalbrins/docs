@@ -13,6 +13,8 @@ Tribune. Much of it was written by `the Chicago News Apps team
 .. toctree::
    :maxdepth: 2
 
+   test
+
    accounts
    ads
    analytics
@@ -36,7 +38,9 @@ Tribune. Much of it was written by `the Chicago News Apps team
 Editing these documents
 -----------------------
 
-These documents are written in a markup language called `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ (rst) and build with a documentation generator called `Sphinx <http://sphinx-doc.org/>`_.  reStructuredText is a bit more complicated to use than Markdown, but is better suited for documentation because it has conventions for linking between documentation sections.  Check out the "User Documentation" section at http://docutils.sourceforge.net/ for help.  In most cases, you should be able to pick up the syntax from the existing files. 
+Many of these documents are written in a markup language called `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ (rst) and build with a documentation generator called `Sphinx <http://sphinx-doc.org/>`_. However, they can also be written in Markdown.  Files ending in `.rst` are written in reStructuredText and files ending in `.md` are written in Markdown.
+
+reStructuredText is a bit more complicated to use than Markdown, but is better suited for documentation because it has conventions for linking between documentation sections.  Check out the "User Documentation" section at http://docutils.sourceforge.net/ for help.  In most cases, you should be able to pick up the syntax from the existing files. 
 
 With your text editor
 ~~~~~~~~~~~~~~~~~~~~~
