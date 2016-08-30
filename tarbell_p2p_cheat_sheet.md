@@ -1,11 +1,12 @@
 Tarbell/P2P/Command line cheat sheet
 ====================================
 
-*UPDATED: June 2016*
+**UPDATED: August 2016**
 
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
 
+```eval_rst
 .. note::
   
   **About code and command line samples**
@@ -25,7 +26,9 @@ This guide is intended to help those who need a quick mental refresher when laun
   How you should type it::
 
     cd ~/code/my_project
+```
 
+```eval_rst
 .. note::
 
     **Make sure the tools library is up-to-date**
@@ -35,6 +38,7 @@ This guide is intended to help those who need a quick mental refresher when laun
     To make sure the tools library is up-to-date, run this command::
 
         pip install --upgrade git+https://tribune.unfuddle.com/git/tribune_python-tribune-viztools/@0.4.1#egg=tribune_viztools
+```
 
 Starting new project (with P2P template)
 ----------------------------------------
@@ -49,6 +53,7 @@ Starting new project (with P2P template)
    #. **Install project build dependencies.** After changing to your project directory, run ``npm install``. This should be done right away after staring a new project. This let's you use the tools we need to turn SASS into CSS, bundle and minify JavaScript and do other very fun things.
    #. **Share your project spreadsheet.** Your spreadsheet should be shared automatically with the team, but just make sure. It should be in Google Drive/Trib Docs/Data Team/Tarbell projects
 
+```eval_rst
 .. note::
   
   **Working on a Tarbell project**
@@ -58,7 +63,9 @@ Starting new project (with P2P template)
   - **Tab 1:** Run ``tarbell serve`` and leave the tab open. Now you can view your project at `localhost:5000 <https://localhost:5000>`_. As long as this tab is open, you have a web server.
   - **Tab 2:** Run ``npm run build && npm run watch`` and leave the tab open. Now any time you make a change to your sass, new css is generated. This is true for javascript bundling and any other tasks you've got running with build tools such as npm, grunt or gulp.
   - **Tab 3:** This is the tab you use to make git commits or any other typing.
+```
 
+```eval_rst
 .. note::
 
         Does running ``npm run build`` or ``npm run watch`` raise an error like this?::
@@ -70,129 +77,151 @@ Starting new project (with P2P template)
              npm ERR! missing script: build
 
         The project was probably created before we switched to npm scripts.  To update your ``package.json`` and fix this, see :ref:`tarbell-updating-to-npm-scripts`.     
+```
 
 
 Tarbell
 -------
-`Tarbell documentation <https://tarbell.readthedocs.org/en/latest/>`_
+
+It may be helpeful to read the main [Tarbell documentation](https://tarbell.readthedocs.org/en/latest/).
    
-   - Starting a new project:
-      1. ``tarbell newproject <projectname>``
-      #. ``cd /path/to/<projectname>``
-      #. ``npm install``
+* Starting a new project:
+  1. ``tarbell newproject <projectname>``
+  2. ``cd /path/to/<projectname>``
+  3. ``npm install``
 
-   - Where does the content go? In the **_content.html** it goes between the content tags::
-      
-      {% block content %}
-      {% endblock content %}
+* Where does the content go? In the *_content.html* it goes between the content tags:
 
-   - Where do your scripts go? Links to scripts go in the **library_scripts** block::
+```jinja
+  {% block content %}
+  {% endblock content %}
+```
 
-      {% block library_scripts %}
-         <script></script>
-      {% endblock %}
+* Where do your scripts go? Links to scripts go in the *library_scripts* block:
 
-   - Link to stylesheets, including the one you're making, get added to the scripts array::
+```jinja
+  {% block library_scripts %}
+     <script></script>
+  {% endblock %}
+```
 
-      {% block scripts %}
-         <script>
-         (function(document) {
-           // Note the quote marks surrounding each link 
-           // and the commas seperating them.
-           var CSS = [
-             "//{{ ROOT_URL }}/css/styles.css",
-             "//{{ ROOT_URL }}/css/another_styles.css",
-             "//{{ ROOT_URL }}/css/yet_another_styles.css"
-           ];    
-           CSS.forEach(function(url) {
-             var link = document.createElement('link');
-             link.setAttribute('rel', 'stylesheet');
-             link.setAttribute('href', url);
-             document.head.appendChild(link);
-           });
-         })(document);    
-         </script>
-      {% endblock scripts %}
+* Link to stylesheets, including the one you're making, get added to the scripts array:
 
+```jinja
+  {% block scripts %}
+     <script>
+     (function(document) {
+       // Note the quote marks surrounding each link 
+       // and the commas seperating them.
+       var CSS = [
+         "//{{ ROOT_URL }}/css/styles.css",
+         "//{{ ROOT_URL }}/css/another_styles.css",
+         "//{{ ROOT_URL }}/css/yet_another_styles.css"
+       ];    
+       CSS.forEach(function(url) {
+         var link = document.createElement('link');
+         link.setAttribute('rel', 'stylesheet');
+         link.setAttribute('href', url);
+         document.head.appendChild(link);
+       });
+     })(document);    
+     </script>
+  {% endblock scripts %}
+```
 
+```eval_rst
     .. note::
 
          When linking to things like images and stylesheets, your url should look like this: ``http://{{ ROOT_URL }}/path/to/image/or/other/asset.jpg``. The ``ROOT_URL`` variable makes sure that your page can reference the assets regardless of whether you are running it locally or on P2P.
+```
 
-   - Where do your hand-written scripts go? Litte scripts, such as a dataTables or clicker initilization can go in the **scripts** block::
+* Where do your hand-written scripts go? Litte scripts, such as a dataTables or clicker initilization can go in the **scripts** block:
 
-      {% block scripts %}
-         <script>
-            // Code here
-         </script>
-      {% endblock %}
-   - Helpful Tarbell commands for the command line
-      - ``tarbell`` On it's own, this command brings up a more detailed list of possible commands
-      - ``tarbell install <git@repo_url>`` Downloads and installs tarbell projects locally
-      - ``tarbell spreadsheet`` Automatically opens an associated spreadsheet in a new browser tab.
-      - ``tarbell publish`` or ``tarbell publish staging`` Whether publishing to P2P or off platform, this makes your project viewable in the tower at `apps.beta.tribapps.com <https://apps.beta.tribapps.com>`_
-        - Make sure you ``source`` your production_secrets.sh script, in the same folder of the project you want to publish
-      - ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably `graphics.chicagotribune.com <http://graphics.chicagotribune.com>`_
+```jinja
+{% block scripts %}
+ <script>
+    // Code here
+ </script>
+{% endblock %}
+```
+
+* Helpful Tarbell commands for the command line
+    * ``tarbell`` On it's own, this command brings up a more detailed list of possible commands
+    * ``tarbell install <git@repo_url>`` Downloads and installs tarbell projects locally
+    * ``tarbell spreadsheet`` Automatically opens an associated spreadsheet in a new browser tab.
+    * ``tarbell publish`` or ``tarbell publish staging`` Whether publishing to P2P or off platform, this makes your project viewable in the tower at [apps.beta.tribapps.com](https://apps.beta.tribapps.com).
+    * ``tarbell publish production`` If publishing to P2P, this uploads your site into the designated P2P slug. Otherwise, if ppublishing off platform, this makes your project viewable to the whole world (and Google) at your production URL, probably (graphics.chicagotribune.com)[http://graphics.chicagotribune.com].
+        * Make sure you ``source`` your production_secrets.sh script.
 
 Jinja
 -----
-Jinja is the templating language you will use in Tarbell projects. It's very handy. The `Jinja documentation <http://jinja.pocoo.org/docs/dev/>`_ is very straightforward and accessible. You'll almost certainly need a `for loop <http://jinja.pocoo.org/docs/dev/templates/#list-of-control-structures>`_ and maybe a couple `if statements <http://jinja.pocoo.org/docs/dev/templates/#if>`_ 
+
+Jinja is the templating language you will use in Tarbell projects. It's very handy. The [Jinja documentation](http://jinja.pocoo.org/docs/dev/) is very straightforward and accessible. You'll almost certainly need a [for loop](http://jinja.pocoo.org/docs/dev/templates/#list-of-control-structures>) and maybe a couple [if statements](http://jinja.pocoo.org/docs/dev/templates/#if)
+
 Also, remember what this syntax means:
    
-   - To ouput the value of a variable, use double curly braces::
-      
-      {{ This is the value of a variable }}
+* To ouput the value of a variable, use double curly braces:
 
-   - To have Jinja *do something*, use a percent sign::
+```jinja
+{{ This is the value of a variable }}
+```
 
-      {% This is a command %}
+* To have Jinja *do something*, use a percent sign:
 
-   - Jinja comments will not show up in your rendered pages. They are a good place to stash notes instead of HTML comments (``<!-- -->``). The readers don't need to see that. Comments are wrapped with a hashtag::
+```jinja
+{% This is a command %}
+```
 
-      {# This is a comment #}
-    - NOTE: Do not use in-line javascript comments (``//``) in jinja template files like ``_content.html``. The minified file will comment-out entire blocks of code otherwise.
+* Jinja comments will not show up in your rendered pages. They are a good place to stash notes instead of HTML comments (``<!-- -->``). The readers don't need to see that. Comments are wrapped with a hashtag:
+
+```jinja
+{# This is a comment #}
+```
+
+* NOTE: Do not use in-line javascript comments (``//``) in jinja template files like ``_content.html``. NGUX compresses your in-line JavaScript and this can cause entire blocks of code to be commented out, breaking your program, instead of just a single line. 
 
 Sass
 ----
 
-Sass is an expansion/improvement on old-school styles `Sass documentation <http://sass-lang.com/>`_ Among it's useful features:
+[Sass](http://sass-lang.com/) is an expansion/improvement on CSS styles. Among it's useful features:
 
-   - ``$variables`` Must begin with a **$.**
-   - ``@import`` Is how you combine sass files into a single document.
-   - ``@include`` Is how you use a mixin.
+* ``$variables`` Must begin with a **$.**
+* ``@import`` Is how you combine sass files into a single document.
+* ``@include`` Is how you use a mixin.
 
 Bash/Command line hints
 -----------------------
 
 Here is a good tutorial on command line stuff. Some basics you'll probably want:
 
-   - ``ls <path/to/directory>`` Lists all the files in a given directory
-   - ``pwd`` Outputs your present working directory
-   - ``cd <path/to/target/directory>`` changes directory to the given path 
-   - ``subl <path/to/target/directory>`` If configured properly, will open the contents of the given file/directory in sublime
-   - ``~`` is the shorthand version of the logged-in user's root directory.
+- ``ls <path/to/directory>`` Lists all the files in a given directory
+- ``pwd`` Outputs your present working directory
+- ``cd <path/to/target/directory>`` changes directory to the given path 
+- ``subl <path/to/target/directory>`` If configured properly, will open the contents of the given file/directory in sublime
+- ``~`` is the shorthand version of the logged-in user's root directory.
 
 Node/NPM
 --------
 
-   - ``npm run build``: Makes sass into css. It also does lots of other things.
-   - ``npm run watch``: Run this in it's own tab and it will automatically run your build tools when it detects changes to a file. 
+- ``npm run build``: Makes sass into css. It also does lots of other things.
+- ``npm run watch``: Run this in it's own tab and it will automatically run your build tools when it detects changes to a file. 
 
 Git 
 ---
 
-`Git documentation <https://git-scm.com/doc>`_
+[Git documentation](https://git-scm.com/doc)
 
-   - ``git status`` See what uncommitted changes exist in a directory
-   - ``git add`` Tell git to watch a file or files for changes
-   - ``git commit`` Tell git that the changes you made should be kept.
-   - ``git pull`` Brings changes from elsewhere onto your machine. **Never push before you pull.**
-   - ``git push`` Overwrites content elsewhere with your changes. **Never push before you pull.**
+- ``git status`` See what uncommitted changes exist in a directory
+- ``git add`` Tell git to watch a file or files for changes
+- ``git commit`` Tell git that the changes you made should be kept.
+- ``git pull`` Brings changes from elsewhere onto your machine. **Never push before you pull.**
+- ``git push`` Overwrites content elsewhere with your changes. **Never push before you pull.**
 
 
 
 JS/CSS tools
 ------------
+
 *Many of these will be temporary as we flesh out our tarbell blueprint and related tools. In the near future, you will download some of these components using node/npm and include them in your project as needed.*
 
 - base css (can be accessed via sass)
@@ -206,8 +235,9 @@ JS/CSS tools
 
    - `<script type='text/javascript' src="https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/makePanels/1.4/jquery.makePanels.1.4.min.js"></script>`
    
-   - Initialize makePanels.js::
-
+   - Initialize makePanels.js:
+   
+      ```javascript
       $('#target').makePanels({
          type:"buttons",    /* Options are "none", "buttons" or "dropdown" */
          transitionSpeed: 0, /* 0=instant, 1000 = 1 second */
@@ -216,13 +246,15 @@ JS/CSS tools
          matchPanelHeightsToggle:false, /* This will make all panels the same height */
          showFirst:"" // The ID of the panel which should be visible on init
       });
+      ```
 
 - dataTables
-   - <script type='text/javascript' src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-   - <script type='text/javascript' src="http://cdn.datatables.net/responsive/1.0.1/js/dataTables.responsive.js"></script>  
-   - https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/dataTables/tribune-datatables.min.css
-   - Initialize dataTabels.js (This can easily become very complicated, but this is a very basic use)::
+   - `<script type='text/javascript' src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>`
+   - `<script type='text/javascript' src="http://cdn.datatables.net/responsive/1.0.1/js/dataTables.responsive.js"></script>`  
+   - `<link rel="stylesheet" href="https://s3.amazonaws.com/media.apps.chicagotribune.com/graphics-toolbox/dataTables/tribune-datatables.min.css">`
+   - Initialize dataTables (This can easily become very complicated, but this is a very basic use):
 
+      ```javascript
       var table = $('#targetTable').DataTable({
          "paging": false, /* If true, the table will only show a small number of rows at a time */
          "lengthMenu": [[50,100,500,-1], [50, 100,500,"All"]], /* if paging=true, then this controls the options for how many to show on a single page ... [ options ][ menu labels ]*/
@@ -231,7 +263,6 @@ JS/CSS tools
          "order": [[ 4, "desc" ]], /* By which column should the table be ordered at first */
          "responsive": true /* Should the table hide columns in the child row? */
       });  
+      ```
 - jQuery
    `<script type='text/javascript' src="http://code.jquery.com/jquery-2.1.1.min.js"></script>`
-
-    
