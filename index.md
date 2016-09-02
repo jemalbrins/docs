@@ -6,26 +6,27 @@ Tribune. Much of it was written by [the Chicago News Apps team](http://blog.apps
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   accounts
-   ads
-   analytics
-   caching
-   contacts
-   maps
-   meetings
-   ngux
-   paywall
-   p2p
-   schema
-   slack
-   seo
-   system_setup
-   servers
-   tarbell
-   tarbell_p2p_cheat_sheet
-   testing
+    accounts
+    ads
+    analytics
+    caching
+    contacts
+    maps
+    meetings
+    ngux
+    paywall
+    p2p
+    schema
+    slack
+    seo
+    system_setup
+    servers
+    tarbell
+    tarbell_p2p_cheat_sheet
+    testing
+    web_applications
 ```
 
 Editing these documents
