@@ -4,7 +4,6 @@ When running `$ tarbell newproject`, sometimes things happen that make us really
 
 .. note::
   [Add your own](#contribute) issue to this page!
-.. note::
 
 - **When it broke**: tried to run `npm run build && npm run watch`
 - **Traceback**:
