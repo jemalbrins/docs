@@ -6,5 +6,6 @@ Servers
     :maxdepth: 1
 
     servers/overview
-    servers/db    
+    servers/db
+    servers/maintenance
     servers/provisioning
