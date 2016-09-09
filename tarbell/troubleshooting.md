@@ -8,8 +8,10 @@ When running `$ tarbell newproject`, sometimes things happen that make us really
   `Add your own issue to this page in the <How to contribute>`_ section!
 ```
 
-- **When it broke**: tried to run `npm run build && npm run watch`
-- **Traceback**:
+## When it broke: tried to run `npm run build && npm run watch`
+
+### Traceback
+
 ```sh
 npm ERR! Darwin 15.5.0
 npm ERR! argv "/usr/local/Cellar/node/5.6.0/bin/node" "/usr/local/bin/npm" "run" "build"
@@ -32,25 +34,36 @@ npm ERR!     npm owner ls Gliniewicz
 npm ERR! There is likely additional logging output above.
 npm WARN Local package.json exists, but node_modules missing, did you mean to install?
 ```
-- **Solution**: run `npm install` before `npm run build && npm run watch`
+### Solution
+
+Run `npm install` before `npm run build && npm run watch`
 
 _submitted by Cecilia_
 
 ----------
 
-- **When it broke**: running `tarbell publish` on a cloned project
-- **Error**: `jinja2.exceptions.TemplateNotFound: _base.html`
-- **Solution**: 
-    - Way 1: If it’s a Tarbell project, you could just run `tarbell install {project-git-url}`
-        * How to check if it’s a Tarbell project? Is there a tarbell_config.py file in your repo? Then yes.
-    - Way 2: For any git repo that uses submodules: run `git submodule init && git submodule update`
+## When it broke: running `tarbell publish` on a cloned project
+
+### Error 
+
+```sh
+jinja2.exceptions.TemplateNotFound: _base.html
+``````
+
+### Solution 
+
+- Way 1: If it’s a Tarbell project, you could just run `tarbell install {project-git-url}`
+    * How to check if it’s a Tarbell project? Is there a tarbell_config.py file in your repo? Then yes.
+- Way 2: For any git repo that uses submodules: run `git submodule init && git submodule update`
 
 _submitted by Cecilia_
 
 ----------
 
-- **When it broke**: Tried to publish to p2p blurb, tarbell publish production
-- **Traceback**:
+## When it broke: Tried to publish to p2p blurb, tarbell publish production
+
+### Traceback
+
 ```sh
 Traceback (most recent call last):
   File "/usr/local/bin/tarbell", line 11, in <module>
@@ -89,7 +102,10 @@ Traceback (most recent call last):
     raise RuntimeError('working outside of application context')
 RuntimeError: working outside of application context
 ```
-- **Solution**: change the filter to be a [context filter](http://flask.pocoo.org/docs/0.11/api/#flask.Blueprint.app_context_processor), which gets the template context passed as an argument by Jinja instead of having to grab it explicitly  with `context = g.current_site.get_context()`
+
+### Solution
+
+Cchange the filter to be a [context filter](http://flask.pocoo.org/docs/0.11/api/#flask.Blueprint.app_context_processor), which gets the template context passed as an argument by Jinja instead of having to grab it explicitly  with `context = g.current_site.get_context()`
 
 _submitted by Chad_
 
