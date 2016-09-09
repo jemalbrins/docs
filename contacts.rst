@@ -2,7 +2,7 @@ Contacts
 ========
 
 * Archives: Justine Tobiasz, Researcher.  This is for the physical archives, not archives.chicagotribune.com.
-* DSS/Commenting: Drew Clayton
+* Marketing (which includes DSS and SSOR): Dena Park
 * Mobile Apps: Joe Mirretti 
 * Digital Edition: Joe Mirretti
 * Newsletters: Joe Mirretti
