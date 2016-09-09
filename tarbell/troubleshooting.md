@@ -5,7 +5,7 @@ When running `$ tarbell newproject`, sometimes things happen that make us really
 ```eval_rst
 .. note::
 
-  `Add your own issue to this page. Check the <How to contribute>`_ section!
+  `Add your own issue to this page. Read how <How to contribute>`_!
 ```
 
 ## When it broke: tried to run `npm run build && npm run watch`
