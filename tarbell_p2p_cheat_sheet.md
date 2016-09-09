@@ -5,9 +5,11 @@ Tarbell/P2P/Command line cheat sheet
 
 This guide is intended to help those who need a quick mental refresher when launching new projects and otherwise adapting old workflows (read: manually coding lots of things) into the tarbell-based workflow. There will be plenty of exceptions to the rules of thumb layed out below, but they are good starting points until you develop a deeper understanding of the tools you are using.
 
+```eval_rst
 .. note::
 
         Are you here because something is broken? Go to the tarbell section :ref:`tarbell-troubleshooting` to find out if your problem has already been fixed.
+```
 
 ```eval_rst
 .. note::
