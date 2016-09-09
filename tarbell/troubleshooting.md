@@ -2,8 +2,11 @@
 
 When running `$ tarbell newproject`, sometimes things happen that make us really sad because they don’t work. Here are some common problems, in no particular order:
 
+```eval_rst
 .. note::
-  [Add your own](#contribute) issue to this page!
+
+  `Add your own issue to this page in the <How to contribute>`_ section!
+```
 
 - **When it broke**: tried to run `npm run build && npm run watch`
 - **Traceback**:
@@ -92,7 +95,7 @@ _submitted by Chad_
 
 ----------
 
-#### <a name="contribute"></a> How to contribute
+#### How to contribute
 * The docs [repo](github.com/newsapps/docs) can be edited in github if you'll just add one problem/fix (recommended if you won't add to multiple files)
 * For multi-file adds, clone the [repo](github.com/newsapps/docs), commit and push your changes
 * Write markdown if you're more comfortable with that. [Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a handy cheat-sheet.

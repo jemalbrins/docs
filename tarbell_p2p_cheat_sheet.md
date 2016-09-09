@@ -8,7 +8,7 @@ This guide is intended to help those who need a quick mental refresher when laun
 ```eval_rst
 .. note::
 
-        Are you here because something is broken? Go to the tarbell section :ref:`tarbell-troubleshooting` to find out if your problem has already been fixed.
+        Are you here because something is broken? Go to the tarbell section :doc:`/tarbell/troubleshooting` to find out if your problem has already been fixed.
 ```
 
 ```eval_rst
