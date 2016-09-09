@@ -317,8 +317,7 @@ Troubleshooting, blurbs and more!
 
 .. toctree::
     :maxdepth: 1
-
+    tarbell/troubleshooting
     tarbell/front_end_assets
     tarbell/blurbs
     tarbell/tools_library
-    tarbell/troubleshooting

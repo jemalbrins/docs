@@ -25,6 +25,7 @@ Tribune. Much of it was written by [the Chicago News Apps team](http://blog.apps
     servers
     tarbell
     tarbell_p2p_cheat_sheet
+    tarbell/troubleshooting
     testing
     web_applications
 ```
