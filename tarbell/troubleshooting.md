@@ -112,7 +112,7 @@ _submitted by Chad_
 ----------
 
 #### How to contribute
-* The docs [repo](https://github.com/newsapps/docs) can be edited in github (browser) if you'll just add one problem/fix (recommended if you won't add to multiple files)
+* Here's the [page you should edit](https://github.com/newsapps/docs/edit/master/tarbell/troubleshooting.md). The docs [repo](https://github.com/newsapps/docs) can be edited in github (browser) if you'll just add one problem/fix (recommended)
 * For multi-file adds, clone the [repo](https://github.com/newsapps/docs), commit and push your changes
 * Write markdown if you're more comfortable with that. [Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a handy cheat-sheet.
 * Let `#techtalk` channel on slack know you've updated the docs!
