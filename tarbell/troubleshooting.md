@@ -60,6 +60,22 @@ _submitted by Cecilia_
 
 ----------
 
+## When it broke: "Tarbell spreadsheet" command not working
+
+### Traceback
+
+```sh
+Error: Error! Unknown command 'spreadsheet'.
+```
+
+### Solution
+
+The answer is probably that you've installed a project that switched to an old version of tarbell. Check your version of tarbell by running `tarbell -v`. "Tarbell spreadsheet" is available in v1.0.4 and 1.0.5. Run `pip install --upgrade tarbell` to upgrade to the latest version of Tarbell.
+
+_submitted by Chad_
+
+----------
+
 ## When it broke: Tried to publish to p2p blurb, tarbell publish production
 
 ### Traceback
