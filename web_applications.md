@@ -53,11 +53,31 @@ More information about this service can be found in the [project README](https:/
 
 ### Boundary Service
 
+URL: http://boundaries.tribapps.com/
+
 TODO: Write this.
 
 ### Bing Bulk Geocoder
 
-TODO: Write this.
+URL: http://geo.tribapps.com/
+
+#### What does it do
+
+Geocodes a spreadsheet's worth of addresses.
+
+#### How do I use it?
+
+Go to the URL and follow the instructions.  It all happens in your browser/email.
+
+#### When do I use it?
+
+When you need to geocode many records and you want to use them however you want (for data analysis, for a map). Many other geocoders restrict how you can use the geocoded data.  For example, Google has a great geocoder, but you can only use geocoded points on a map if it's a Google Map. 
+
+#### When shouldn't I use it?
+
+* When you just need one address geocoded.  For that, you can use the Boundary Service.
+* When it breaks.  You could try the [Texas A&M Geoservices Batch Geocoder](http://geoservices.tamu.edu/Services/Geocode/BatchProcess/) or the [U.S. Census Bureau Geocoder](http://geocoding.geo.census.gov/).
+
 
 ### NewsroomDB 
 
