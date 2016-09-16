@@ -18,7 +18,16 @@ TODO: Describe this
 
 URL: [http://crime.chicagotribune.com/](http://crime.chicagotribune.com/)
 
-TODO: Describe this
+REPO: [https://tribune.unfuddle.com/a#/projects/46/repositories/124/browse](https://tribune.unfuddle.com/a#/projects/46/repositories/124/browse)
+
+Site that collects crime incidents, homicde victims and shooting victims and shows it on maps.
+
+The data for this site comes from a variety of sources, and there can often be bugs with loading data due to the size of the data, data entry issues or changes or bugs in external APIs.  For example:
+
+* [Potential mismatch between NewsroomDB and Crime site shooting totals](https://tribune.unfuddle.com/a#/projects/46/tickets/by_number/1241) 
+* [Crime updating still failing due to timeout when hitting data portal API](https://tribune.unfuddle.com/a#/projects/46/tickets/by_number/1228)
+* [Crimes on community area profile pages not up to date](https://tribune.unfuddle.com/a#/projects/46/tickets/by_number/1205)
+* [Crime updating fails](https://tribune.unfuddle.com/a#/projects/46/tickets/by_number/1211)
 
 Services
 --------
