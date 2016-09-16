@@ -121,9 +121,36 @@ RuntimeError: working outside of application context
 
 ### Solution
 
-Cchange the filter to be a [context filter](http://flask.pocoo.org/docs/0.11/api/#flask.Blueprint.app_context_processor), which gets the template context passed as an argument by Jinja instead of having to grab it explicitly  with `context = g.current_site.get_context()`
+Change the filter to be a [context filter](http://flask.pocoo.org/docs/0.11/api/#flask.Blueprint.app_context_processor), which gets the template context passed as an argument by Jinja instead of having to grab it explicitly  with `context = g.current_site.get_context()`
 
 _submitted by Chad_
+
+----------
+
+## When it broke: Tried to publish to P2P and styles don't come through in P2P preview
+
+### Solution
+
+So far, I've encountered two solutions to this:
+- In _content.html, if you have
+  
+  ```
+  <div class="graphic-wrapper">
+    {% include "_text.html" %}
+  </div>
+  ```
+  make it
+
+  ```
+  <div class="graphic-wrapper">
+    {% include "_text.html" with context %}
+  </div>
+  ```
+  The "with context" forces P2P to apply the same attributes from the parent element to the child element.
+
+- Make sure that all commented out lines in _content.html are removed before publishing to prod. Commented out lines mess with the way P2P runs scripts.
+
+_submitted by Nausheen_
 
 ----------
 
