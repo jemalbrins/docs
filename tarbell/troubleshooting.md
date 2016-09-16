@@ -152,6 +152,43 @@ So far, I've encountered two solutions to this:
 
 _submitted by Nausheen_
 
+
+----------
+
+## When it broke: Tried to run npm install and it errored out
+
+### Traceback
+
+tt-edt-ct07505:mlb-record-playoffs jberlin$ npm install
+npm ERR! fetch failed https://tribune.unfuddle.com/git/tribune_trib-styles/
+npm WARN retry will retry, error on last attempt: Error: fetch failed with status code 401
+npm ERR! fetch failed https://tribune.unfuddle.com/git/tribune_trib-styles/
+npm WARN retry will retry, error on last attempt: Error: fetch failed with status code 401
+npm ERR! fetch failed https://tribune.unfuddle.com/git/tribune_trib-styles/
+npm ERR! Darwin 14.5.0
+npm ERR! argv "/usr/local/Cellar/node/5.4.1_1/bin/node" "/usr/local/bin/npm" "install"
+npm ERR! node v5.4.1
+npm ERR! npm  v3.10.8
+
+npm ERR! fetch failed with status code 401
+npm ERR! 
+npm ERR! If you need help, you may report this error at:
+npm ERR!     <https://github.com/npm/npm/issues>
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/jberlin/code/mlb-record-playoffs/npm-debug.log
+tt-edt-ct07505:mlb-record-playoffs jberlin$ ls node_modules
+ls: node_modules: No such file or directory
+tt-edt-ct07505:mlb-record-playoffs jberlin$
+
+### Solution
+
+The new Tribune styles had a bad URL for a git repo. It was listed without the correct prefix in the "dependencies" area of the package.json file.
+
+Geoff helped find the right format for URLs like this and we had to add **git+** to the front of it. The Trib styles were likely not installed correctly on the project. I made the changes and pushed the new version of **package.json** to the project.
+
+_submitted by Jonathon_
+
 ----------
 
 #### How to contribute
