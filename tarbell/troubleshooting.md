@@ -159,6 +159,7 @@ _submitted by Nausheen_
 
 ### Traceback
 
+```sh
 tt-edt-ct07505:mlb-record-playoffs jberlin$ npm install
 npm ERR! fetch failed https://tribune.unfuddle.com/git/tribune_trib-styles/
 npm WARN retry will retry, error on last attempt: Error: fetch failed with status code 401
@@ -177,9 +178,7 @@ npm ERR!     <https://github.com/npm/npm/issues>
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     /Users/jberlin/code/mlb-record-playoffs/npm-debug.log
-tt-edt-ct07505:mlb-record-playoffs jberlin$ ls node_modules
-ls: node_modules: No such file or directory
-tt-edt-ct07505:mlb-record-playoffs jberlin$
+```
 
 ### Solution
 
