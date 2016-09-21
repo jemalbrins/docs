@@ -1,0 +1,154 @@
+STARTING AN AFTER EFFECTS PROJECT 
+
+
+**DO THIS FIRST**
+On your desktop, set up a folder with subfolders (fig.1). All of the assets you think you will need for your project should go in these folders. 
+Name one of the folders "intro_credits."
+Download the tribuneanimatedopen.mov and credit files from this link and put them in your "intro_credits" folder.
+Note: It's important to have your assets in a central location so AE will know where to find them. As you add more assets continue to put them in the appropriate folders.  
+Always import into AE from these folders so the path stays linked. If you don't you will run into problems with missing files.
+
+
+
+LAUNCH AFTER EFFECTS
+When you launch AE you will see a startup window. (fig.2)
+This is where you can start a new project or open one you already created. 
+For now, close this window by clicking the red close button at the top left. 
+
+
+
+MAKE A NEW COMPOSITION
+A composition holds all of the layers contained in your project. A layer can hold many things including audio, solids, text, video, Illustrator and Photoshop files. 
+
+1. To make a new composition hit "command n" OR go to "composition/new composition" in the top menu bar. The new composition box will appear. (fig.3) This is where you do your initial setup. 
+
+2. Composition name: Leave the name as Comp 1 for now
+
+3. Preset: Change to "HDTV 1080 29.97"
+This is saying the video will be 1920px wide by 1080px deep at 29.97 frames per second. The higher the frame-rate the smoother the animation will be. It's best to set this correctly from the beginning. Changing it later can create problems. 
+
+4. Pixel aspect ratio: Should be Square pixels
+
+5. Frame rate: 29.97
+
+6. Resolution: Set this to half (this has nothing to do with your final render. This setting enables the computer to show you a preview of your video at a lower resolution)
+
+7. Start Timecode: 0:00 (the beginning of the video)
+
+8. Duration: Should be the length of the video. 
+A good length is about 1 to 1:40 but depends on the project. That includes the opening Tribune intro.
+
+9. Background color: This is the color of the background while working in AE. It has nothing to do with the final rendering's background color. Click on the swatch and set it to whatever you want. I find white works best for me. 
+
+10. Hit "OK" - You are done with the initial setup.
+ 
+11. Now that you created your composition you should see it in the projects panel. (fig.4) 
+If you look to the right of the projects panel you should see a huge white composition window. (fig.5) This window will show what you animate. Think of it as the stage.
+
+NOTE: If you want to tweak any of these settings later hit "command + k" OR go to "composition/settings" in the menu bar and tweak away.
+
+
+ADDING TEXT TO YOUR PROJECT
+Select the text tool (fig.6) and click in the composition window and start typing. Your text should appear on the screen in the comp window (fig.6a). It will also create a layer in the timeline window at the bottom left. (fig.7)
+
+
+IMPORTING FILES
+You can import any number of items into AE. When they are imported, they appear in the project panel on the left side of the AE interface. (fig.8) 
+
+1. One way to import a file is to go to the top menu bar and select "file/file import/file."
+Navigate to the folder where your asset lives and double-click it. You should see it listed in the project panel. 
+Do this now by importing the "tribuneanimatedopen.mov" and the "credits.ai" files. You should have them in the folder you created on your desktop. If not go back to **DO THIS FIRST** at the top of this doc.
+
+2. This is how your project panel should look. (fig.9) 
+
+3. To add them to the animation just click on the file name in the project panel drag it to the timeline window in the bottom left corner.
+ 
+
+
+ANIMATING
+There are a million videos on Youtube that walk you through getting started with animation. Here's one that you might find helpful: https://www.youtube.com/watch?v=8LtY7qWWyAY
+
+
+
+EDITING IMPORTED ILLUSTRATOR AND PHOTOSHOP FILES
+The cool thing about AE is it links to any file you import. 
+If you want to edit a particular file you've imported:
+
+1. Click on the file name in the file list in the project panel or in the animation timeline
+
+2. Hit "Command + e" (This will open the file in Illustrator or Photoshop) 
+
+3. Make your edits and save the file. It will automatically update in AE.
+
+Do this now by clicking on the "credits" file you just imported. 
+Hit "Command + e" and add the sources and credits info. 
+Save and close. This .ai file is sized at 1920px by 1080px so it will be centered in your animation.   
+
+
+
+SPECIAL NOTES ON IMPORTING ILLUSTRATOR AND PHOTOSHOP FILES
+
+ILLUSTRATOR:
+1. Navigate to the folder and select the file you want to import. 
+
+2. Single click on the name of the file.
+At the bottom of the window you will see a few options. 
+
+3. Where it says "Import As" select "Footage" if it's a single-layered .ai file. This options flattens the .ai file.
+
+4. Select "Composition" if it's a multi-layered file. This way you can animate each layer separately.
+
+5. Make sure the "check-box" next to Illustrator/PDF/EPS Sequence is not selected.
+
+6. Hit open. You should now see your .ai file listed in the file panel.
+ 
+
+
+PHOTOSHOP:
+1. Navigate to the folder and select the file you want to import. 
+
+2. Single click on the name of the file.
+At the bottom of the window you will see a few options.
+
+3. Where it says "Import As" select "Composition - Retain Layer Sizes." This option retains each layer including any layer style(s) you may have applied.
+
+4. When you choose open, a new window will open giving you 2 options. Select the option that says "Editable Layer Styles" and hit OK. You should now see your .psd file listed in the file panel.
+
+
+
+IMPORTING SOUND
+.wav files work best so try to record or import in this format. 48000 Hz at 16bit.
+
+
+
+RENDERING YOUR FINAL FILE
+There are limitations when rendering from AE. The best way to render your file is through Adobe Media Encoder. It's a bundled program that ships with AE and Premiere. It's a great tool as it allows you to render and still work on your project in AE or Premiere. 
+
+1. When you are ready to render hit "option + command + m" OR go to the menu across the top and select "composition/Add to Adobe Media Encoder Queue" 
+
+2. It will take it a second for Adobe Media Encoder to open up due to gathering the info from your comp. Once it opens, (fig.10) is what you should see.
+
+3. Under the format column (fig.11) click on the little triangle and select "H.264" if it's not already selected. 
+
+4. Under the Preset column (fig.12) click on "blue words" it probably says "Match Source - High bitrate"
+
+5. When this window opens it will look very similar to the composition settings in AE. 
+Click on the "video" tab and match your settings to (fig.13).
+
+6. Next, click on the "audio" tab and match your settings to (fig.14).
+
+Once you are happy with the everything click OK.
+
+
+
+SAVING THE FILE
+1. Under the Output column (fig.15) you can select where the rendering will save. Click on the file name and save it wherever you'd like. You can leave it as is if you are fine with the location.
+
+2. Click the little green "play" button (fig.16) at the top of the interface. This starts the rendering process. You should see your animation start playing in the bottom left corner of the Adobe Media Encoder interface. 
+
+
+That's it. Get some coffee or crack and wait for the file to finish.
+
+Let me know if you run into any problems (related to AE). 
+Ryan can help you figure out problems with your life.
+
